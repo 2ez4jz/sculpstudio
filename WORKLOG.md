@@ -498,3 +498,40 @@ For every future website modification:
 
 **Related site commit**
 - `5d9df3853a56f556e18f5b3f2ded65b4bd8cf73d`
+
+
+### Book page — focused enquiry flow
+
+**Structure / Information Architecture — P1**
+- Reworked Book into a clearer conversion-first page.
+- New flow: Intro → Service Details → Contact Details → What Happens Next → Contact Fallback.
+- Kept the Promotion module as a secondary right-side element that remains hidden unless an offer is active.
+- Avoided adding portfolio imagery or brand-story content so Book stays task-focused.
+
+**Core Functionality — P1**
+- Split the form into two visible groups: Service Details and Your Contact.
+- Added Timing as a dedicated field.
+- Added Preferred Contact so users can indicate Email, Phone, or Instagram.
+- Extended the generated email payload to include the new fields.
+- Preserved all current service and artist choices.
+- Added a three-step “What happens next” section covering review, reply, and confirmation.
+- Kept the current mailto-based submission behavior and made that limitation explicit in the form copy.
+
+**Visual / Brand — P2**
+- Added a calmer Book intro with a narrower text measure.
+- Introduced understated section dividers and group headings instead of more cards.
+- Added a compact three-column expectation area that collapses cleanly on mobile.
+- Kept the page visually quiet and functional, consistent with the warm SCULP system.
+
+**Fixes / Technical Maintenance — P0**
+- Updated the mailto payload so Timing and Preferred Contact are not lost when the enquiry is prepared.
+
+**Pending / Next — P1**
+- Confirm the final Book headline.
+- Confirm real response-time promise.
+- Confirm exact booking/deposit language and what officially secures a date.
+- Replace mailto with a real form submission / backend before final commercial launch if possible.
+- Later consider conditional fields for Bridal, Commercial, and Education only if the form remains easy to complete.
+
+**Related site commit**
+- `3d05f79e195b9ff86180ca6df6e6c5beab677d23`
