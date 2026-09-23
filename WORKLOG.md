@@ -67,3 +67,23 @@ For every future website modification:
 2. Add a dated entry to this `WORKLOG.md`.
 3. Include the relevant Git commit SHA when available.
 4. Also provide a concise work-log summary in the ChatGPT conversation.
+
+### Occasion page — service modules
+**Structure / Information Architecture — P1**
+- Split Occasions into two primary service families: Makeup Services and Education.
+- Added four makeup modules: Event Makeup, Personal Makeup, Commercial Beauty, and Photoshoot Makeup.
+- Added two education modules: 1-on-1 Makeup Lesson and Group Makeup Class.
+- Kept pricing intentionally open because package details are not finalized yet.
+
+**Core Functionality — P1**
+- Added direct enquiry CTAs for each service module.
+- Commercial Beauty routes to a quote-style enquiry.
+- Added a pricing-status module explaining that service details are still being finalized.
+
+**Visual / Brand — P2**
+- Reused the existing SCULP editorial card system and page hierarchy for consistency.
+
+**Pending / Next — P1**
+- Final pricing and package details.
+- Final service copy, duration, inclusions, group-size rules, and any commercial usage terms.
+- Real imagery for Occasion and Education sections.
