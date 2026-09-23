@@ -148,3 +148,38 @@ For every future website modification:
 
 **Related site commit**
 - `5371a897e2d0187cacc95938b4f9c819a2529f65`
+
+
+### Team page — hierarchy, real profiles, and shared-standard module
+
+**Structure / Information Architecture — P1**
+- Rebuilt Team around a clear hierarchy: Team Hero → Founder Spotlight → Senior Makeup Artists → Makeup Artists → SCULP Standard → Enquiry CTA.
+- Separated Miranda from the grid so the founder/creative lead has a stronger editorial presence.
+- Grouped Yuki and Mira as Senior Makeup Artists.
+- Grouped Angelina, Elaine, Emily, and Giselle as Makeup Artists.
+- Added a dedicated “SCULP Standard” section to explain how different artist styles can still sit within one studio standard.
+
+**Core Functionality — P1**
+- Replaced placeholder team profiles with the real names, roles, backgrounds, and specialties currently published on the existing SCULP Team page.
+- Added portfolio and enquiry pathways so Team supports artist selection without becoming a dead-end profile page.
+- Added a clear message that clients can enquire without already knowing which artist to choose.
+
+**Visual / Brand — P2**
+- Introduced a large founder spotlight layout rather than treating every artist as an equal card.
+- Added 2-column Senior and 4-column Makeup Artist layouts on desktop, with responsive stacking on smaller screens.
+- Added compact specialty lines to make artist differences easier to scan.
+
+**Fixes / Technical Maintenance — P0**
+- Added responsive Team layouts for tablet and mobile.
+- Preserved the existing Chinese staging-note system so missing assets and owner decisions are visible during internal review.
+
+**Pending / Next — P1**
+- Upload one approved portrait for each artist.
+- Confirm final Team-page headline.
+- Reconcile public Team role names with Bridal pricing names (Founder / Creative Makeup Director vs Founder / Lead Artist; Senior Makeup Artist vs Senior Artist; Makeup Artist vs SCULP Artist).
+- Decide whether Miranda needs a more personal founder story in addition to the current career biography.
+- Confirm the actual studio-wide standards that should appear under “The SCULP Standard”.
+- Optional: decide whether individual artist portfolio filtering will be supported later.
+
+**Related site commit**
+- `778290aa1799021cc06730d3cbc55f6c167fa4a3`
