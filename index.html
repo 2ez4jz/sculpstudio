@@ -266,7 +266,7 @@
 #sculp-site .team-next-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
 #sculp-site .team-next-links a{font-size:13px;border-bottom:1px solid currentColor;padding-bottom:3px}
 #sculp-site .portfolio-strip,#sculp-site .home-strip{cursor:grab;touch-action:pan-y}
-#sculp-site .portfolio-strip.dragging,#sculp-site .home-strip.dragging{cursor:grabbing;scroll-snap-type:none}
+#sculp-site .portfolio-strip.dragging,#sculp-site .home-strip.dragging{cursor:grabbing;scroll-snap-type:none}#sculp-site [id^="occasion-"],#sculp-site #bridal-services{scroll-margin-top:110px}
 @media(prefers-reduced-motion:reduce){#sculp-site *,#sculp-site *::before,#sculp-site *::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
 
@@ -479,7 +479,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="bridal-services">
   <div class="shell">
     <div class="section-kicker">
       <div>
@@ -607,7 +607,7 @@
     <p class="lead">Choose the setting. We shape the look around the person, the purpose and the camera.</p>
 
     <div class="three">
-      <div class="card">
+      <div class="card" id="occasion-event">
         <div class="eyebrow">01</div>
         <h3>Event Makeup</h3>
         <p>For celebrations, dinners, graduations and occasions where you want to feel polished and camera-ready.</p>
@@ -623,7 +623,7 @@
         
       </div>
 
-      <div class="card">
+      <div class="card" id="occasion-camera">
         <div class="eyebrow">03</div>
         <h3>Commercial Beauty</h3>
         <p>For campaigns, advertising, branded content and creative commercial projects.</p>
@@ -646,7 +646,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="occasion-education">
   <div class="shell">
     <div class="eyebrow">Education</div>
     <div class="content-note"><strong>待老板确认：</strong>教学业务是否统一放在 Occasions 下。当前结构分成 1-on-1 和 Group 两类，不再另外开 Course 页面。</div>
@@ -1106,7 +1106,7 @@ function route(){
   if(pages.indexOf(key)<0)key='home';
   root.querySelectorAll('.view').forEach(function(el){el.hidden=el.dataset.page!==key});
   root.querySelectorAll('.nav a').forEach(function(el){
-    var active=el.getAttribute('href')==='#'+key;
+    var href=el.getAttribute('href')||'',active=href==='#'+key;
     el.classList.toggle('active',active);
     if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');
   });
@@ -1114,7 +1114,17 @@ function route(){
   menu.classList.remove('open');
   root.querySelector('.mobile-toggle').setAttribute('aria-expanded','false');
   if(key==='book')applyBookPrefill(hash.params);
-  window.scrollTo(0,0);
+
+  var section=hash.params.get('section');
+  if(section){
+    requestAnimationFrame(function(){
+      var target=document.getElementById(section);
+      if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+      else window.scrollTo(0,0);
+    });
+  }else{
+    window.scrollTo(0,0);
+  }
 }
 window.addEventListener('hashchange',route);route();
 
@@ -1155,10 +1165,10 @@ enableDragScroll(root.querySelector('#portfolio-strip'));
 enableDragScroll(root.querySelector('.home-strip'));
 
 var conciergeData={
-  wedding:{label:'Recommended · Bridal',title:'Start with SCULP Bridal.',copy:'Wedding-day makeup, previews, bridal-party services, and half-day support are all planned from one place.',primary:'Explore Bridal',href:'#bridal',secondary:'Enquire with Bridal pre-selected →',secondaryHref:'#book?service=Bridal'},
-  event:{label:'Recommended · Event Makeup',title:'Start with Event Makeup.',copy:'For celebrations, dinners, graduations, wedding-guest beauty, and other moments where you want to feel polished and camera-ready.',primary:'Explore Occasions',href:'#occasions',secondary:'Enquire with Event Makeup pre-selected →',secondaryHref:'#book?service=Event%20Makeup'},
-  camera:{label:'Recommended · Image-making',title:'Start with the brief.',copy:'Portraits, photoshoots, campaigns, and branded content can require different levels of support. Explore the image-making services, then send us the brief.',primary:'Explore Occasions',href:'#occasions',secondary:'Start an enquiry →',secondaryHref:'#book'},
-  learn:{label:'Recommended · Education',title:'Start with how you want to learn.',copy:'Choose a private 1-on-1 lesson for your own routine, or a group class for friends, events, or brand-led sessions.',primary:'Explore Education',href:'#occasions',secondary:'Enquire about a lesson →',secondaryHref:'#book?service=1-on-1%20Makeup%20Lesson'}
+  wedding:{label:'Recommended · Bridal',title:'Start with SCULP Bridal.',copy:'Wedding-day makeup, previews, bridal-party services, and half-day support are all planned from one place.',primary:'Explore Bridal',href:'#bridal?section=bridal-services',secondary:'Enquire with Bridal pre-selected →',secondaryHref:'#book?service=Bridal'},
+  event:{label:'Recommended · Event Makeup',title:'Start with Event Makeup.',copy:'For celebrations, dinners, graduations, wedding-guest beauty, and other moments where you want to feel polished and camera-ready.',primary:'Explore Event Makeup',href:'#occasions?section=occasion-event',secondary:'Enquire with Event Makeup pre-selected →',secondaryHref:'#book?service=Event%20Makeup'},
+  camera:{label:'Recommended · Image-making',title:'Start with the brief.',copy:'Portraits, photoshoots, campaigns, and branded content can require different levels of support. Explore the image-making services, then send us the brief.',primary:'Explore Image-making',href:'#occasions?section=occasion-camera',secondary:'Start an enquiry →',secondaryHref:'#book'},
+  learn:{label:'Recommended · Education',title:'Start with how you want to learn.',copy:'Choose a private 1-on-1 lesson for your own routine, or a group class for friends, events, or brand-led sessions.',primary:'Explore Education',href:'#occasions?section=occasion-education',secondary:'Enquire about a lesson →',secondaryHref:'#book?service=1-on-1%20Makeup%20Lesson'}
 };
 
 root.querySelectorAll('.concierge-option').forEach(function(btn){
