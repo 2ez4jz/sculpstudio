@@ -303,3 +303,26 @@ For every future website modification:
 
 **Related site commit**
 - `1339c2e694d12d5e34c0f966b63007a0b052bf59`
+
+
+### About page — lighter closing CTA for visual consistency
+
+**Structure / Information Architecture — P1**
+- Kept the About content flow unchanged.
+- Replaced the heavy final CTA block with a lighter editorial navigation close.
+- The page now ends with one clear continuation area instead of feeling like it has two separate endings after “The SCULP Standard”.
+
+**Core Functionality — P1**
+- Preserved the same three destinations: Team, Portfolio, and Book.
+- Changed them from button-style actions into lighter text links so About remains a brand/idea page rather than a hard-conversion page.
+
+**Visual / Brand — P2**
+- Added a simple top border, left-aligned editorial copy, and understated link row.
+- Removed the large centered CTA treatment to better match the tone of the About page and reduce template-like repetition across the site.
+
+**Pending / Next — P2**
+- Revisit the exact final line after owner review of the About copy.
+- Keep About as a light-conversion page; avoid adding another strong CTA unless the page role changes.
+
+**Related site commit**
+- `346a95501192671a66fe4e13eafa5e37709f2c9f`
