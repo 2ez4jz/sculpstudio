@@ -731,3 +731,24 @@ For every future website modification:
 
 **Related site commit**
 - `9627d52c87285a15ee12ca59996955204f1cf2d9`
+
+
+### Footer social link — Instagram
+
+**Core Functionality — P1**
+- Added SCULP Studio's Instagram profile to the global footer:
+  - `@sculp_studio`
+  - opens in a new tab
+- Kept the existing enquiry and email contact options.
+
+**Visual / Brand — P2**
+- Added a small monochrome line icon rather than a large colored social badge.
+- Styled the Instagram entry as a compact icon + text link so it fits the existing premium editorial footer.
+- Removed the temporary “add Instagram link” placeholder note.
+
+**Pending / Next — P2**
+- Add Xiaohongshu, WeChat, and any additional verified contact details once provided.
+- WeChat can later use a compact QR-code interaction if desired.
+
+**Related site commit**
+- `6e6ea9a37f521ec2d0dfcdfc806f56adf7f681e6`
