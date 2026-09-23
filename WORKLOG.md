@@ -183,3 +183,34 @@ For every future website modification:
 
 **Related site commit**
 - `778290aa1799021cc06730d3cbc55f6c167fa4a3`
+
+
+### Portfolio page — featured images + draggable horizontal strip
+
+**Structure / Information Architecture — P1**
+- Simplified Portfolio into a curated showcase instead of a heavy multi-category gallery.
+- New flow: Portfolio Intro → 3 Featured Images → Horizontal Scroll/Drag Strip → Enquiry CTA.
+- Removed the previous visible filter controls from the page structure because the current image library is relatively small.
+
+**Core Functionality — P1**
+- Added a horizontal thumbnail strip that can be scrolled normally or dragged with the mouse on desktop.
+- Added touch-friendly horizontal scrolling for mobile/tablet.
+- Kept category labels aligned with the existing portfolio structure: Bridal, Commercial, Fashion / Runway, Celebrity / Events.
+- Added an enquiry CTA directly after the gallery.
+
+**Visual / Brand — P2**
+- Added a magazine-style featured composition: one large hero image plus two smaller supporting images.
+- The lower image strip uses smaller cards to create a clear visual hierarchy between hero work and the broader portfolio.
+- Added scroll snapping and hidden scrollbars for a cleaner editorial feel.
+
+**Polish / Nice-to-have — P3**
+- Added grab / grabbing cursor states during desktop drag interaction.
+- Added a subtle “Drag or scroll to explore” hint.
+
+**Pending / Next — P1**
+- Select the 3 strongest existing images for the featured composition.
+- Insert the actual existing portfolio images into the horizontal strip.
+- Decide whether category labels should remain visible under thumbnails or become hover-only later.
+
+**Related site commit**
+- `20d73a81418ef9ac85d89431ca937ada21e23ac7`
