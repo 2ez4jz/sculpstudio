@@ -451,3 +451,50 @@ For every future website modification:
 
 **Related site commit**
 - `b5abeaf7b0e0008bf8c60418d8c06311feba74d9`
+
+
+### Home page — curated brand and service gateway
+
+**Structure / Information Architecture — P1**
+- Rebuilt Home from a generic multi-section landing page into a focused brand gateway.
+- New flow: Hero → Philosophy → Selected Work → Bridal / Occasions → Studio → Team → Trust Strip → Final Enquiry.
+- Removed the previous three-way service split and simplified the service decision into Bridal vs Occasions.
+- Kept Home intentionally lighter than inner pages so it introduces rather than repeats full service details.
+
+**Core Functionality — P1**
+- Hero routes users to Bridal or Portfolio.
+- Selected Work routes to the full Portfolio.
+- Service module routes to Bridal and Occasions.
+- Studio routes to About.
+- Team teaser routes to Team.
+- Final conversion routes to Book.
+- Added a restrained “Bridal services currently start from $290” signal without duplicating the full pricing table.
+- Preserved existing navigation, routing, form, and gallery functionality.
+
+**Visual / Brand — P2**
+- Created a more image-led 35/65-style editorial Hero.
+- Added a centered philosophy statement with controlled line length.
+- Added a magazine-like Featured Work layout: one large image + two support images + horizontal preview strip.
+- Added a two-column service architecture rather than a card-heavy service grid.
+- Added a dedicated Studio teaser using the warm architectural visual language already established from the new studio design.
+- Added a compact Team teaser rather than duplicating all artist profiles.
+- Added a low-density trust strip for studio/location/service reassurance.
+- Final CTA uses the warm light-page visual system rather than another heavy black panel.
+
+**Polish / Nice-to-have — P3**
+- Added responsive homepage layouts for featured work, services, studio, team, trust strip, and final CTA.
+- Added selective arch treatment to the Hero and Studio image placements.
+- Added a lightweight horizontal image preview strip on Home.
+
+**Pending / Next — P1**
+- Confirm Hero headline and positioning sentence.
+- Confirm whether “Beauty that still feels like you.” should be the homepage core philosophy line.
+- Select one hero image.
+- Select 6–8 portfolio images for Home.
+- Select one strong finished-studio image after construction is complete.
+- Select one Team / artist-at-work image.
+- Revisit the three trust-strip statements after owner review.
+- Review whether “Bridal services currently start from $290” should remain on Home after final pricing strategy is approved.
+
+**Related site commit**
+- `5d9df3853a56f556e18f5b3f2ded65b4bd8cf73d`
