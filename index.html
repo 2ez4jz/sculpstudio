@@ -142,6 +142,23 @@
 #sculp-site .card p{max-width:52ch}
 #sculp-site .pricing-grid p{max-width:44ch}
 #sculp-site .book-main>p{max-width:60ch}
+#sculp-site .book-intro{max-width:760px}
+#sculp-site .book-intro h1{max-width:10ch}
+#sculp-site .book-layout{margin-top:44px}
+#sculp-site .book-main{min-width:0}
+#sculp-site .form{margin-top:0}
+#sculp-site .form-group-title{grid-column:1/-1;padding:0 0 10px;border-bottom:1px solid var(--line);margin-top:8px}
+#sculp-site .form-group-title:first-child{margin-top:0}
+#sculp-site .form-group-title .eyebrow{margin-bottom:6px}
+#sculp-site .form-group-title p{font-size:14px;color:var(--muted);margin:0;max-width:60ch}
+#sculp-site .book-expectation{margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+#sculp-site .book-expectation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px}
+#sculp-site .book-expectation h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:22px;line-height:1.15;margin:0 0 8px}
+#sculp-site .book-expectation p{font-size:14px;color:var(--muted);margin:0}
+#sculp-site .book-fallback{margin-top:24px;font-size:14px;color:var(--muted)}
+#sculp-site .book-fallback a{border-bottom:1px solid currentColor}
+#sculp-site .field.full .button{min-width:230px}
+
 #sculp-site .home-hero{grid-template-columns:minmax(0,.68fr) minmax(420px,1.32fr);gap:clamp(48px,6vw,104px);min-height:min(820px,86vh);padding-top:clamp(34px,5vw,70px)}
 #sculp-site .home-hero .copy{padding:clamp(70px,8vw,118px) 0}
 #sculp-site .home-hero .copy h1{max-width:9ch}
@@ -173,7 +190,7 @@
 
 #sculp-site .foot{font-size:14px}
 
-@media(max-width:950px){#sculp-site .home-work{grid-template-columns:1fr}#sculp-site .home-work-stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .home-work>.photo{min-height:540px}#sculp-site .home-services,#sculp-site .home-studio,#sculp-site .home-team,#sculp-site .home-final{grid-template-columns:1fr}#sculp-site .trust-strip{grid-template-columns:1fr 1fr}#sculp-site .home-team .photo{order:1}#sculp-site .home-team>div:last-child{order:2}#sculp-site .studio-gallery{grid-template-columns:1fr}#sculp-site .studio-gallery .studio-stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .studio-gallery .photo{min-height:420px}#sculp-site .studio-gallery .studio-stack .photo{min-height:260px}#sculp-site .portfolio-featured{grid-template-columns:1fr}#sculp-site .portfolio-featured .stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .portfolio-featured .photo{min-height:520px}#sculp-site .portfolio-featured .stack .photo{min-height:300px}#sculp-site .team-founder{grid-template-columns:1fr}#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr 1fr}#sculp-site .bridal-hero{grid-template-columns:1fr;padding-top:54px}#sculp-site .bridal-hero-media .photo{min-height:520px}#sculp-site .book-layout{grid-template-columns:1fr}#sculp-site .promo-card{position:relative;top:auto}#sculp-site .pricing-grid{grid-template-columns:1fr}#sculp-site .service-list{grid-template-columns:1fr}#sculp-site .artist-note{align-items:flex-start;flex-direction:column}#sculp-site .mobile-toggle{display:block}#sculp-site .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}#sculp-site .nav.open{display:flex}#sculp-site .home-hero,#sculp-site .split{grid-template-columns:1fr}#sculp-site .home-hero .copy{order:2;padding:45px 0 65px}#sculp-site .home-hero .photo{order:1;min-height:55vh}#sculp-site .triptych{grid-template-columns:1fr 1fr}#sculp-site .triptych .photo:first-child{grid-column:1/-1;grid-row:auto;min-height:520px}#sculp-site .three,#sculp-site .people{grid-template-columns:1fr 1fr}}@media(max-width:640px){#sculp-site .home-work-stack{grid-template-columns:1fr}#sculp-site .home-work>.photo{min-height:460px}#sculp-site .home-work-stack .photo{min-height:300px}#sculp-site .home-strip .photo{flex-basis:72vw}#sculp-site .trust-strip{grid-template-columns:1fr}#sculp-site .home-hero .photo{min-height:58vh}#sculp-site h1{font-size:clamp(48px,14vw,68px);line-height:1.01;max-width:12ch}#sculp-site h2{font-size:clamp(34px,10vw,48px);line-height:1.07}#sculp-site .lead{font-size:17px}#sculp-site p{font-size:16px;line-height:1.62}#sculp-site .button{font-size:11.5px;padding:13px 17px}#sculp-site .arch-top{border-radius:58px 58px 0 0}#sculp-site .arch-soft{border-radius:38px 38px 8px 8px}#sculp-site .shell{padding-left:22px;padding-right:22px}#sculp-site .section{padding:68px 0}#sculp-site .intro{padding:86px 0 72px}#sculp-site .shell.cta{padding:72px 28px}#sculp-site .logo{font-size:17px}#sculp-site .triptych,#sculp-site .three,#sculp-site .people,#sculp-site .form,#sculp-site .foot{grid-template-columns:1fr}#sculp-site .portfolio{display:block}#sculp-site .portfolio figure{margin-bottom:22px}#sculp-site .portfolio .photo,#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:460px}#sculp-site .photo.tall{min-height:470px}#sculp-site .field.full{grid-column:auto}#sculp-site .triptych .photo:first-child{min-height:470px}}
+@media(max-width:950px){#sculp-site .home-work{grid-template-columns:1fr}#sculp-site .home-work-stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .home-work>.photo{min-height:540px}#sculp-site .home-services,#sculp-site .home-studio,#sculp-site .home-team,#sculp-site .home-final{grid-template-columns:1fr}#sculp-site .trust-strip{grid-template-columns:1fr 1fr}#sculp-site .home-team .photo{order:1}#sculp-site .home-team>div:last-child{order:2}#sculp-site .studio-gallery{grid-template-columns:1fr}#sculp-site .studio-gallery .studio-stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .studio-gallery .photo{min-height:420px}#sculp-site .studio-gallery .studio-stack .photo{min-height:260px}#sculp-site .portfolio-featured{grid-template-columns:1fr}#sculp-site .portfolio-featured .stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .portfolio-featured .photo{min-height:520px}#sculp-site .portfolio-featured .stack .photo{min-height:300px}#sculp-site .team-founder{grid-template-columns:1fr}#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr 1fr}#sculp-site .bridal-hero{grid-template-columns:1fr;padding-top:54px}#sculp-site .bridal-hero-media .photo{min-height:520px}#sculp-site .book-layout{grid-template-columns:1fr}#sculp-site .promo-card{position:relative;top:auto}#sculp-site .pricing-grid{grid-template-columns:1fr}#sculp-site .service-list{grid-template-columns:1fr}#sculp-site .artist-note{align-items:flex-start;flex-direction:column}#sculp-site .mobile-toggle{display:block}#sculp-site .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}#sculp-site .nav.open{display:flex}#sculp-site .home-hero,#sculp-site .split{grid-template-columns:1fr}#sculp-site .home-hero .copy{order:2;padding:45px 0 65px}#sculp-site .home-hero .photo{order:1;min-height:55vh}#sculp-site .triptych{grid-template-columns:1fr 1fr}#sculp-site .triptych .photo:first-child{grid-column:1/-1;grid-row:auto;min-height:520px}#sculp-site .three,#sculp-site .people{grid-template-columns:1fr 1fr}}@media(max-width:640px){#sculp-site .book-expectation-grid{grid-template-columns:1fr}#sculp-site .home-work-stack{grid-template-columns:1fr}#sculp-site .home-work>.photo{min-height:460px}#sculp-site .home-work-stack .photo{min-height:300px}#sculp-site .home-strip .photo{flex-basis:72vw}#sculp-site .trust-strip{grid-template-columns:1fr}#sculp-site .home-hero .photo{min-height:58vh}#sculp-site h1{font-size:clamp(48px,14vw,68px);line-height:1.01;max-width:12ch}#sculp-site h2{font-size:clamp(34px,10vw,48px);line-height:1.07}#sculp-site .lead{font-size:17px}#sculp-site p{font-size:16px;line-height:1.62}#sculp-site .button{font-size:11.5px;padding:13px 17px}#sculp-site .arch-top{border-radius:58px 58px 0 0}#sculp-site .arch-soft{border-radius:38px 38px 8px 8px}#sculp-site .shell{padding-left:22px;padding-right:22px}#sculp-site .section{padding:68px 0}#sculp-site .intro{padding:86px 0 72px}#sculp-site .shell.cta{padding:72px 28px}#sculp-site .logo{font-size:17px}#sculp-site .triptych,#sculp-site .three,#sculp-site .people,#sculp-site .form,#sculp-site .foot{grid-template-columns:1fr}#sculp-site .portfolio{display:block}#sculp-site .portfolio figure{margin-bottom:22px}#sculp-site .portfolio .photo,#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:460px}#sculp-site .photo.tall{min-height:470px}#sculp-site .field.full{grid-column:auto}#sculp-site .triptych .photo:first-child{min-height:470px}}
 </style>
 <header class="mast"><div class="shell mast-inner"><a class="logo" href="#home">SCULP STUDIO</a><button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="sculp-nav">MENU ☰</button><nav class="nav" id="sculp-nav" aria-label="Main navigation"><a href="#bridal">BRIDAL</a><a href="#occasions">OCCASIONS</a><a href="#portfolio">PORTFOLIO</a><a href="#team">TEAM</a><a href="#about">ABOUT</a><a href="#book">BOOK</a></nav></div></header>
 <main>
@@ -817,12 +834,22 @@
 </article>
 <article class="view" data-page="book" hidden>
 <div class="shell intro">
-  <div class="eyebrow">Enquiries</div>
-  <h1>Let's create<br>something beautiful.</h1>
-  <p class="lead">Tell us what you're planning. We’ll review your enquiry and reply with the right service, artist and next steps.</p>
+  <div class="book-intro">
+    <div class="eyebrow">Enquiries</div>
+    <div class="content-note"><strong>待老板确认：</strong>Book 页主标题与回复时效。当前建议把它做成最直接、最实用的转化页，不放作品图或品牌故事。</div>
+    <h1>Tell us what<br>you're planning.</h1>
+    <p class="lead">Share the essentials below. We’ll review your enquiry and guide you toward the right service, artist, and next step.</p>
+  </div>
+
   <div class="book-layout">
     <div class="book-main">
       <form class="form" id="sculp-form">
+
+        <div class="form-group-title">
+          <div class="eyebrow">01 · Service details</div>
+          <p>Start with the appointment, date, location, and artist preference.</p>
+        </div>
+
         <label class="field">Service *
           <select name="service" required>
             <option value="">Select a service</option>
@@ -835,6 +862,7 @@
             <option>Group Makeup Class</option>
           </select>
         </label>
+
         <label class="field">Preferred artist *
           <select name="artist" required>
             <option value="">Select a preference</option>
@@ -844,19 +872,78 @@
             <option>No Preference</option>
           </select>
         </label>
-        <label class="field">Date *<input name="date" type="date" required></label>
-        <label class="field">Location *<input name="location" placeholder="City / venue" required></label>
-        <label class="field">Party size<input name="party" type="number" min="1" placeholder="Number of people"></label>
-        <label class="field">Your name *<input name="name" autocomplete="name" required></label>
-        <label class="field">Email *<input name="email" type="email" autocomplete="email" required></label>
-        <label class="field">Phone / Instagram<input name="contact" autocomplete="tel"></label>
-        <label class="field full">Tell us more<textarea name="details" placeholder="Your plans, timing, style, or anything we should know"></textarea></label>
+
+        <label class="field">Preferred date *
+          <input name="date" type="date" required>
+        </label>
+
+        <label class="field">Location *
+          <input name="location" placeholder="City / venue" required>
+        </label>
+
+        <label class="field">Party size
+          <input name="party" type="number" min="1" placeholder="Number of people">
+        </label>
+
+        <label class="field">Timing
+          <input name="timing" placeholder="e.g. Ready by 11:00 AM">
+        </label>
+
+        <div class="form-group-title">
+          <div class="eyebrow">02 · Your contact</div>
+          <p>Tell us how to reach you and anything else that will help us understand the booking.</p>
+        </div>
+
+        <label class="field">Your name *
+          <input name="name" autocomplete="name" required>
+        </label>
+
+        <label class="field">Email *
+          <input name="email" type="email" autocomplete="email" required>
+        </label>
+
+        <label class="field">Phone / Instagram
+          <input name="contact" autocomplete="tel">
+        </label>
+
+        <label class="field">Preferred contact
+          <select name="contact_method">
+            <option>Email</option>
+            <option>Phone</option>
+            <option>Instagram</option>
+          </select>
+        </label>
+
+        <label class="field full">Tell us more
+          <textarea name="details" placeholder="Plans, style, timing, reference details, or anything we should know"></textarea>
+        </label>
+
         <div class="field full">
           <button class="button fill" type="submit">Prepare email enquiry →</button>
-          <p class="note">This opens your email app with the enquiry filled in. Please send the email there to complete your request. Your date is not confirmed until we reply.</p>
+          <p class="note">This currently opens your email app with the enquiry filled in. Please send the email there to complete your request.</p>
         </div>
       </form>
-      <p>If the button does not open your email app, write to <a href="mailto:hello@sculpstudio.ca">hello@sculpstudio.ca</a>.</p>
+
+      <div class="book-expectation">
+        <div class="eyebrow">What happens next</div>
+        <div class="content-note"><strong>待老板确认：</strong>请确认真实回复时效、定金规则，以及什么状态才算正式锁定日期。以下先按当前 Bridal 逻辑做占位。</div>
+        <div class="book-expectation-grid">
+          <div>
+            <h3>We review</h3>
+            <p>We check your service, date, location, and artist preference.</p>
+          </div>
+          <div>
+            <h3>We reply</h3>
+            <p>We’ll confirm availability and guide you through the most suitable next step.</p>
+          </div>
+          <div>
+            <h3>You confirm</h3>
+            <p>Your date is only secured after availability is confirmed and the required booking payment is received.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="book-fallback">If the form does not open your email app, write directly to <a href="mailto:hello@sculpstudio.ca">hello@sculpstudio.ca</a>.</p>
     </div>
 
     <!-- PROMOTION MODULE: switch data-active to "true" and update the text below when an offer is live. -->
@@ -871,7 +958,7 @@
 </div>
 </article>
 </main><div class="cta"><div class="shell"><div class="eyebrow">An invitation</div><h2>Your moment.<br>Our attention.</h2><p>Tell us where beauty will take you next.</p><a class="button fill" href="#book">Enquire with SCULP</a></div></div><footer><div class="shell foot"><div><a class="logo" href="#home">SCULP STUDIO</a><p>Contemporary beauty for moments that matter.<br>Toronto, Ontario · Available for travel</p></div><div><div class="eyebrow">Explore</div><a href="#bridal">Bridal</a><a href="#occasions">Occasions</a><a href="#portfolio">Portfolio</a><a href="#team">Team</a><a href="#about">About</a></div><div><div class="eyebrow">Connect</div><a href="#book">Enquire</a><a href="mailto:hello@sculpstudio.ca">hello@sculpstudio.ca</a><span class="note">Add your verified Instagram link here.</span></div></div></footer>
-<script>(function(){var root=document.getElementById('sculp-site');if(!root)return;var pages=['home','bridal','occasions','portfolio','team','about','book'];function route(){var key=location.hash.slice(1).split('?')[0];if(pages.indexOf(key)<0)key='home';root.querySelectorAll('.view').forEach(function(el){el.hidden=el.dataset.page!==key});root.querySelectorAll('.nav a').forEach(function(el){var active=el.getAttribute('href')==='#'+key;el.classList.toggle('active',active);if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')});var menu=root.querySelector('.nav');menu.classList.remove('open');root.querySelector('.mobile-toggle').setAttribute('aria-expanded','false');window.scrollTo(0,0)}window.addEventListener('hashchange',route);route();root.querySelector('.mobile-toggle').addEventListener('click',function(){var menu=root.querySelector('.nav');var open=menu.classList.toggle('open');this.setAttribute('aria-expanded',String(open))});root.querySelectorAll('.filter').forEach(function(button){button.addEventListener('click',function(){var value=this.dataset.filter;root.querySelectorAll('.filter').forEach(function(b){b.setAttribute('aria-pressed',String(b===button))});root.querySelectorAll('.portfolio figure').forEach(function(fig){fig.hidden=value!=='all'&&fig.dataset.category!==value})})});var mast=root.querySelector('.mast');function updateMast(){if(mast)mast.classList.toggle('scrolled',window.scrollY>28)}window.addEventListener('scroll',updateMast,{passive:true});updateMast();root.querySelector('#sculp-form').addEventListener('submit',function(event){event.preventDefault();if(!this.reportValidity())return;var data=new FormData(this),lines=['SCULP Studio enquiry',''];['service','artist','date','location','party','name','email','contact','details'].forEach(function(key){lines.push(key.toUpperCase()+': '+(data.get(key)||'—'))});var subject=encodeURIComponent('SCULP enquiry — '+data.get('service')+' — '+data.get('date'));window.location.href='mailto:hello@sculpstudio.ca?subject='+subject+'&body='+encodeURIComponent(lines.join('\n'))})})();</script>
+<script>(function(){var root=document.getElementById('sculp-site');if(!root)return;var pages=['home','bridal','occasions','portfolio','team','about','book'];function route(){var key=location.hash.slice(1).split('?')[0];if(pages.indexOf(key)<0)key='home';root.querySelectorAll('.view').forEach(function(el){el.hidden=el.dataset.page!==key});root.querySelectorAll('.nav a').forEach(function(el){var active=el.getAttribute('href')==='#'+key;el.classList.toggle('active',active);if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')});var menu=root.querySelector('.nav');menu.classList.remove('open');root.querySelector('.mobile-toggle').setAttribute('aria-expanded','false');window.scrollTo(0,0)}window.addEventListener('hashchange',route);route();root.querySelector('.mobile-toggle').addEventListener('click',function(){var menu=root.querySelector('.nav');var open=menu.classList.toggle('open');this.setAttribute('aria-expanded',String(open))});root.querySelectorAll('.filter').forEach(function(button){button.addEventListener('click',function(){var value=this.dataset.filter;root.querySelectorAll('.filter').forEach(function(b){b.setAttribute('aria-pressed',String(b===button))});root.querySelectorAll('.portfolio figure').forEach(function(fig){fig.hidden=value!=='all'&&fig.dataset.category!==value})})});var mast=root.querySelector('.mast');function updateMast(){if(mast)mast.classList.toggle('scrolled',window.scrollY>28)}window.addEventListener('scroll',updateMast,{passive:true});updateMast();root.querySelector('#sculp-form').addEventListener('submit',function(event){event.preventDefault();if(!this.reportValidity())return;var data=new FormData(this),lines=['SCULP Studio enquiry',''];['service','artist','date','location','party','timing','name','email','contact','contact_method','details'].forEach(function(key){lines.push(key.toUpperCase()+': '+(data.get(key)||'—'))});var subject=encodeURIComponent('SCULP enquiry — '+data.get('service')+' — '+data.get('date'));window.location.href='mailto:hello@sculpstudio.ca?subject='+subject+'&body='+encodeURIComponent(lines.join('\n'))})})();</script>
 </div>
 </body>
 </html>
