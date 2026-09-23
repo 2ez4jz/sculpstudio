@@ -248,3 +248,30 @@ For every future website modification:
 
 **Related site commit**
 - `287f96060baa096ef09e5bfa77539655d6dbc69f`
+
+
+### About page — brand philosophy structure
+
+**Structure / Information Architecture — P1**
+- Rebuilt About as a brand-philosophy page rather than a founder-story page.
+- New flow: About Hero → Our Philosophy → Our Approach → The SCULP Standard → Final CTA.
+- Avoided inventing a founder origin story that does not exist.
+
+**Core Functionality — P1**
+- Added clear pathways from About to Team, Portfolio, and Book.
+- Structured the page to explain SCULP's point of view before sending users deeper into services or artist profiles.
+
+**Visual / Brand — P2**
+- Introduced the working headline “Beauty, with intention.”
+- Added the working philosophy line “Beauty should still feel like you.”
+- Added a three-part approach section for Bridal, Commercial & Portrait, and Personal Beauty.
+- Added the brand statement: “We do not believe every client should look the same. We do believe every client should feel understood.”
+
+**Pending / Next — P1**
+- Confirm the About hero headline.
+- Confirm whether “Beauty should still feel like you.” should become a core SCULP line.
+- Confirm the SCULP Standard language reflects the owner's real brand values.
+- Supply one strong About / founder-at-work / backstage image.
+
+**Related site commit**
+- `d8ba90090148c7f2dfaaf1d3e26e74c76d4aa05f`
