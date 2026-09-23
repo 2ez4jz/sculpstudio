@@ -326,3 +326,38 @@ For every future website modification:
 
 **Related site commit**
 - `346a95501192671a66fe4e13eafa5e37709f2c9f`
+
+
+### Global spacing pass — more editorial breathing room
+
+**Structure / Information Architecture — P1**
+- Kept all page structures and content hierarchy unchanged.
+- Standardized the spacing system across sections so large content blocks feel less compressed against the page edges.
+
+**Core Functionality — P1**
+- No interaction or navigation behavior changed.
+- Preserved all existing CTA destinations, forms, portfolio dragging, responsive layouts, and page routing.
+
+**Visual / Brand — P2**
+- Increased global left/right shell padding on desktop for more generous page-edge whitespace.
+- Increased intro and section vertical rhythm so large headings and image blocks have more room to breathe.
+- Increased split-layout gaps to reduce the cramped feeling between imagery and copy.
+- Increased internal padding in pricing cards.
+- Increased spacing in Bridal hero and Team founder layouts.
+- Refined About's light closing section with a larger editorial gap.
+- Reworked dark CTA spacing:
+  - Full-width CTAs now have deeper vertical padding and wider internal side padding.
+  - Inset `.shell.cta` panels now have dedicated inner padding so text no longer sits too close to black-panel edges.
+  - CTA text line length is constrained for a calmer composition.
+- Added tighter but still comfortable mobile spacing rules.
+
+**Fixes / Technical Maintenance — P0**
+- Fixed a malformed Home hero CSS declaration where `align-items:center` and `padding-top` had been accidentally merged.
+
+**Pending / Next — P2**
+- Review the updated site on desktop and mobile after deployment.
+- If any single section still feels too tight or too loose, adjust locally rather than increasing global spacing again.
+- Home remains intentionally provisional until the final homepage design phase.
+
+**Related site commit**
+- `2c30e9fc2c8ced2c8f56c32ce284462f4d06cd78`
