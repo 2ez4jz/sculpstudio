@@ -570,3 +570,20 @@ For every future website modification:
 
 **Related site commit**
 - `e8af5e1d8a6268b57114218c68be591a10647242`
+
+
+### Book form — field alignment refinement
+
+**Visual / Brand — P2**
+- Corrected the visual vertical alignment of Book form controls.
+- Standardized input and select height to 54px.
+- Increased horizontal field padding to 18px.
+- Increased label-to-control spacing to 10px.
+- Adjusted select line-height so option text sits more centrally.
+- Preserved a separate, roomier textarea treatment.
+
+**Fixes / Technical Maintenance — P0**
+- Removed the older generic control padding/min-height rule that was causing select text to appear slightly low in the field.
+
+**Related site commit**
+- `5956a0e63de5bf0cabc016cf518ddd6994b33ef4`
