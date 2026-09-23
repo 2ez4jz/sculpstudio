@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SCULP Studio</title>
-<meta name="description" content="Contemporary beauty for weddings, occasions, and moments that matter. Toronto, Ontario.">
+<title>SCULP Studio | Bridal & Beauty Makeup Toronto</title>
+<meta name="description" content="Toronto beauty studio for bridal, event, commercial and photoshoot makeup, plus private and group education. Available for travel.">
+<meta name="theme-color" content="#f3eee6">
 <style>html,body{margin:0;padding:0;background:#f3eee6}body{min-height:100vh}@media(max-width:620px){#sculp-site .studio-gallery .studio-stack{grid-template-columns:1fr}#sculp-site .portfolio-featured .stack{grid-template-columns:1fr}#sculp-site .portfolio-thumb{flex-basis:72vw}#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr}#sculp-site .team-founder .photo{min-height:480px}}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -246,10 +247,32 @@
 #sculp-site .promo-card{border-radius:4px}
 #sculp-site footer .logo{display:inline-block;margin-bottom:12px}
 #sculp-site .foot{align-items:start}
+#sculp-site .section-actions{display:flex;justify-content:space-between;align-items:center;gap:28px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+#sculp-site .section-actions p{font-size:14px;color:var(--muted);margin:0;max-width:58ch}
+#sculp-site .concierge{display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(46px,7vw,110px);align-items:start}
+#sculp-site .concierge-intro h2{max-width:9.5ch}
+#sculp-site .concierge-ui{border-top:1px solid var(--ink)}
+#sculp-site .concierge-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-bottom:1px solid var(--line)}
+#sculp-site .concierge-option{appearance:none;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:transparent;color:var(--ink);padding:19px 18px;text-align:left;font-size:13px;letter-spacing:.02em;transition:background .2s ease,color .2s ease}
+#sculp-site .concierge-option:nth-child(2n){border-right:0}
+#sculp-site .concierge-option:nth-last-child(-n+2){border-bottom:0}
+#sculp-site .concierge-option:hover{background:rgba(212,190,162,.18)}
+#sculp-site .concierge-option.active{background:var(--charcoal);color:var(--paper)}
+#sculp-site .concierge-result{padding:clamp(30px,4vw,50px) 0 0;min-height:255px}
+#sculp-site .concierge-result h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:clamp(30px,3vw,44px);line-height:1.08;max-width:14ch;margin:8px 0 15px}
+#sculp-site .concierge-result p{max-width:54ch}
+#sculp-site .team-next{border-top:1px solid var(--line);padding-top:clamp(34px,4vw,52px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(34px,6vw,90px);align-items:end}
+#sculp-site .team-next h2{max-width:12ch;margin:.15em 0 .22em}
+#sculp-site .team-next-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+#sculp-site .team-next-links a{font-size:13px;border-bottom:1px solid currentColor;padding-bottom:3px}
+#sculp-site .portfolio-strip,#sculp-site .home-strip{cursor:grab;touch-action:pan-y}
+#sculp-site .portfolio-strip.dragging,#sculp-site .home-strip.dragging{cursor:grabbing;scroll-snap-type:none}
+@media(prefers-reduced-motion:reduce){#sculp-site *,#sculp-site *::before,#sculp-site *::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
-@media(max-width:950px){#sculp-site .trust-item:not(:last-child){border-right:0}#sculp-site .trust-item{padding-right:0}#sculp-site .trust-item:not(:first-child){padding-left:0}#sculp-site .home-hero{grid-template-columns:1fr;gap:34px;min-height:auto;padding-top:40px}#sculp-site .home-hero .copy{max-width:680px;padding:54px 0 24px}#sculp-site .home-hero .copy h1{font-size:clamp(58px,10vw,84px);max-width:8.5ch}#sculp-site .home-hero .copy .lead{max-width:40ch}#sculp-site .home-hero>div:last-child{width:100%}#sculp-site .home-work{grid-template-columns:1fr}#sculp-site .home-work-stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .home-work>.photo{min-height:540px}#sculp-site .home-services,#sculp-site .home-studio,#sculp-site .home-team,#sculp-site .home-final{grid-template-columns:1fr}#sculp-site .trust-strip{grid-template-columns:1fr 1fr}#sculp-site .home-team .photo{order:1}#sculp-site .home-team>div:last-child{order:2}#sculp-site .studio-gallery{grid-template-columns:1fr}#sculp-site .studio-gallery .studio-stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .studio-gallery .photo{min-height:420px}#sculp-site .studio-gallery .studio-stack .photo{min-height:260px}#sculp-site .portfolio-featured{grid-template-columns:1fr}#sculp-site .portfolio-featured .stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .portfolio-featured .photo{min-height:520px}#sculp-site .portfolio-featured .stack .photo{min-height:300px}#sculp-site .team-founder{grid-template-columns:1fr}#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr 1fr}#sculp-site .bridal-hero{grid-template-columns:1fr;padding-top:54px}#sculp-site .bridal-hero-media .photo{min-height:520px}#sculp-site .book-layout{grid-template-columns:1fr}#sculp-site .promo-card{position:relative;top:auto}#sculp-site .pricing-grid{grid-template-columns:1fr}#sculp-site .service-list{grid-template-columns:1fr}#sculp-site .artist-note{align-items:flex-start;flex-direction:column}#sculp-site .mobile-toggle{display:block}#sculp-site .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}#sculp-site .nav.open{display:flex}#sculp-site .home-hero,#sculp-site .split{grid-template-columns:1fr}#sculp-site .home-hero .copy{order:2;padding:45px 0 65px}#sculp-site .home-hero .photo{order:1;min-height:55vh}#sculp-site .triptych{grid-template-columns:1fr 1fr}#sculp-site .triptych .photo:first-child{grid-column:1/-1;grid-row:auto;min-height:520px}#sculp-site .three,#sculp-site .people{grid-template-columns:1fr 1fr}}@media(max-width:640px){#sculp-site .actions{align-items:stretch;gap:10px}#sculp-site .actions .button{width:100%}#sculp-site .home-final .actions{justify-content:flex-start}#sculp-site .field.full .button{width:100%}#sculp-site .book-expectation-grid>div{padding-right:0;padding-bottom:18px}#sculp-site .book-expectation-grid>div:not(:last-child){border-right:0;border-bottom:1px solid var(--line)}#sculp-site .book-expectation-grid{grid-template-columns:1fr}#sculp-site .home-work-stack{grid-template-columns:1fr}#sculp-site .home-work>.photo{min-height:460px}#sculp-site .home-work-stack .photo{min-height:300px}#sculp-site .home-strip .photo{flex-basis:72vw}#sculp-site .trust-strip{grid-template-columns:1fr}#sculp-site .home-hero .photo{min-height:58vh}#sculp-site h1{font-size:clamp(48px,14vw,68px);line-height:1.01;max-width:12ch}#sculp-site h2{font-size:clamp(34px,10vw,48px);line-height:1.07}#sculp-site .lead{font-size:17px}#sculp-site p{font-size:16px;line-height:1.62}#sculp-site .button{font-size:11.5px;padding:13px 17px}#sculp-site .arch-top{border-radius:58px 58px 0 0}#sculp-site .arch-soft{border-radius:38px 38px 8px 8px}#sculp-site .shell{padding-left:22px;padding-right:22px}#sculp-site .section{padding:68px 0}#sculp-site .intro{padding:86px 0 72px}#sculp-site .shell.cta{padding:72px 28px}#sculp-site .logo{font-size:17px}#sculp-site .triptych,#sculp-site .three,#sculp-site .people,#sculp-site .form,#sculp-site .foot{grid-template-columns:1fr}#sculp-site .portfolio{display:block}#sculp-site .portfolio figure{margin-bottom:22px}#sculp-site .portfolio .photo,#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:460px}#sculp-site .photo.tall{min-height:470px}#sculp-site .field.full{grid-column:auto}#sculp-site .triptych .photo:first-child{min-height:470px}}
+
+@media(max-width:950px){#sculp-site .concierge{grid-template-columns:1fr}#sculp-site .team-next{grid-template-columns:1fr}#sculp-site .team-next-links{justify-content:flex-start}#sculp-site .section-actions{align-items:flex-start;flex-direction:column}#sculp-site .trust-item:not(:last-child){border-right:0}#sculp-site .trust-item{padding-right:0}#sculp-site .trust-item:not(:first-child){padding-left:0}#sculp-site .home-hero{grid-template-columns:1fr;gap:34px;min-height:auto;padding-top:40px}#sculp-site .home-hero .copy{max-width:680px;padding:54px 0 24px}#sculp-site .home-hero .copy h1{font-size:clamp(58px,10vw,84px);max-width:8.5ch}#sculp-site .home-hero .copy .lead{max-width:40ch}#sculp-site .home-hero>div:last-child{width:100%}#sculp-site .home-work{grid-template-columns:1fr}#sculp-site .home-work-stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .home-work>.photo{min-height:540px}#sculp-site .home-services,#sculp-site .home-studio,#sculp-site .home-team,#sculp-site .home-final{grid-template-columns:1fr}#sculp-site .trust-strip{grid-template-columns:1fr 1fr}#sculp-site .home-team .photo{order:1}#sculp-site .home-team>div:last-child{order:2}#sculp-site .studio-gallery{grid-template-columns:1fr}#sculp-site .studio-gallery .studio-stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .studio-gallery .photo{min-height:420px}#sculp-site .studio-gallery .studio-stack .photo{min-height:260px}#sculp-site .portfolio-featured{grid-template-columns:1fr}#sculp-site .portfolio-featured .stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .portfolio-featured .photo{min-height:520px}#sculp-site .portfolio-featured .stack .photo{min-height:300px}#sculp-site .team-founder{grid-template-columns:1fr}#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr 1fr}#sculp-site .bridal-hero{grid-template-columns:1fr;padding-top:54px}#sculp-site .bridal-hero-media .photo{min-height:520px}#sculp-site .book-layout{grid-template-columns:1fr}#sculp-site .promo-card{position:relative;top:auto}#sculp-site .pricing-grid{grid-template-columns:1fr}#sculp-site .service-list{grid-template-columns:1fr}#sculp-site .artist-note{align-items:flex-start;flex-direction:column}#sculp-site .mobile-toggle{display:block}#sculp-site .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}#sculp-site .nav.open{display:flex}#sculp-site .home-hero,#sculp-site .split{grid-template-columns:1fr}#sculp-site .home-hero .copy{order:2;padding:45px 0 65px}#sculp-site .home-hero .photo{order:1;min-height:55vh}#sculp-site .triptych{grid-template-columns:1fr 1fr}#sculp-site .triptych .photo:first-child{grid-column:1/-1;grid-row:auto;min-height:520px}#sculp-site .three,#sculp-site .people{grid-template-columns:1fr 1fr}}@media(max-width:640px){#sculp-site .concierge-options{grid-template-columns:1fr}#sculp-site .concierge-option{border-right:0;border-bottom:1px solid var(--line)!important}#sculp-site .concierge-option:last-child{border-bottom:0!important}#sculp-site .concierge-result{min-height:0}#sculp-site .actions{align-items:stretch;gap:10px}#sculp-site .actions .button{width:100%}#sculp-site .home-final .actions{justify-content:flex-start}#sculp-site .field.full .button{width:100%}#sculp-site .book-expectation-grid>div{padding-right:0;padding-bottom:18px}#sculp-site .book-expectation-grid>div:not(:last-child){border-right:0;border-bottom:1px solid var(--line)}#sculp-site .book-expectation-grid{grid-template-columns:1fr}#sculp-site .home-work-stack{grid-template-columns:1fr}#sculp-site .home-work>.photo{min-height:460px}#sculp-site .home-work-stack .photo{min-height:300px}#sculp-site .home-strip .photo{flex-basis:72vw}#sculp-site .trust-strip{grid-template-columns:1fr}#sculp-site .home-hero .photo{min-height:58vh}#sculp-site h1{font-size:clamp(48px,14vw,68px);line-height:1.01;max-width:12ch}#sculp-site h2{font-size:clamp(34px,10vw,48px);line-height:1.07}#sculp-site .lead{font-size:17px}#sculp-site p{font-size:16px;line-height:1.62}#sculp-site .button{font-size:11.5px;padding:13px 17px}#sculp-site .arch-top{border-radius:58px 58px 0 0}#sculp-site .arch-soft{border-radius:38px 38px 8px 8px}#sculp-site .shell{padding-left:22px;padding-right:22px}#sculp-site .section{padding:68px 0}#sculp-site .intro{padding:86px 0 72px}#sculp-site .shell.cta{padding:72px 28px}#sculp-site .logo{font-size:17px}#sculp-site .triptych,#sculp-site .three,#sculp-site .people,#sculp-site .form,#sculp-site .foot{grid-template-columns:1fr}#sculp-site .portfolio{display:block}#sculp-site .portfolio figure{margin-bottom:22px}#sculp-site .portfolio .photo,#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:460px}#sculp-site .photo.tall{min-height:470px}#sculp-site .field.full{grid-column:auto}#sculp-site .triptych .photo:first-child{min-height:470px}}
 </style>
-<header class="mast"><div class="shell mast-inner"><a class="logo" href="#home">SCULP STUDIO</a><button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="sculp-nav">MENU ☰</button><nav class="nav" id="sculp-nav" aria-label="Main navigation"><a href="#bridal">BRIDAL</a><a href="#occasions">OCCASIONS</a><a href="#portfolio">PORTFOLIO</a><a href="#team">TEAM</a><a href="#about">ABOUT</a><a href="#book">BOOK</a></nav></div></header>
+<header class="mast"><div class="shell mast-inner"><a class="logo" href="#home">SCULP STUDIO</a><button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="sculp-nav">MENU ☰</button><nav class="nav" id="sculp-nav" aria-label="Main navigation"><a href="#bridal">BRIDAL</a><a href="#occasions">OCCASIONS</a><a href="#portfolio">PORTFOLIO</a><a href="#team">TEAM</a><a href="#about">ABOUT</a><a href="#book">ENQUIRE</a></nav></div></header>
 <main>
 <article class="view" data-page="home">
 
@@ -258,8 +281,8 @@
     <div class="copy">
       <div class="eyebrow">Toronto · Available for travel</div>
       <div class="content-note"><strong>待老板确认：</strong>首页 Hero 主标题与一句总定位。当前延续品牌方向 “Beauty, considered.”。</div>
-      <h1>Beauty,<br>considered.</h1>
-      <p class="lead">Refined makeup for weddings, events, image-making, and education — created with intention by SCULP Studio.</p>
+      <h1>Beauty,<br>shaped around you.</h1>
+      <p class="lead">Refined makeup for weddings, events, image-making, and education — shaped around the person, the setting, and the camera.</p>
       <div class="actions">
         <a class="button fill" href="#bridal">Explore Bridal</a>
         <a class="button" href="#portfolio">View Portfolio →</a>
@@ -310,7 +333,7 @@
 <section class="section">
   <div class="shell">
     <div class="eyebrow">Services</div>
-    <h2>Two ways into SCULP.</h2>
+    <h2>Start with the occasion.</h2>
     <div class="home-services">
       <div class="home-service primary">
         <div class="eyebrow">01 · Bridal</div>
@@ -324,6 +347,35 @@
         <h3>For life, camera, and learning.</h3>
         <p>Makeup for events, personal appointments, commercial projects, photoshoots, and education.</p>
         <a href="#occasions">Explore Occasions →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell concierge" id="sculp-concierge">
+    <div class="concierge-intro">
+      <div class="eyebrow">SCULP Concierge</div>
+      <h2>Not sure where to begin?</h2>
+      <p class="lead">Choose what you’re getting ready for. We’ll point you to the best place to start.</p>
+    </div>
+
+    <div class="concierge-ui">
+      <div class="concierge-options" role="group" aria-label="Choose what you are getting ready for">
+        <button type="button" class="concierge-option active" data-concierge="wedding" aria-pressed="true">I’m getting married</button>
+        <button type="button" class="concierge-option" data-concierge="event" aria-pressed="false">I have an event</button>
+        <button type="button" class="concierge-option" data-concierge="camera" aria-pressed="false">I’m creating images</button>
+        <button type="button" class="concierge-option" data-concierge="learn" aria-pressed="false">I want to learn</button>
+      </div>
+
+      <div class="concierge-result" aria-live="polite">
+        <div class="eyebrow" id="concierge-label">Recommended · Bridal</div>
+        <h3 id="concierge-title">Start with SCULP Bridal.</h3>
+        <p id="concierge-copy">Wedding-day makeup, previews, bridal-party services, and half-day support are all planned from one place.</p>
+        <div class="actions">
+          <a class="button fill" id="concierge-primary" href="#bridal">Explore Bridal</a>
+          <a id="concierge-secondary" href="#book?service=Bridal">Enquire with Bridal pre-selected →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -360,16 +412,16 @@
   <div class="shell">
     <div class="trust-strip">
       <div class="trust-item">
-        <h3>Toronto-based</h3>
-        <p>Available for travel.</p>
+        <h3>Toronto studio</h3>
+        <p>Based in Toronto · available for travel.</p>
       </div>
       <div class="trust-item">
-        <h3>Bridal to Commercial</h3>
-        <p>Beauty across different settings and cameras.</p>
+        <h3>Bridal to camera</h3>
+        <p>Weddings, events, portraits, and commercial work.</p>
       </div>
       <div class="trust-item">
-        <h3>Individual Artists</h3>
-        <p>A shared studio point of view and service standard.</p>
+        <h3>Artist guidance</h3>
+        <p>Tell us the brief; we’ll help you find the right fit.</p>
       </div>
     </div>
   </div>
@@ -384,7 +436,6 @@
     </div>
     <div class="actions">
       <a class="button fill" href="#book">Start an enquiry</a>
-      <a href="#bridal">View services →</a>
     </div>
   </div>
 </section>
@@ -561,7 +612,7 @@
         <h3>Event Makeup</h3>
         <p>For celebrations, dinners, graduations and occasions where you want to feel polished and camera-ready.</p>
         <div class="content-note"><strong>待老板确认：</strong>Event Makeup 实际覆盖哪些场景；是否包含 prom / graduation / birthday / gala / wedding guest 等。</div>
-        <a href="#book">Enquire →</a>
+        
       </div>
 
       <div class="card">
@@ -569,7 +620,7 @@
         <h3>Personal Makeup</h3>
         <p>For everyday refinement, dates, important meetings or simply looking and feeling more considered.</p>
         <div class="content-note"><strong>待老板确认：</strong>是否真的提供“日常 / Personal Makeup”单次服务；如果只做活动妆，这一项应删除或改名。</div>
-        <a href="#book">Enquire →</a>
+        
       </div>
 
       <div class="card">
@@ -577,7 +628,7 @@
         <h3>Commercial Beauty</h3>
         <p>For campaigns, advertising, branded content and creative commercial projects.</p>
         <div class="content-note"><strong>待老板确认：</strong>商业项目是按 day rate、half-day、小时还是 project quote 报价；是否涉及 assistant、travel、usage 或其他商业条款。</div>
-        <a href="#book">Request a quote →</a>
+        
       </div>
 
       <div class="card">
@@ -585,8 +636,12 @@
         <h3>Photoshoot Makeup</h3>
         <p>For portraits, engagements, editorial-style sessions and studio photography.</p>
         <div class="content-note"><strong>待老板确认：</strong>Photoshoot 是否包含 engagement / portrait / personal branding / headshot / creative shoot；需要明确与 Commercial 的边界。</div>
-        <a href="#book">Enquire →</a>
+        
       </div>
+    </div>
+    <div class="section-actions">
+      <p>Tell us what you’re planning and we’ll guide you to the right makeup service.</p>
+      <a class="button" href="#book">Start a makeup enquiry</a>
     </div>
   </div>
 </section>
@@ -605,7 +660,7 @@
         <h3>1-on-1 Makeup Lesson</h3>
         <p>A personalized lesson focused on your features, technique, product use and a routine you can repeat with confidence.</p>
         <div class="content-note"><strong>待老板确认：</strong>课程时长、是否需要自带化妆品、是否包含产品推荐 / face chart / follow-up、适合新手还是进阶用户。</div>
-        <a href="#book">Enquire about 1-on-1 →</a>
+        
       </div>
 
       <div class="card">
@@ -613,8 +668,12 @@
         <h3>Group Makeup Class</h3>
         <p>For friends, small groups, events or brand-led sessions. Format and focus can be tailored to the group.</p>
         <div class="content-note"><strong>待老板确认：</strong>团课最少 / 最多人数、时长、场地、是否可做私人聚会 / corporate / brand workshop，以及报价方式。</div>
-        <a href="#book">Enquire about a group class →</a>
+        
       </div>
+    </div>
+    <div class="section-actions">
+      <p>Tell us whether you’re learning solo or with a group. We’ll help shape the right format.</p>
+      <a class="button" href="#book">Enquire about education</a>
     </div>
   </div>
 </section>
@@ -623,8 +682,8 @@
   <div class="shell statement">
     <div class="eyebrow">Pricing</div>
     <div class="content-note"><strong>待老板确认：</strong>哪些服务适合公开固定价格 / starting from，哪些只适合 Request a Quote。建议 Commercial 保留 quote，其余服务可在价格确认后公开。</div>
-    <h2>Service details coming soon.</h2>
-    <p>Pricing and package details are currently being finalized. Tell us what you need and we’ll guide you to the right service.</p>
+    <h2>Tell us what you’re planning.</h2>
+    <p>We’ll help identify the right service, format, and artist for the brief.</p>
     <div class="actions" style="justify-content:center"><a class="button fill" href="#book">Start an enquiry</a></div>
   </div>
 </section>
@@ -791,11 +850,16 @@
 </section>
 
 <section class="section">
-  <div class="shell cta">
-    <div class="eyebrow">Find your artist</div>
-    <h2>Start with the service.<br>We’ll help with the match.</h2>
-    <p>You do not need to know exactly who to book before enquiring. Tell us what you're looking for and we can guide you toward the right artist and service.</p>
-    <div class="actions" style="justify-content:center"><a class="button fill" href="#book">Start an enquiry</a><a class="button" href="#bridal">Explore Bridal →</a></div>
+  <div class="shell team-next">
+    <div>
+      <div class="eyebrow">Find your artist</div>
+      <h2>Start with the service.<br>We’ll help with the match.</h2>
+      <p>You do not need to know exactly who to book before enquiring. Tell us what you're looking for and we can guide you toward the right artist and service.</p>
+    </div>
+    <div class="team-next-links">
+      <a href="#book">Start an enquiry →</a>
+      <a href="#bridal">Explore Bridal →</a>
+    </div>
   </div>
 </section>
 </article>
@@ -852,7 +916,7 @@
     <div class="eyebrow">The Studio</div>
     <div class="content-note"><strong>待补（Studio 装修完成后）：</strong>空间主图 1 张 + 细节图 2 张。建议优先拍整体空间、化妆台/镜面、材质或品牌细节。这里是 Studio 图片的主要展示位置。</div>
     <h2>A space for beauty,<br>detail, and calm.</h2>
-    <p class="lead">The studio should feel like an extension of the SCULP approach — considered, refined, and designed around the experience of getting ready.</p>
+    <p class="lead">The studio is designed as an extension of the SCULP approach — considered, refined, and centered on the experience of getting ready.</p>
     <div class="studio-gallery">
       <div class="photo" data-image="待补：Studio Main Interior"></div>
       <div class="studio-stack">
@@ -1014,8 +1078,113 @@
   </div>
 </div>
 </article>
-</main><div class="cta"><div class="shell"><div class="eyebrow">An invitation</div><h2>Your moment.<br>Our attention.</h2><p>Tell us where beauty will take you next.</p><a class="button fill" href="#book">Enquire with SCULP</a></div></div><footer><div class="shell foot"><div><a class="logo" href="#home">SCULP STUDIO</a><p>Contemporary beauty for moments that matter.<br>Toronto, Ontario · Available for travel</p></div><div><div class="eyebrow">Explore</div><a href="#bridal">Bridal</a><a href="#occasions">Occasions</a><a href="#portfolio">Portfolio</a><a href="#team">Team</a><a href="#about">About</a></div><div><div class="eyebrow">Connect</div><a href="#book">Enquire</a><a href="mailto:hello@sculpstudio.ca">hello@sculpstudio.ca</a><span class="note">Add your verified Instagram link here.</span></div></div></footer>
-<script>(function(){var root=document.getElementById('sculp-site');if(!root)return;var pages=['home','bridal','occasions','portfolio','team','about','book'];function route(){var key=location.hash.slice(1).split('?')[0];if(pages.indexOf(key)<0)key='home';root.querySelectorAll('.view').forEach(function(el){el.hidden=el.dataset.page!==key});root.querySelectorAll('.nav a').forEach(function(el){var active=el.getAttribute('href')==='#'+key;el.classList.toggle('active',active);if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')});var menu=root.querySelector('.nav');menu.classList.remove('open');root.querySelector('.mobile-toggle').setAttribute('aria-expanded','false');window.scrollTo(0,0)}window.addEventListener('hashchange',route);route();root.querySelector('.mobile-toggle').addEventListener('click',function(){var menu=root.querySelector('.nav');var open=menu.classList.toggle('open');this.setAttribute('aria-expanded',String(open))});root.querySelectorAll('.filter').forEach(function(button){button.addEventListener('click',function(){var value=this.dataset.filter;root.querySelectorAll('.filter').forEach(function(b){b.setAttribute('aria-pressed',String(b===button))});root.querySelectorAll('.portfolio figure').forEach(function(fig){fig.hidden=value!=='all'&&fig.dataset.category!==value})})});var mast=root.querySelector('.mast');function updateMast(){if(mast)mast.classList.toggle('scrolled',window.scrollY>28)}window.addEventListener('scroll',updateMast,{passive:true});updateMast();root.querySelector('#sculp-form').addEventListener('submit',function(event){event.preventDefault();if(!this.reportValidity())return;var data=new FormData(this),lines=['SCULP Studio enquiry',''];['service','artist','date','location','party','timing','name','email','contact','contact_method','details'].forEach(function(key){lines.push(key.toUpperCase()+': '+(data.get(key)||'—'))});var subject=encodeURIComponent('SCULP enquiry — '+data.get('service')+' — '+data.get('date'));window.location.href='mailto:hello@sculpstudio.ca?subject='+subject+'&body='+encodeURIComponent(lines.join('\n'))})})();</script>
+</main><footer><div class="shell foot"><div><a class="logo" href="#home">SCULP STUDIO</a><p>Bridal, event, commercial beauty & education.<br>Toronto, Ontario · Available for travel</p></div><div><div class="eyebrow">Explore</div><a href="#bridal">Bridal</a><a href="#occasions">Occasions</a><a href="#portfolio">Portfolio</a><a href="#team">Team</a><a href="#about">About</a></div><div><div class="eyebrow">Connect</div><a href="#book">Enquire</a><a href="mailto:hello@sculpstudio.ca">hello@sculpstudio.ca</a><span class="note">Add your verified Instagram link here.</span></div></div></footer>
+<script>(function(){
+var root=document.getElementById('sculp-site');if(!root)return;
+var pages=['home','bridal','occasions','portfolio','team','about','book'];
+
+function getHashParts(){
+  var raw=location.hash.slice(1),parts=raw.split('?');
+  return {page:parts[0],params:new URLSearchParams(parts[1]||'')};
+}
+
+function applyBookPrefill(params){
+  if(!params||!root.querySelector('#sculp-form'))return;
+  var service=params.get('service');
+  if(service){
+    var select=root.querySelector('#sculp-form [name="service"]');
+    if(select){
+      Array.from(select.options).forEach(function(opt){
+        if(opt.text===service||opt.value===service)select.value=opt.value||opt.text;
+      });
+    }
+  }
+}
+
+function route(){
+  var hash=getHashParts(),key=hash.page;
+  if(pages.indexOf(key)<0)key='home';
+  root.querySelectorAll('.view').forEach(function(el){el.hidden=el.dataset.page!==key});
+  root.querySelectorAll('.nav a').forEach(function(el){
+    var active=el.getAttribute('href')==='#'+key;
+    el.classList.toggle('active',active);
+    if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');
+  });
+  var menu=root.querySelector('.nav');
+  menu.classList.remove('open');
+  root.querySelector('.mobile-toggle').setAttribute('aria-expanded','false');
+  if(key==='book')applyBookPrefill(hash.params);
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);route();
+
+root.querySelector('.mobile-toggle').addEventListener('click',function(){
+  var menu=root.querySelector('.nav'),open=menu.classList.toggle('open');
+  this.setAttribute('aria-expanded',String(open));
+});
+
+var mast=root.querySelector('.mast');
+function updateMast(){if(mast)mast.classList.toggle('scrolled',window.scrollY>28)}
+window.addEventListener('scroll',updateMast,{passive:true});updateMast();
+
+function enableDragScroll(el){
+  if(!el)return;
+  var down=false,startX=0,startScroll=0,moved=false;
+  el.addEventListener('pointerdown',function(e){
+    if(e.pointerType==='touch')return;
+    down=true;moved=false;startX=e.clientX;startScroll=el.scrollLeft;
+    el.classList.add('dragging');
+    el.setPointerCapture(e.pointerId);
+  });
+  el.addEventListener('pointermove',function(e){
+    if(!down)return;
+    var dx=e.clientX-startX;
+    if(Math.abs(dx)>4)moved=true;
+    el.scrollLeft=startScroll-dx;
+  });
+  function end(e){
+    if(!down)return;
+    down=false;el.classList.remove('dragging');
+    try{el.releasePointerCapture(e.pointerId)}catch(_){}
+  }
+  el.addEventListener('pointerup',end);
+  el.addEventListener('pointercancel',end);
+  el.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+}
+enableDragScroll(root.querySelector('#portfolio-strip'));
+enableDragScroll(root.querySelector('.home-strip'));
+
+var conciergeData={
+  wedding:{label:'Recommended · Bridal',title:'Start with SCULP Bridal.',copy:'Wedding-day makeup, previews, bridal-party services, and half-day support are all planned from one place.',primary:'Explore Bridal',href:'#bridal',secondary:'Enquire with Bridal pre-selected →',secondaryHref:'#book?service=Bridal'},
+  event:{label:'Recommended · Event Makeup',title:'Start with Event Makeup.',copy:'For celebrations, dinners, graduations, wedding-guest beauty, and other moments where you want to feel polished and camera-ready.',primary:'Explore Occasions',href:'#occasions',secondary:'Enquire with Event Makeup pre-selected →',secondaryHref:'#book?service=Event%20Makeup'},
+  camera:{label:'Recommended · Image-making',title:'Start with the brief.',copy:'Portraits, photoshoots, campaigns, and branded content can require different levels of support. Explore the image-making services, then send us the brief.',primary:'Explore Occasions',href:'#occasions',secondary:'Start an enquiry →',secondaryHref:'#book'},
+  learn:{label:'Recommended · Education',title:'Start with how you want to learn.',copy:'Choose a private 1-on-1 lesson for your own routine, or a group class for friends, events, or brand-led sessions.',primary:'Explore Education',href:'#occasions',secondary:'Enquire about a lesson →',secondaryHref:'#book?service=1-on-1%20Makeup%20Lesson'}
+};
+
+root.querySelectorAll('.concierge-option').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var key=this.dataset.concierge,data=conciergeData[key];if(!data)return;
+    root.querySelectorAll('.concierge-option').forEach(function(b){b.classList.toggle('active',b===btn);b.setAttribute('aria-pressed',String(b===btn))});
+    root.querySelector('#concierge-label').textContent=data.label;
+    root.querySelector('#concierge-title').textContent=data.title;
+    root.querySelector('#concierge-copy').textContent=data.copy;
+    var primary=root.querySelector('#concierge-primary'),secondary=root.querySelector('#concierge-secondary');
+    primary.textContent=data.primary;primary.setAttribute('href',data.href);
+    secondary.textContent=data.secondary;secondary.setAttribute('href',data.secondaryHref);
+  });
+});
+
+var form=root.querySelector('#sculp-form');
+if(form)form.addEventListener('submit',function(event){
+  event.preventDefault();if(!this.reportValidity())return;
+  var data=new FormData(this),lines=['SCULP Studio enquiry',''];
+  ['service','artist','date','location','party','timing','name','email','contact','contact_method','details'].forEach(function(key){
+    lines.push(key.toUpperCase()+': '+(data.get(key)||'—'));
+  });
+  var subject=encodeURIComponent('SCULP enquiry — '+data.get('service')+' — '+data.get('date'));
+  window.location.href='mailto:hello@sculpstudio.ca?subject='+subject+'&body='+encodeURIComponent(lines.join('\n'));
+});
+})();</script>
 </div>
 </body>
 </html>
