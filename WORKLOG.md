@@ -623,3 +623,54 @@ For every future website modification:
 
 **Related site commit**
 - `bc10a1d4f9892f36752514b6ae2399a9e939c679`
+
+
+### Deep polish pass — conversion clarity, page endings, and SCULP Concierge
+
+**Structure / Information Architecture — P1**
+- Completed a full pre-image review across Home, Bridal, Occasions, Portfolio, Team, About, Book, navigation, and footer.
+- Removed the generic sitewide CTA because every page now has its own more context-appropriate ending.
+- Simplified Occasions by removing repetitive per-card enquiry links and moving conversion actions to the section level.
+- Replaced the heavy Team closing panel with a lighter editorial close consistent with About.
+- Kept page responsibilities distinct: Portfolio proves the work, Team builds trust, About explains the point of view, Book converts.
+
+**Core Functionality — P1**
+- Added **SCULP Concierge**, a four-intent service finder on Home:
+  - getting married
+  - attending an event
+  - creating images
+  - learning makeup
+- Concierge dynamically recommends the relevant starting point and changes both primary and secondary CTAs.
+- Added Book-page query prefill, e.g. `#book?service=Bridal`, so selected services can carry into the enquiry form.
+- Added real mouse / pointer drag behavior to the Portfolio strip and Home work strip; previous styling suggested dragging but did not implement it.
+- Changed the navigation label from BOOK to ENQUIRE because the current flow is an enquiry form, not instant scheduling.
+
+**Visual / Brand — P2**
+- Replaced the more abstract Home Hero line “Beauty, considered.” with clearer positioning: “Beauty, shaped around you.”
+- Refined Home supporting copy to connect the person, setting, and camera.
+- Reworded the Home service intro to “Start with the occasion.”
+- Reworked the Home trust strip to communicate studio location, range of work, and artist guidance without invented statistics.
+- Removed the unfinished-sounding public line “Service details coming soon” from Occasions while keeping the internal owner note about pricing.
+- Made the About studio copy more confident and aligned with the actual studio design intent.
+- Clarified the footer description around bridal, event, commercial beauty, and education.
+
+**Accessibility / Technical — P0**
+- Concierge controls use native buttons, `aria-pressed`, and an `aria-live` result region.
+- Added reduced-motion handling for users who prefer less animation.
+- Validated the final JavaScript syntax after the update.
+- Verified one Concierge instance, one Portfolio strip, Book prefill support, and removal of redundant global CTA markup.
+
+**Research basis**
+- Reviewed current premium bridal / beauty sites and adjacent luxury service experiences before this pass.
+- Stronger examples consistently prioritize clear service routing, image-led editorial presentation, transparent next steps, and booking/inquiry paths that feel integrated rather than bolted on.
+- The physical studio is treated as part of the premium experience rather than a background detail, which informed the continued emphasis on SCULP's Studio sections.
+
+**Pending / Next — P1**
+- Replace placeholders with final photography.
+- Confirm remaining owner notes: final service names, artist titles, pricing details, response time, retainer language, and studio uses.
+- Replace mailto with a real form endpoint before commercial launch.
+- Remove internal Chinese content notes before publishing publicly.
+- After final imagery is inserted, perform one last crop/object-position and mobile QA pass.
+
+**Related site commit**
+- `bdddb6a8ae17660175e850a350835bd3858fd969`
