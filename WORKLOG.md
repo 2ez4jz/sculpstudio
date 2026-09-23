@@ -361,3 +361,48 @@ For every future website modification:
 
 **Related site commit**
 - `2c30e9fc2c8ced2c8f56c32ce284462f4d06cd78`
+
+
+### Visual system — aligned with the new studio interior
+
+**Structure / Information Architecture — P1**
+- Kept the current page architecture intact.
+- Treated the physical studio as a visual reference system rather than adding new sections or changing page hierarchy.
+
+**Core Functionality — P1**
+- No routes, forms, pricing, enquiry flows, portfolio interactions, or responsive behaviors were removed.
+- All changes are visual-system refinements only.
+
+**Visual / Brand — P2**
+- Shifted the site palette from cooler ivory/gray toward a warmer architectural palette inspired by the studio renderings:
+  - warm ivory
+  - sand
+  - light oak
+  - warm charcoal
+- Reduced the sense of pure black by changing major dark accents and CTAs to a warmer charcoal.
+- Warmed the frosted header so it feels closer to the studio wall tone.
+- Changed placeholder/image surfaces from gray-taupe to warmer beige/oak gradients.
+- Softened card and form surfaces to match the studio's cream cabinetry, light wood, and warm neutral materials.
+- Added a warmer hover state based on the studio's light-wood tone.
+- Added very selective architectural curves inspired by the studio's repeated arches:
+  - Bridal Hero image
+  - Miranda Founder image
+  - About founder/work image
+  - About Studio main image
+- Kept most cards and layouts rectilinear so the site does not become overly decorative or literal.
+- Softened divider/border tones and footer background for better continuity with the studio interior.
+
+**Polish / Nice-to-have — P3**
+- Added reduced arch radii on mobile so curved image frames stay proportionate on smaller screens.
+- Added a subtle featured-pricing shadow to introduce the softer depth seen in the studio lighting.
+
+**Pending / Next — P2**
+- Review the new palette against the final built studio once real photography is available.
+- Replace placeholders with real studio and beauty photography before deciding whether the arch treatment should remain on all selected images.
+- Home remains intentionally provisional and should be finalized after the core pages and final photography are available.
+
+**Reference**
+- Visual direction based on the new SCULP studio design renderings: warm cream walls, light wood cabinetry, arched niches/screens, black architectural trim, soft indirect lighting, and restrained neutral materials.
+
+**Related site commit**
+- `67262547ab3cc1f3804fcd1d45bfeeab9fe6c7e2`
