@@ -587,3 +587,39 @@ For every future website modification:
 
 **Related site commit**
 - `5956a0e63de5bf0cabc016cf518ddd6994b33ef4`
+
+
+### Sitewide detail polish — micro-interactions, rhythm, and form finish
+
+**Structure / Information Architecture — P1**
+- Kept all page structures, routes, and content hierarchy unchanged.
+- Focused strictly on finish-level details rather than introducing new sections.
+
+**Core Functionality — P1**
+- Preserved all existing navigation, portfolio scrolling, pricing, Book form behavior, and enquiry routing.
+- Added clearer keyboard focus states for links, buttons, and form controls.
+- Hid the generic sitewide dark CTA on Home so the newly designed Home final enquiry section remains the single closing conversion point.
+
+**Visual / Brand — P2**
+- Standardized eyebrow spacing and heading/body rhythm.
+- Refined text-link treatment across Home, About, and service modules with a lighter editorial underline.
+- Standardized button height, vertical alignment, hover motion, and transition timing.
+- Added restrained image hover scaling only when real images are present.
+- Added very subtle pricing-card lift on hover.
+- Tightened Home service, Studio, Team, trust-strip, and final-CTA spacing.
+- Added dividers within the Home trust strip for clearer scanning.
+- Refined Book form spacing, placeholders, focus state, group rhythm, and expectation-section dividers.
+- Added a small footer alignment pass.
+
+**Accessibility / Technical — P0**
+- Added visible :focus-visible states for keyboard users.
+- Improved input/select/textarea focus feedback without changing the warm visual system.
+- Added mobile-specific full-width CTA behavior where narrow screens benefit from it.
+
+**Pending / Next — P2**
+- Continue reviewing page screenshots at 1440px, 1280px, tablet, and mobile.
+- Fine-tune only local outliers from this point onward.
+- Remove internal Chinese content notes before public launch.
+
+**Related site commit**
+- `bc10a1d4f9892f36752514b6ae2399a9e939c679`
