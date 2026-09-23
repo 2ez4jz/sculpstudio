@@ -214,3 +214,37 @@ For every future website modification:
 
 **Related site commit**
 - `20d73a81418ef9ac85d89431ca937ada21e23ac7`
+
+
+### Occasions page — owner review markers and decision points
+
+**Structure / Information Architecture — P1**
+- Kept Occasions as the combined non-bridal hub for Makeup Services + Education.
+- Preserved the current makeup structure: Event Makeup, Personal Makeup, Commercial Beauty, Photoshoot Makeup.
+- Preserved the education structure: 1-on-1 Makeup Lesson + Group Makeup Class.
+- Added clear Chinese internal review markers above each major section and service so owner decisions can be made directly in context.
+
+**Core Functionality — P1**
+- Marked which services require business-rule confirmation before launch.
+- Flagged Commercial Beauty for quote-based pricing and business terms rather than a simple fixed-price card.
+- Flagged education modules for class duration, format, group size, venue, inclusions and pricing model.
+- Kept all current enquiry CTAs active.
+
+**Visual / Brand — P2**
+- Reused the same Chinese staging-note system already established on Bridal and Team so internal review remains consistent across the site.
+
+**Pending / Next — P1**
+- Confirm Occasions page headline and positioning.
+- Confirm whether all four makeup categories are real ongoing services.
+- Confirm Event Makeup scope.
+- Confirm whether Personal Makeup is a standalone service.
+- Define Commercial pricing model and project terms.
+- Define Photoshoot vs Commercial boundaries.
+- Confirm whether Education remains inside Occasions or gets a standalone Course/Education page later.
+- Define 1-on-1 duration, inclusions and target audience.
+- Define Group Class minimum/maximum size, duration, venue and quote method.
+- Decide which services show fixed price / starting from / request a quote.
+- Supply 4–6 suitable Occasions / Education images or decide on a more selective editorial-image approach.
+
+**Related site commit**
+- `287f96060baa096ef09e5bfa77539655d6dbc69f`
