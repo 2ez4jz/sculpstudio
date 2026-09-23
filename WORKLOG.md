@@ -114,3 +114,37 @@ For every future website modification:
 
 **Related site commit**
 - `d55bb50ba06d0e1409fc1834578d51a766ff68eb`
+
+
+### Bridal page — structure-first refinement and content-gap markers
+
+**Structure / Information Architecture — P1**
+- Rebuilt the Bridal hero into a 40/60 editorial split: message and CTA on the left, primary image on the right.
+- Kept the page flow focused on: Hero → Bridal Approach → Core Bridal Experiences → Artist Level → Additional Services → What's Included → Booking Notes → Final Enquiry.
+- Preserved the three core Bridal products and current pricing structure.
+
+**Core Functionality — P1**
+- Added a secondary Bridal-work CTA from the hero to Portfolio.
+- Kept all pricing, artist-tier links, booking CTA and service information connected to the existing site routes.
+- Updated Bridesmaids & Mothers to show the currently known $200 / $180 / $160 tier values while explicitly marking the quantity mapping as awaiting confirmation.
+
+**Visual / Brand — P2**
+- Introduced a stronger editorial Bridal hero with a larger image area and restrained copy.
+- Added a dedicated staging-note style so missing content can be clearly marked in Chinese without confusing it with final brand copy.
+- Updated Bridal copy toward the current brand direction: considered, personal, refined, and camera-aware.
+
+**Fixes / Technical Maintenance — P0**
+- Added responsive behavior for the new Bridal hero so it collapses cleanly to one column on mobile.
+
+**Pending / Next — P1**
+- Hero image.
+- Bridal Approach image.
+- Final owner approval for hero headline and brand sentence.
+- Final decision on whether “Still entirely you.” is the Bridal core philosophy line.
+- Final English names for artist tiers.
+- Confirm Bridesmaids & Mothers quantity-to-price mapping.
+- Confirm accessory deposit/return details.
+- Confirm formal booking / cancellation / rescheduling / non-refundable wording.
+
+**Related site commit**
+- `5371a897e2d0187cacc95938b4f9c819a2529f65`
