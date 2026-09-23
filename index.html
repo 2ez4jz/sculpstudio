@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SCULP Studio</title>
 <meta name="description" content="Contemporary beauty for weddings, occasions, and moments that matter. Toronto, Ontario.">
-<style>html,body{margin:0;padding:0;background:#f4f1eb}body{min-height:100vh}@media(max-width:620px){#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr}#sculp-site .team-founder .photo{min-height:480px}}</style>
+<style>html,body{margin:0;padding:0;background:#f4f1eb}body{min-height:100vh}@media(max-width:620px){#sculp-site .portfolio-featured .stack{grid-template-columns:1fr}#sculp-site .portfolio-thumb{flex-basis:72vw}#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr}#sculp-site .team-founder .photo{min-height:480px}}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
@@ -49,6 +49,19 @@
 #sculp-site .team-person p{font-size:14px}
 #sculp-site .team-standard{max-width:900px;margin:0 auto;text-align:center}
 #sculp-site .team-standard .three{text-align:left;margin-top:30px}
+#sculp-site .portfolio-featured{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:34px}
+#sculp-site .portfolio-featured .photo{min-height:620px}
+#sculp-site .portfolio-featured .stack{display:grid;grid-template-rows:1fr 1fr;gap:18px}
+#sculp-site .portfolio-featured .stack .photo{min-height:301px}
+#sculp-site .portfolio-strip-wrap{position:relative;margin-top:22px}
+#sculp-site .portfolio-strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 2px 10px;cursor:grab;user-select:none;-webkit-overflow-scrolling:touch}
+#sculp-site .portfolio-strip::-webkit-scrollbar{display:none}
+#sculp-site .portfolio-strip.dragging{cursor:grabbing;scroll-snap-type:none}
+#sculp-site .portfolio-thumb{flex:0 0 clamp(150px,18vw,230px);scroll-snap-align:start}
+#sculp-site .portfolio-thumb .photo{min-height:220px}
+#sculp-site .portfolio-thumb figcaption{font-size:11px;color:var(--muted);margin-top:8px}
+#sculp-site .portfolio-hint{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:8px;font-size:12px;color:var(--muted)}
+
 
 #sculp-site .section-kicker{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
 #sculp-site .service-context{margin-top:10px;color:var(--muted);font-size:13px}
@@ -62,7 +75,7 @@
 #sculp-site .promo-card .promo-code{margin:22px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 #sculp-site .promo-card .button{margin-top:18px;width:100%}
 
-@media(max-width:950px){#sculp-site .team-founder{grid-template-columns:1fr}#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr 1fr}#sculp-site .bridal-hero{grid-template-columns:1fr;padding-top:54px}#sculp-site .bridal-hero-media .photo{min-height:520px}#sculp-site .book-layout{grid-template-columns:1fr}#sculp-site .promo-card{position:relative;top:auto}#sculp-site .pricing-grid{grid-template-columns:1fr}#sculp-site .service-list{grid-template-columns:1fr}#sculp-site .artist-note{align-items:flex-start;flex-direction:column}#sculp-site .mobile-toggle{display:block}#sculp-site .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}#sculp-site .nav.open{display:flex}#sculp-site .home-hero,#sculp-site .split{grid-template-columns:1fr}#sculp-site .home-hero .copy{order:2;padding:45px 0 65px}#sculp-site .home-hero .photo{order:1;min-height:55vh}#sculp-site .triptych{grid-template-columns:1fr 1fr}#sculp-site .triptych .photo:first-child{grid-column:1/-1;grid-row:auto;min-height:520px}#sculp-site .three,#sculp-site .people{grid-template-columns:1fr 1fr}}@media(max-width:640px){#sculp-site .logo{font-size:17px}#sculp-site .triptych,#sculp-site .three,#sculp-site .people,#sculp-site .form,#sculp-site .foot{grid-template-columns:1fr}#sculp-site .portfolio{display:block}#sculp-site .portfolio figure{margin-bottom:22px}#sculp-site .portfolio .photo,#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:460px}#sculp-site .photo.tall{min-height:470px}#sculp-site .field.full{grid-column:auto}#sculp-site .triptych .photo:first-child{min-height:470px}}
+@media(max-width:950px){#sculp-site .portfolio-featured{grid-template-columns:1fr}#sculp-site .portfolio-featured .stack{grid-template-columns:1fr 1fr;grid-template-rows:none}#sculp-site .portfolio-featured .photo{min-height:520px}#sculp-site .portfolio-featured .stack .photo{min-height:300px}#sculp-site .team-founder{grid-template-columns:1fr}#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr 1fr}#sculp-site .bridal-hero{grid-template-columns:1fr;padding-top:54px}#sculp-site .bridal-hero-media .photo{min-height:520px}#sculp-site .book-layout{grid-template-columns:1fr}#sculp-site .promo-card{position:relative;top:auto}#sculp-site .pricing-grid{grid-template-columns:1fr}#sculp-site .service-list{grid-template-columns:1fr}#sculp-site .artist-note{align-items:flex-start;flex-direction:column}#sculp-site .mobile-toggle{display:block}#sculp-site .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}#sculp-site .nav.open{display:flex}#sculp-site .home-hero,#sculp-site .split{grid-template-columns:1fr}#sculp-site .home-hero .copy{order:2;padding:45px 0 65px}#sculp-site .home-hero .photo{order:1;min-height:55vh}#sculp-site .triptych{grid-template-columns:1fr 1fr}#sculp-site .triptych .photo:first-child{grid-column:1/-1;grid-row:auto;min-height:520px}#sculp-site .three,#sculp-site .people{grid-template-columns:1fr 1fr}}@media(max-width:640px){#sculp-site .logo{font-size:17px}#sculp-site .triptych,#sculp-site .three,#sculp-site .people,#sculp-site .form,#sculp-site .foot{grid-template-columns:1fr}#sculp-site .portfolio{display:block}#sculp-site .portfolio figure{margin-bottom:22px}#sculp-site .portfolio .photo,#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:460px}#sculp-site .photo.tall{min-height:470px}#sculp-site .field.full{grid-column:auto}#sculp-site .triptych .photo:first-child{min-height:470px}}
 </style>
 <header class="mast"><div class="shell mast-inner"><a class="logo" href="#home">SCULP STUDIO</a><button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="sculp-nav">MENU ☰</button><nav class="nav" id="sculp-nav" aria-label="Main navigation"><a href="#bridal">BRIDAL</a><a href="#occasions">OCCASIONS</a><a href="#portfolio">PORTFOLIO</a><a href="#team">TEAM</a><a href="#about">ABOUT</a><a href="#book">BOOK</a></nav></div></header>
 <main>
@@ -269,7 +282,48 @@
   </div>
 </section>
 </article>
-<article class="view" data-page="portfolio" hidden><div class="shell intro"><div class="eyebrow">SCULP Studio · Selected projects</div><h1>Portfolio.</h1><p class="lead">A shared point of view, expressed through the work of our studio and artists.</p><div class="filters" role="group" aria-label="Filter portfolio"><button class="filter" type="button" data-filter="all" aria-pressed="true">All</button><button class="filter" type="button" data-filter="bridal" aria-pressed="false">Bridal</button><button class="filter" type="button" data-filter="beauty" aria-pressed="false">Beauty</button><button class="filter" type="button" data-filter="occasion" aria-pressed="false">Occasion</button><button class="filter" type="button" data-filter="editorial" aria-pressed="false">Editorial</button></div><div class="portfolio"><figure data-category="bridal"><div class="photo" data-image="Portfolio image 01 · bridal"></div><figcaption>01 / Bridal · Artist credit to add</figcaption></figure><figure data-category="beauty"><div class="photo" data-image="Portfolio image 02 · beauty"></div><figcaption>02 / Beauty · Artist credit to add</figcaption></figure><figure data-category="editorial"><div class="photo" data-image="Portfolio image 03 · editorial"></div><figcaption>03 / Editorial · Artist credit to add</figcaption></figure><figure data-category="occasion"><div class="photo" data-image="Portfolio image 04 · occasion"></div><figcaption>04 / Occasion · Artist credit to add</figcaption></figure><figure data-category="bridal"><div class="photo" data-image="Portfolio image 05 · bridal detail"></div><figcaption>05 / Bridal · Artist credit to add</figcaption></figure><figure data-category="beauty"><div class="photo" data-image="Portfolio image 06 · beauty portrait"></div><figcaption>06 / Beauty · Artist credit to add</figcaption></figure></div></div></article>
+<article class="view" data-page="portfolio" hidden>
+<div class="shell intro">
+  <div class="eyebrow">SCULP Studio · Selected work</div>
+  <h1>Portfolio.</h1>
+  <p class="lead">A concise edit of bridal, commercial, fashion and event beauty by SCULP Studio.</p>
+
+  <div class="content-note"><strong>待补：</strong>从现有 Portfolio 中选 3 张最强作品作为主视觉：1 张主图 + 2 张辅助图。优先选能代表不同业务、但整体色调能放在一起的图片。</div>
+
+  <div class="portfolio-featured" aria-label="Featured portfolio">
+    <figure>
+      <div class="photo" data-image="待补：Portfolio Featured 01"></div>
+    </figure>
+    <div class="stack">
+      <figure><div class="photo" data-image="待补：Portfolio Featured 02"></div></figure>
+      <figure><div class="photo" data-image="待补：Portfolio Featured 03"></div></figure>
+    </div>
+  </div>
+
+  <div class="portfolio-strip-wrap">
+    <div class="portfolio-strip" id="portfolio-strip" aria-label="Scrollable portfolio gallery">
+      <figure class="portfolio-thumb" data-category="bridal"><div class="photo" data-image="Bridal 01"></div><figcaption>Bridal</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="bridal"><div class="photo" data-image="Bridal 02"></div><figcaption>Bridal</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="commercial"><div class="photo" data-image="Commercial 01"></div><figcaption>Commercial</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="fashion"><div class="photo" data-image="Fashion / Runway 01"></div><figcaption>Fashion / Runway</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="fashion"><div class="photo" data-image="Fashion / Runway 02"></div><figcaption>Fashion / Runway</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="events"><div class="photo" data-image="Celebrity / Events 01"></div><figcaption>Celebrity / Events</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="events"><div class="photo" data-image="Celebrity / Events 02"></div><figcaption>Celebrity / Events</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="bridal"><div class="photo" data-image="Bridal 03"></div><figcaption>Bridal</figcaption></figure>
+    </div>
+    <div class="portfolio-hint">
+      <span>Drag or scroll to explore.</span>
+      <span>Selected work · more images can be added later</span>
+    </div>
+  </div>
+
+  <div class="content-note"><strong>待补：</strong>把当前官网现有作品图按 Bridal / Commercial / Fashion &amp; Runway / Celebrity &amp; Events 四类整理进这条横向作品带。图片数量不多时不再做重型筛选器。</div>
+
+  <div class="actions" style="margin-top:34px">
+    <a class="button fill" href="#book">Start an enquiry</a>
+  </div>
+</div>
+</article>
 <article class="view" data-page="team" hidden>
 <div class="shell intro">
   <div class="eyebrow">The people behind SCULP</div>
