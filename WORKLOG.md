@@ -674,3 +674,28 @@ For every future website modification:
 
 **Related site commit**
 - `bdddb6a8ae17660175e850a350835bd3858fd969`
+
+
+### SCULP Concierge — deep-link to exact service sections
+
+**Structure / Information Architecture — P1**
+- Kept the Concierge choices and recommendation logic unchanged.
+- Added direct section targets so each recommendation lands on the relevant part of the destination page instead of only opening the top of that page.
+
+**Core Functionality — P1**
+- “I’m getting married” now opens Bridal and scrolls directly to Bridal Services.
+- “I have an event” now opens Occasions and scrolls directly to Event Makeup.
+- “I’m creating images” now opens Occasions and scrolls directly to the Commercial / image-making area.
+- “I want to learn” now opens Occasions and scrolls directly to Education.
+- Preserved the secondary enquiry links and existing Book service prefill behavior.
+
+**Visual / Brand — P2**
+- Added sticky-header-aware scroll spacing so the destination heading/card does not sit underneath the navigation bar.
+- Uses smooth scrolling for a more polished handoff from Concierge to service detail.
+
+**Fixes / Technical Maintenance — P0**
+- Updated routing so hash query parameters can control both Book prefill and in-page section navigation.
+- Revalidated JavaScript syntax and confirmed all four destination anchors and links exist.
+
+**Related site commit**
+- `f8f8bba1852dae9457f3947aa3f28252e3a0aea7`
