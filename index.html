@@ -33,6 +33,15 @@
 #sculp-site .service-row span:last-child{text-align:right;white-space:nowrap}
 #sculp-site .booking-notes{max-width:900px;margin-top:34px}
 #sculp-site .booking-notes li{margin:10px 0;color:#4d4944}
+#sculp-site .bridal-hero{display:grid;grid-template-columns:minmax(0,.82fr) minmax(380px,1.18fr);gap:clamp(42px,7vw,110px);align-items:center;padding:clamp(72px,8vw,120px) 0 clamp(80px,9vw,135px)}
+#sculp-site .bridal-hero-copy{max-width:620px}
+#sculp-site .bridal-hero-copy h1{margin:.18em 0 .28em}
+#sculp-site .bridal-hero-media .photo{min-height:680px}
+#sculp-site .content-note{margin:0 0 14px;padding:10px 12px;border:1px dashed rgba(126,92,48,.38);background:rgba(236,221,197,.22);font-size:12px;line-height:1.55;color:#765c3c;letter-spacing:.01em}
+#sculp-site .content-note strong{font-weight:650}
+#sculp-site .section-kicker{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+#sculp-site .service-context{margin-top:10px;color:var(--muted);font-size:13px}
+
 #sculp-site .book-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:clamp(34px,5vw,80px);align-items:start}
 #sculp-site .book-main .form{max-width:none}
 #sculp-site .promo-card{position:sticky;top:112px;border:1px solid rgba(27,27,25,.16);background:rgba(251,250,247,.72);backdrop-filter:blur(14px) saturate(112%);-webkit-backdrop-filter:blur(14px) saturate(112%);padding:28px;box-shadow:0 12px 34px rgba(20,20,18,.055)}
@@ -42,34 +51,57 @@
 #sculp-site .promo-card .promo-code{margin:22px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 #sculp-site .promo-card .button{margin-top:18px;width:100%}
 
-@media(max-width:950px){#sculp-site .book-layout{grid-template-columns:1fr}#sculp-site .promo-card{position:relative;top:auto}#sculp-site .pricing-grid{grid-template-columns:1fr}#sculp-site .service-list{grid-template-columns:1fr}#sculp-site .artist-note{align-items:flex-start;flex-direction:column}#sculp-site .mobile-toggle{display:block}#sculp-site .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}#sculp-site .nav.open{display:flex}#sculp-site .home-hero,#sculp-site .split{grid-template-columns:1fr}#sculp-site .home-hero .copy{order:2;padding:45px 0 65px}#sculp-site .home-hero .photo{order:1;min-height:55vh}#sculp-site .triptych{grid-template-columns:1fr 1fr}#sculp-site .triptych .photo:first-child{grid-column:1/-1;grid-row:auto;min-height:520px}#sculp-site .three,#sculp-site .people{grid-template-columns:1fr 1fr}}@media(max-width:640px){#sculp-site .logo{font-size:17px}#sculp-site .triptych,#sculp-site .three,#sculp-site .people,#sculp-site .form,#sculp-site .foot{grid-template-columns:1fr}#sculp-site .portfolio{display:block}#sculp-site .portfolio figure{margin-bottom:22px}#sculp-site .portfolio .photo,#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:460px}#sculp-site .photo.tall{min-height:470px}#sculp-site .field.full{grid-column:auto}#sculp-site .triptych .photo:first-child{min-height:470px}}
+@media(max-width:950px){#sculp-site .bridal-hero{grid-template-columns:1fr;padding-top:54px}#sculp-site .bridal-hero-media .photo{min-height:520px}#sculp-site .book-layout{grid-template-columns:1fr}#sculp-site .promo-card{position:relative;top:auto}#sculp-site .pricing-grid{grid-template-columns:1fr}#sculp-site .service-list{grid-template-columns:1fr}#sculp-site .artist-note{align-items:flex-start;flex-direction:column}#sculp-site .mobile-toggle{display:block}#sculp-site .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}#sculp-site .nav.open{display:flex}#sculp-site .home-hero,#sculp-site .split{grid-template-columns:1fr}#sculp-site .home-hero .copy{order:2;padding:45px 0 65px}#sculp-site .home-hero .photo{order:1;min-height:55vh}#sculp-site .triptych{grid-template-columns:1fr 1fr}#sculp-site .triptych .photo:first-child{grid-column:1/-1;grid-row:auto;min-height:520px}#sculp-site .three,#sculp-site .people{grid-template-columns:1fr 1fr}}@media(max-width:640px){#sculp-site .logo{font-size:17px}#sculp-site .triptych,#sculp-site .three,#sculp-site .people,#sculp-site .form,#sculp-site .foot{grid-template-columns:1fr}#sculp-site .portfolio{display:block}#sculp-site .portfolio figure{margin-bottom:22px}#sculp-site .portfolio .photo,#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:460px}#sculp-site .photo.tall{min-height:470px}#sculp-site .field.full{grid-column:auto}#sculp-site .triptych .photo:first-child{min-height:470px}}
 </style>
 <header class="mast"><div class="shell mast-inner"><a class="logo" href="#home">SCULP STUDIO</a><button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="sculp-nav">MENU ☰</button><nav class="nav" id="sculp-nav" aria-label="Main navigation"><a href="#bridal">BRIDAL</a><a href="#occasions">OCCASIONS</a><a href="#portfolio">PORTFOLIO</a><a href="#team">TEAM</a><a href="#about">ABOUT</a><a href="#book">BOOK</a></nav></div></header>
 <main>
 <article class="view" data-page="home"><div class="shell home-hero"><div class="copy"><div class="eyebrow">Toronto · Available for travel</div><h1>Beauty,<br>considered.</h1><p class="lead">Refined makeup for weddings, occasions, and moments that matter. Created with intention by SCULP Studio.</p><div class="actions"><a class="button fill" href="#portfolio">View portfolio</a><a class="button" href="#book">Enquire</a></div></div><div class="photo" data-image="Add your strongest beauty portrait"></div></div><section class="section"><div class="shell statement"><div class="eyebrow">The SCULP point of view</div><h2>Beauty that feels<br>like you.</h2><p>We consider the person, the light, and the occasion before a brush touches the skin. The result feels polished, personal, and effortless.</p></div></section><section class="section"><div class="shell"><div class="eyebrow">Selected portfolio</div><h2>Made to be remembered.</h2><div class="triptych"><div class="photo" data-image="Bridal portrait"></div><div class="photo" data-image="Beauty close-up"></div><div class="photo" data-image="Occasion look"></div></div><div class="actions"><a class="button" href="#portfolio">Explore our portfolio →</a></div></div></section><section class="section"><div class="shell"><div class="eyebrow">What we do</div><h2>Every moment,<br>considered.</h2><div class="three"><div class="card"><div class="eyebrow">01</div><h3>Bridal</h3><p>Wedding-day beauty shaped around you and every part of your celebration.</p><a href="#bridal">Discover bridal →</a></div><div class="card"><div class="eyebrow">02</div><h3>Occasions</h3><p>For celebrations, portraits, milestones, and nights worth dressing for.</p><a href="#occasions">Explore occasions →</a></div><div class="card"><div class="eyebrow">03</div><h3>Editorial & commercial</h3><p>Beauty for campaigns, camera, and creative collaborations.</p><a href="#book">Start a conversation →</a></div></div></div></section><section class="section"><div class="shell split"><div class="photo tall" data-image="Team or behind-the-scenes photograph"></div><div><div class="eyebrow">The artists</div><h2>One point of view. Many hands.</h2><p>Meet the artists behind SCULP, united by an attentive approach to every face and every moment.</p><a class="button" href="#team">Meet the team</a></div></div></section><section class="section"><div class="shell statement"><div class="eyebrow">Our approach</div><blockquote class="quote">“Every face asks for something different.”</blockquote><a class="button" href="#about">Our story</a></div></section></article>
 <article class="view" data-page="bridal" hidden>
-<div class="shell intro">
-  <div class="eyebrow">SCULP Bridal · Toronto & beyond</div>
-  <h1>For the day<br>you'll remember.</h1>
-  <p class="lead">Bridal beauty should feel personal in the mirror, beautiful in photographs, and comfortable from the first look to the last dance.</p>
-  <a class="button fill" href="#book">Enquire for your date</a>
-</div>
+
+<section>
+  <div class="shell bridal-hero">
+    <div class="bridal-hero-copy">
+      <div class="eyebrow">SCULP Bridal · Toronto & beyond</div>
+      <div class="content-note"><strong>待老板确认：</strong>Hero 主标题与一句品牌文案。当前为第一版占位文案。</div>
+      <h1>Bridal beauty,<br>considered.</h1>
+      <p class="lead">Refined makeup shaped around you, your dress, your setting, and the way the day will be remembered.</p>
+      <div class="actions">
+        <a class="button fill" href="#book">Enquire for your date</a>
+        <a class="button" href="#portfolio">View bridal work →</a>
+      </div>
+      <p class="note">Toronto · Available for travel</p>
+    </div>
+
+    <div class="bridal-hero-media">
+      <div class="content-note"><strong>待补：</strong>Hero 主图 1 张。建议新娘近景或半身，能同时看见妆面、礼服/头纱与自然光，避免普通婚礼合照。</div>
+      <div class="photo tall" data-image="待补：SCULP Bridal Hero 主图"></div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="shell split">
-    <div class="photo tall" data-image="Real SCULP bridal portrait"></div>
+    <div>
+      <div class="content-note"><strong>待补：</strong>Bridal Approach 配图 1 张。优先幕后工作照、新娘侧脸或妆面细节，与 Hero 图不要重复。</div>
+      <div class="photo tall" data-image="待补：Bridal Approach 图片"></div>
+    </div>
     <div>
       <div class="eyebrow">The bridal approach</div>
+      <div class="content-note"><strong>待老板确认：</strong>是否把“Still entirely you.”作为 Bridal 的核心理念句。</div>
       <h2>Still entirely you.</h2>
-      <p>We begin with your features, your style, your setting, and how you want to feel. Together, we refine a look that belongs to you.</p>
+      <p>We begin with your features, personal style, dress, setting, light and photography. The goal is not to place a look on you, but to refine one that feels considered, comfortable and recognizably yours.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="shell">
-    <div class="eyebrow">Bridal services</div>
-    <h2>Choose your experience.</h2>
+    <div class="section-kicker">
+      <div>
+        <div class="eyebrow">Bridal services</div>
+        <h2>Choose your experience.</h2>
+      </div>
+    </div>
     <p class="lead">Three ways to work with SCULP, from wedding-day makeup to a fully supported half-day experience.</p>
 
     <div class="pricing-grid">
@@ -88,7 +120,7 @@
       <div class="price-card featured">
         <div class="tag">Most Chosen</div>
         <h3>Wedding Day + Preview</h3>
-        <p>Your preview session and wedding-day makeup, refined together before the celebration.</p>
+        <p>Preview and wedding-day makeup planned together, so the final look is already understood before the celebration.</p>
         <div class="from">From $590</div>
         <div class="tier-list">
           <div class="tier"><span>Founder / Lead Artist</span><strong>$790</strong></div>
@@ -113,6 +145,7 @@
     <div class="artist-note">
       <div>
         <div class="eyebrow">Choose your artist</div>
+        <div class="content-note"><strong>待老板确认：</strong>三档 Artist 的正式英文命名，以及是否需要一句更明确的“经验不同、标准一致”说明。</div>
         <p>Pricing reflects artist experience and role within the studio. Every SCULP artist works within the same studio point of view and service standard.</p>
       </div>
       <a class="button" href="#team">Meet the artists →</a>
@@ -124,13 +157,14 @@
   <div class="shell">
     <div class="eyebrow">Additional services</div>
     <h2>For the people around you.</h2>
+    <div class="content-note"><strong>待老板确认：</strong>伴娘/妈妈妆 $200 / $180 / $160 是否对应 1人 / 3人以上 / 5人以上；确认后可改成正式价格说明。</div>
     <div class="service-list">
       <div class="service-row"><span>Preview Session</span><span>$390 / $300 / $260</span></div>
-      <div class="service-row"><span>Bridesmaids & Mothers</span><span>from $160 / person</span></div>
+      <div class="service-row"><span>Bridesmaids & Mothers</span><span>$200 / $180 / $160</span></div>
       <div class="service-row"><span>Groom Styling</span><span>$120</span></div>
       <div class="service-row"><span>Additional Touch-Up Time</span><span>$100 / hour</span></div>
     </div>
-    <p class="note">Preview pricing follows Founder / Lead Artist, Senior Artist, and SCULP Artist. Bridal-party rates vary by artist and party size.</p>
+    <p class="note">Preview pricing follows Founder / Lead Artist, Senior Artist, and SCULP Artist. Bridal-party quantity tiers will be clarified once confirmed.</p>
   </div>
 </section>
 
@@ -139,9 +173,19 @@
     <div class="eyebrow">What's included</div>
     <h2>Thought through, start to finish.</h2>
     <div class="three">
-      <div class="card"><h3>Beauty Preview</h3><p>Hair and makeup direction, styling, and overall look refinement when your service includes a preview.</p></div>
-      <div class="card"><h3>Luxury Products</h3><p>Professional and prestige beauty products selected for performance, comfort, and finish.</p></div>
-      <div class="card"><h3>Finishing Details</h3><p>Selected handmade accessories and styling details where applicable.</p></div>
+      <div class="card">
+        <h3>Beauty Preview</h3>
+        <p>When included in your package, the preview covers hair and makeup direction, styling and overall look coordination before the wedding day.</p>
+      </div>
+      <div class="card">
+        <h3>Luxury Products</h3>
+        <p>Professional and prestige beauty products selected for performance, comfort and finish.</p>
+      </div>
+      <div class="card">
+        <div class="content-note"><strong>待老板确认：</strong>手工配饰具体包含什么、押金金额/方式、归还时间。</div>
+        <h3>Finishing Details</h3>
+        <p>Selected handmade accessories and styling details can be incorporated where appropriate.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -150,6 +194,7 @@
   <div class="shell">
     <div class="eyebrow">Booking notes</div>
     <h2>Before your date is confirmed.</h2>
+    <div class="content-note"><strong>待老板确认：</strong>定金正式称呼（deposit / retainer）、取消与改期政策、不可退款条款的最终法律/业务表述。</div>
     <ul class="booking-notes">
       <li>A 50% retainer is required to secure the booking.</li>
       <li>The remaining balance is collected after the wedding service.</li>
@@ -158,6 +203,7 @@
     <div class="actions"><a class="button fill" href="#book">Enquire for your date</a></div>
   </div>
 </section>
+
 </article>
 <article class="view" data-page="occasions" hidden>
 <div class="shell intro">
