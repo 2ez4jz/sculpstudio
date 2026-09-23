@@ -87,3 +87,30 @@ For every future website modification:
 - Final pricing and package details.
 - Final service copy, duration, inclusions, group-size rules, and any commercial usage terms.
 - Real imagery for Occasion and Education sections.
+
+
+### Book page — future-ready promotion module
+
+**Structure / Information Architecture — P1**
+- Reworked the Book page into a two-column enquiry layout on desktop.
+- Reserved a dedicated right-side module for future promotions without mixing promotional content into the core enquiry form.
+
+**Core Functionality — P1**
+- Added a reusable promotion module controlled by a single `data-active` flag.
+- The promotion can be turned on by changing `data-active="false"` to `data-active="true"`, then updating its title, copy, optional offer code and CTA.
+- Updated the Book service selector to match the current service architecture: Bridal, Event Makeup, Personal Makeup, Commercial Beauty, Photoshoot Makeup, 1-on-1 Makeup Lesson, and Group Makeup Class.
+- Added Senior Artist to the artist preference selector.
+
+**Visual / Brand — P2**
+- Promotion card uses a light frosted treatment and sticky positioning so it can remain visible beside the enquiry form without overpowering the page.
+- Mobile layout automatically stacks the promotion beneath the enquiry content.
+
+**Polish / Nice-to-have — P3**
+- Added a soft shadow, restrained glass blur and full-width offer CTA inside the promotion module.
+
+**Pending / Next — P1**
+- No promotion is active by default.
+- When a real promotion is available, replace the placeholder copy and activate the module.
+
+**Related site commit**
+- `d55bb50ba06d0e1409fc1834578d51a766ff68eb`
