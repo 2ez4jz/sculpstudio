@@ -699,3 +699,35 @@ For every future website modification:
 
 **Related site commit**
 - `f8f8bba1852dae9457f3947aa3f28252e3a0aea7`
+
+
+### Background detailing — subtle architectural texture
+
+**Visual / Brand — P2**
+- Added a restrained background-detail system rather than decorative graphics.
+- Introduced very soft warm surface washes to selected brand/philosophy sections.
+- Added low-contrast architectural arch outlines to Studio-related sections, inspired by the physical studio's repeated curved openings and niches.
+- Added a faint framed-corner detail to the About Studio gallery.
+- Added a nearly imperceptible shadow under the Home Studio image to create depth without making the page feel card-based.
+- Added a minimal finishing line to the About closing section.
+- Kept Portfolio, Bridal pricing, Team profiles, Book form, and most service sections clean so the site still feels editorial rather than decorated.
+
+**Structure / Information Architecture — P1**
+- No page order, copy hierarchy, CTA flow, or navigation behavior changed.
+- Details were applied selectively to Home Philosophy, SCULP Concierge, Home Studio, About Studio, and The SCULP Standard only.
+
+**Core Functionality — P1**
+- No functional behavior changed.
+- All Concierge, deep-link, Book prefill, drag-gallery, and form behavior remains intact.
+
+**Polish / Nice-to-have — P3**
+- Architectural outlines reduce in prominence on tablet and disappear on small mobile screens where they would add clutter.
+- Background effects sit behind content and do not interfere with interaction or image placement.
+
+**Design intent**
+- First impression should remain clean and calm.
+- Background details should be noticed only on a second look.
+- The goal is to make the website feel connected to the physical SCULP Studio rather than to add generic luxury decoration.
+
+**Related site commit**
+- `9627d52c87285a15ee12ca59996955204f1cf2d9`
