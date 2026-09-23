@@ -275,3 +275,31 @@ For every future website modification:
 
 **Related site commit**
 - `d8ba90090148c7f2dfaaf1d3e26e74c76d4aa05f`
+
+
+### New studio imagery — reserved placements across the site
+
+**Structure / Information Architecture — P1**
+- Added a dedicated “The Studio” section to About as the primary home for new studio photography.
+- Kept Home untouched for now because Home is intentionally being designed last.
+- Added supporting studio-image placeholders to Team and Education rather than turning those pages into space galleries.
+
+**Core Functionality — P1**
+- Reserved About for one main interior image plus two supporting detail images.
+- Added an owner-confirmation note asking which services will actually be hosted in the studio (Bridal Preview, 1-on-1, Group Class, Personal Makeup, etc.).
+- Added a Team-page placeholder for one natural in-studio working image.
+- Added an Education placeholder for 1–2 real teaching-in-studio images if classes are held there.
+
+**Visual / Brand — P2**
+- Built an editorial studio gallery layout: one larger space image with two smaller detail images.
+- The section is designed to present the studio as part of the SCULP brand experience rather than as a real-estate gallery.
+- Responsive stacking added for tablet and mobile.
+
+**Pending / Next — P1**
+- Photograph the completed studio.
+- Select: 1 strong overall interior, 2 detail images, 1 team-working image, and 1–2 education/action images.
+- Confirm which client-facing services actually happen in the studio before finalizing copy.
+- Home may later use 1–2 of the strongest studio images when its final design begins.
+
+**Related site commit**
+- `1339c2e694d12d5e34c0f966b63007a0b052bf59`
