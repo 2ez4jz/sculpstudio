@@ -535,3 +535,38 @@ For every future website modification:
 
 **Related site commit**
 - `3d05f79e195b9ff86180ca6df6e6c5beab677d23`
+
+
+### Home page QA — fixed Hero overlap and rebalanced page rhythm
+
+**Structure / Information Architecture — P1**
+- Kept the Home page flow and section order unchanged.
+- Performed a section-level QA pass focused on layout proportions rather than adding new content.
+
+**Core Functionality — P1**
+- No routes, links, CTAs, scrolling behavior, or interactions changed.
+- Preserved all existing Home destinations and responsive behaviors.
+
+**Visual / Brand — P2**
+- Fixed the Hero text/image collision shown in review.
+- Increased the Hero copy column from an overly narrow split to a more balanced editorial proportion.
+- Reduced the Home Hero headline scale independently from the global H1 system.
+- Added a safe max-width and stacking context to the Hero copy so long display words no longer intrude into the image column.
+- Kept the supporting lead copy intentionally narrow for a cleaner luxury-service composition.
+- Increased Hero image separation and preserved the arch treatment.
+- Added Home-specific heading width constraints so later sections do not feel oversized.
+- Increased Selected Work strip spacing.
+- Increased separation between Bridal and Occasions service columns.
+
+**Responsive / Technical — P0**
+- Added dedicated tablet Hero stacking rules rather than relying only on the generic split breakpoint.
+- Added dedicated mobile Hero sizing and spacing so the headline remains readable without colliding with imagery.
+- Protected long headline words from forced breaking or overflow.
+
+**Pending / Next — P2**
+- Review Hero again after the real main image is inserted, since subject placement may change the ideal image crop.
+- Continue visual QA once the selected portfolio and studio photos are available.
+- Remove internal Chinese review notes before public launch.
+
+**Related site commit**
+- `e8af5e1d8a6268b57114218c68be591a10647242`
