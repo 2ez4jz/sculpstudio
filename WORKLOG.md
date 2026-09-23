@@ -406,3 +406,48 @@ For every future website modification:
 
 **Related site commit**
 - `67262547ab3cc1f3804fcd1d45bfeeab9fe6c7e2`
+
+
+### Typography & positioning — research-guided commercial refinement
+
+**Structure / Information Architecture — P1**
+- Kept every page, module, route, and CTA destination unchanged.
+- Focused only on typography hierarchy, readable line lengths, and content positioning within existing layouts.
+
+**Core Functionality — P1**
+- No functional behavior changed.
+- Forms, portfolio dragging, responsive breakpoints, routing, pricing, and enquiry flows remain intact.
+
+**Visual / Brand — P2**
+- Rebuilt the typography scale around a clearer commercial hierarchy:
+  - Body copy: 16px with 1.65 line-height.
+  - Lead copy: 17–19px with tighter controlled measure.
+  - Eyebrows/navigation: increased to 12px for better legibility.
+  - H1: reduced from an oversized 126px ceiling to a 104px ceiling, with tighter line-height and controlled headline width.
+  - H2: reduced to a 66px ceiling for better hierarchy and less visual crowding.
+  - Buttons and form labels increased slightly for easier scanning and interaction.
+- Constrained body text to approximately 50–75 characters per line using 62ch / 56ch / 55ch measures depending on context.
+- Increased readable sizes for Team bios, notes, service context, tier pricing, captions, and form fields.
+- Added context-specific maximum widths to split-layout headings, CTA headings, About closing text, pricing descriptions, and Team founder copy.
+- Adjusted heading line-height and tracking to retain the editorial look without sacrificing commercial readability.
+- Added text balancing for large headings where supported.
+- Kept left alignment for functional/service copy, while preserving centered treatment only for intentionally editorial statement sections.
+
+**Polish / Nice-to-have — P3**
+- Increased header height slightly for a calmer navigation rhythm.
+- Enlarged the BOOK pill hit area.
+- Tuned mobile H1/H2 scale independently so headings remain expressive without dominating small screens.
+- Standardized intro positioning across Team, About, Occasions, and Book.
+
+**Research basis**
+- Baymard readability research recommends roughly 50–75 characters per line for body text and warns that overly long lines reduce engagement.
+- Nielsen Norman Group research supports generous line-height and scannable, concise web copy.
+- Current premium bridal/beauty commercial sites commonly use strong editorial display typography paired with simpler, highly legible service copy and clear inquiry pathways.
+
+**Pending / Next — P2**
+- Review the deployed site at common desktop widths (1440px, 1280px) and mobile widths.
+- Fine-tune only individual modules that still feel too large/small rather than changing the global scale again.
+- Reassess final type scale once real photography replaces placeholders.
+
+**Related site commit**
+- `b5abeaf7b0e0008bf8c60418d8c06311feba74d9`
