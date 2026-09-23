@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SCULP Studio</title>
 <meta name="description" content="Contemporary beauty for weddings, occasions, and moments that matter. Toronto, Ontario.">
-<style>html,body{margin:0;padding:0;background:#f4f1eb}body{min-height:100vh}</style>
+<style>html,body{margin:0;padding:0;background:#f4f1eb}body{min-height:100vh}@media(max-width:620px){#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr}#sculp-site .team-founder .photo{min-height:480px}}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
@@ -39,6 +39,17 @@
 #sculp-site .bridal-hero-media .photo{min-height:680px}
 #sculp-site .content-note{margin:0 0 14px;padding:10px 12px;border:1px dashed rgba(126,92,48,.38);background:rgba(236,221,197,.22);font-size:12px;line-height:1.55;color:#765c3c;letter-spacing:.01em}
 #sculp-site .content-note strong{font-weight:650}
+#sculp-site .team-founder{display:grid;grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr);gap:clamp(42px,7vw,110px);align-items:center}
+#sculp-site .team-founder .photo{min-height:620px}
+#sculp-site .team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(34px,5vw,72px);margin-top:38px}
+#sculp-site .team-grid.junior{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+#sculp-site .team-person .photo{min-height:430px;margin-bottom:18px}
+#sculp-site .team-grid.junior .team-person .photo{min-height:330px}
+#sculp-site .team-person h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:32px;line-height:1.05;margin:8px 0 10px}
+#sculp-site .team-person p{font-size:14px}
+#sculp-site .team-standard{max-width:900px;margin:0 auto;text-align:center}
+#sculp-site .team-standard .three{text-align:left;margin-top:30px}
+
 #sculp-site .section-kicker{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
 #sculp-site .service-context{margin-top:10px;color:var(--muted);font-size:13px}
 
@@ -51,7 +62,7 @@
 #sculp-site .promo-card .promo-code{margin:22px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 #sculp-site .promo-card .button{margin-top:18px;width:100%}
 
-@media(max-width:950px){#sculp-site .bridal-hero{grid-template-columns:1fr;padding-top:54px}#sculp-site .bridal-hero-media .photo{min-height:520px}#sculp-site .book-layout{grid-template-columns:1fr}#sculp-site .promo-card{position:relative;top:auto}#sculp-site .pricing-grid{grid-template-columns:1fr}#sculp-site .service-list{grid-template-columns:1fr}#sculp-site .artist-note{align-items:flex-start;flex-direction:column}#sculp-site .mobile-toggle{display:block}#sculp-site .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}#sculp-site .nav.open{display:flex}#sculp-site .home-hero,#sculp-site .split{grid-template-columns:1fr}#sculp-site .home-hero .copy{order:2;padding:45px 0 65px}#sculp-site .home-hero .photo{order:1;min-height:55vh}#sculp-site .triptych{grid-template-columns:1fr 1fr}#sculp-site .triptych .photo:first-child{grid-column:1/-1;grid-row:auto;min-height:520px}#sculp-site .three,#sculp-site .people{grid-template-columns:1fr 1fr}}@media(max-width:640px){#sculp-site .logo{font-size:17px}#sculp-site .triptych,#sculp-site .three,#sculp-site .people,#sculp-site .form,#sculp-site .foot{grid-template-columns:1fr}#sculp-site .portfolio{display:block}#sculp-site .portfolio figure{margin-bottom:22px}#sculp-site .portfolio .photo,#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:460px}#sculp-site .photo.tall{min-height:470px}#sculp-site .field.full{grid-column:auto}#sculp-site .triptych .photo:first-child{min-height:470px}}
+@media(max-width:950px){#sculp-site .team-founder{grid-template-columns:1fr}#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr 1fr}#sculp-site .bridal-hero{grid-template-columns:1fr;padding-top:54px}#sculp-site .bridal-hero-media .photo{min-height:520px}#sculp-site .book-layout{grid-template-columns:1fr}#sculp-site .promo-card{position:relative;top:auto}#sculp-site .pricing-grid{grid-template-columns:1fr}#sculp-site .service-list{grid-template-columns:1fr}#sculp-site .artist-note{align-items:flex-start;flex-direction:column}#sculp-site .mobile-toggle{display:block}#sculp-site .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:25px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}#sculp-site .nav.open{display:flex}#sculp-site .home-hero,#sculp-site .split{grid-template-columns:1fr}#sculp-site .home-hero .copy{order:2;padding:45px 0 65px}#sculp-site .home-hero .photo{order:1;min-height:55vh}#sculp-site .triptych{grid-template-columns:1fr 1fr}#sculp-site .triptych .photo:first-child{grid-column:1/-1;grid-row:auto;min-height:520px}#sculp-site .three,#sculp-site .people{grid-template-columns:1fr 1fr}}@media(max-width:640px){#sculp-site .logo{font-size:17px}#sculp-site .triptych,#sculp-site .three,#sculp-site .people,#sculp-site .form,#sculp-site .foot{grid-template-columns:1fr}#sculp-site .portfolio{display:block}#sculp-site .portfolio figure{margin-bottom:22px}#sculp-site .portfolio .photo,#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:460px}#sculp-site .photo.tall{min-height:470px}#sculp-site .field.full{grid-column:auto}#sculp-site .triptych .photo:first-child{min-height:470px}}
 </style>
 <header class="mast"><div class="shell mast-inner"><a class="logo" href="#home">SCULP STUDIO</a><button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="sculp-nav">MENU ☰</button><nav class="nav" id="sculp-nav" aria-label="Main navigation"><a href="#bridal">BRIDAL</a><a href="#occasions">OCCASIONS</a><a href="#portfolio">PORTFOLIO</a><a href="#team">TEAM</a><a href="#about">ABOUT</a><a href="#book">BOOK</a></nav></div></header>
 <main>
@@ -259,7 +270,127 @@
 </section>
 </article>
 <article class="view" data-page="portfolio" hidden><div class="shell intro"><div class="eyebrow">SCULP Studio · Selected projects</div><h1>Portfolio.</h1><p class="lead">A shared point of view, expressed through the work of our studio and artists.</p><div class="filters" role="group" aria-label="Filter portfolio"><button class="filter" type="button" data-filter="all" aria-pressed="true">All</button><button class="filter" type="button" data-filter="bridal" aria-pressed="false">Bridal</button><button class="filter" type="button" data-filter="beauty" aria-pressed="false">Beauty</button><button class="filter" type="button" data-filter="occasion" aria-pressed="false">Occasion</button><button class="filter" type="button" data-filter="editorial" aria-pressed="false">Editorial</button></div><div class="portfolio"><figure data-category="bridal"><div class="photo" data-image="Portfolio image 01 · bridal"></div><figcaption>01 / Bridal · Artist credit to add</figcaption></figure><figure data-category="beauty"><div class="photo" data-image="Portfolio image 02 · beauty"></div><figcaption>02 / Beauty · Artist credit to add</figcaption></figure><figure data-category="editorial"><div class="photo" data-image="Portfolio image 03 · editorial"></div><figcaption>03 / Editorial · Artist credit to add</figcaption></figure><figure data-category="occasion"><div class="photo" data-image="Portfolio image 04 · occasion"></div><figcaption>04 / Occasion · Artist credit to add</figcaption></figure><figure data-category="bridal"><div class="photo" data-image="Portfolio image 05 · bridal detail"></div><figcaption>05 / Bridal · Artist credit to add</figcaption></figure><figure data-category="beauty"><div class="photo" data-image="Portfolio image 06 · beauty portrait"></div><figcaption>06 / Beauty · Artist credit to add</figcaption></figure></div></div></article>
-<article class="view" data-page="team" hidden><div class="shell intro"><div class="eyebrow">The people behind SCULP</div><h1>Meet the team.</h1><p class="lead">Individual artists. A shared approach to beauty.</p></div><section class="section"><div class="shell"><div class="photo wide" data-image="Add an authentic SCULP team or backstage image"></div><div class="people"><div><div class="photo" data-image="Founder portrait"></div><div class="eyebrow">Founder / Creative Director</div><h3>Founder name</h3><p>Add the founder's real story, specialty, and point of view here.</p><a href="#portfolio">View portfolio →</a></div><div><div class="photo" data-image="Artist portrait"></div><div class="eyebrow">SCULP Artist</div><h3>Artist name</h3><p>Add this artist's real biography and experience here.</p><a href="#portfolio">View portfolio →</a></div><div><div class="photo" data-image="Artist portrait"></div><div class="eyebrow">SCULP Artist</div><h3>Artist name</h3><p>Add this artist's real biography and experience here.</p><a href="#portfolio">View portfolio →</a></div></div><p class="note">Replace these sample profiles with your actual team before publishing.</p></div></section></article>
+<article class="view" data-page="team" hidden>
+<div class="shell intro">
+  <div class="eyebrow">The people behind SCULP</div>
+  <div class="content-note"><strong>待老板确认：</strong>Team 页核心标题。当前建议用“Different artists. One SCULP point of view.”，强调个人风格不同但工作室标准一致。</div>
+  <h1>Different artists.<br>One SCULP point of view.</h1>
+  <p class="lead">Meet the artists behind the studio - each with an individual eye, experience and specialty, connected by a shared approach to modern beauty.</p>
+</div>
+
+<section class="section">
+  <div class="shell team-founder">
+    <div>
+      <div class="content-note"><strong>待补：</strong>Miranda 个人主肖像 1 张。建议半身或工作状态，画面质感应明显高于普通证件式头像。</div>
+      <div class="photo tall" data-image="待补：Miranda Founder Portrait"></div>
+    </div>
+    <div>
+      <div class="eyebrow">Founder / Creative Makeup Director</div>
+      <h2>Miranda</h2>
+      <p>With over 10 years of experience, Miranda brings a background in fashion and celebrity beauty to modern bridal makeup. Her work spans international Fashion Weeks, runway shows and advertising campaigns for global brands, giving her bridal work a distinctly editorial eye.</p>
+      <p>She has also created beauty for luxury destination weddings around the world, working with clients across different cultures and settings to create looks that feel refined, elegant and personal.</p>
+      <div class="content-note"><strong>待老板确认：</strong>Founder 是否需要补充更个人化的品牌故事，例如为什么创立 SCULP、最看重什么、个人最擅长的妆感。现在内容更偏履历。</div>
+      <a class="button" href="#portfolio">View Miranda's work →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="eyebrow">Senior Makeup Artists</div>
+    <h2>Experience, with a distinct point of view.</h2>
+    <div class="content-note"><strong>待确认：</strong>Team 页职位命名要和 Bridal 价格体系统一。目前原官网使用 Senior Makeup Artist / Makeup Artist，而 Bridal 价格页使用 Senior Artist / SCULP Artist。</div>
+
+    <div class="team-grid">
+      <div class="team-person">
+        <div class="content-note"><strong>待补：</strong>Yuki 个人肖像 1 张。</div>
+        <div class="photo" data-image="待补：Yuki Portrait"></div>
+        <div class="eyebrow">Senior Makeup Artist</div>
+        <h3>Yuki</h3>
+        <p>With over 10 years in bridal beauty, Yuki combines technical expertise with a refined artistic approach. Professionally trained in Hong Kong and South Korea, she holds ITEC and City &amp; Guilds certifications and has a background in beauty education and entrepreneurship.</p>
+        <p class="service-context">Background: former makeup instructor at Elite College; co-founder of Miyan Beauty Clinic.</p>
+      </div>
+
+      <div class="team-person">
+        <div class="content-note"><strong>待补：</strong>Mira 个人肖像 1 张。</div>
+        <div class="photo" data-image="待补：Mira Portrait"></div>
+        <div class="eyebrow">Senior Makeup Artist</div>
+        <h3>Mira</h3>
+        <p>Mira specializes in modern bridal beauty with a particular focus on New Chinese Style makeup, combining Chinese elegance with contemporary technique for polished, fashion-forward looks.</p>
+        <p class="service-context">Specialty: Modern Bridal · New Chinese Style</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="eyebrow">Makeup Artists</div>
+    <h2>Individual strengths, shared standards.</h2>
+
+    <div class="team-grid junior">
+      <div class="team-person">
+        <div class="content-note"><strong>待补：</strong>Angelina 个人肖像。</div>
+        <div class="photo" data-image="待补：Angelina Portrait"></div>
+        <div class="eyebrow">Makeup Artist</div>
+        <h3>Angelina</h3>
+        <p>Bridal, editorial and commercial beauty with a modern Korean-inspired approach - refined, fresh and designed to photograph beautifully.</p>
+        <p class="service-context">Specialty: Korean-inspired · Bridal · Editorial</p>
+      </div>
+
+      <div class="team-person">
+        <div class="content-note"><strong>待补：</strong>Elaine 个人肖像。</div>
+        <div class="photo" data-image="待补：Elaine Portrait"></div>
+        <div class="eyebrow">Makeup Artist</div>
+        <h3>Elaine</h3>
+        <p>Bridal, portrait and special-event makeup with a soft, charming and modern point of view that keeps the client's own features at the centre.</p>
+        <p class="service-context">Specialty: Bridal · Portrait · Event</p>
+      </div>
+
+      <div class="team-person">
+        <div class="content-note"><strong>待补：</strong>Emily 个人肖像。</div>
+        <div class="photo" data-image="待补：Emily Portrait"></div>
+        <div class="eyebrow">Makeup Artist</div>
+        <h3>Emily</h3>
+        <p>Fresh, polished beauty shaped around the client's features, personality and occasion, with a thoughtful and detail-oriented approach.</p>
+        <p class="service-context">Specialty: Fresh · Polished · Personalized</p>
+      </div>
+
+      <div class="team-person">
+        <div class="content-note"><strong>待补：</strong>Giselle 个人肖像。</div>
+        <div class="photo" data-image="待补：Giselle Portrait"></div>
+        <div class="eyebrow">Makeup Artist</div>
+        <h3>Giselle</h3>
+        <p>Soft glam, modern Western and Thai-inspired beauty, with sculpted features, radiant skin and a more defined fashion-led finish.</p>
+        <p class="service-context">Specialty: Soft Glam · Western · Thai-inspired</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell team-standard">
+    <div class="eyebrow">The SCULP Standard</div>
+    <div class="content-note"><strong>待老板确认：</strong>这一段是新结构里很重要的内容，需要老板确认 SCULP 对所有 Artist 的共同标准到底是什么。下面先放建议方向。</div>
+    <h2>Different hands. A shared standard.</h2>
+    <p class="lead">Artist selection should feel like choosing a point of view - not choosing between good and bad. The studio standard should remain consistent across every booking.</p>
+    <div class="three">
+      <div class="card"><h3>Shared Approach</h3><p>Beauty that begins with the person, not a preset look.</p></div>
+      <div class="card"><h3>Professional Standard</h3><p>Consistent service, hygiene, product performance and preparation across the studio.</p></div>
+      <div class="card"><h3>Individual Eye</h3><p>Each artist brings a distinct strength, technique and aesthetic within the SCULP point of view.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell cta">
+    <div class="eyebrow">Find your artist</div>
+    <h2>Start with the service.<br>We’ll help with the match.</h2>
+    <p>You do not need to know exactly who to book before enquiring. Tell us what you're looking for and we can guide you toward the right artist and service.</p>
+    <div class="actions" style="justify-content:center"><a class="button fill" href="#book">Start an enquiry</a><a class="button" href="#bridal">Explore Bridal →</a></div>
+  </div>
+</section>
+</article>
 <article class="view" data-page="about" hidden><div class="shell intro"><div class="eyebrow">About SCULP</div><h1>Made with<br>intention.</h1><p class="lead">SCULP is a contemporary beauty studio rooted in a simple belief: the most memorable makeup begins with the person wearing it.</p></div><section class="section"><div class="shell split"><div class="photo tall" data-image="Founder at work · candid photograph"></div><div><div class="eyebrow">Founder & Creative Director</div><h2>Beauty begins with observation.</h2><p>We look at skin, shape, proportion, light, and personal style. That attention to detail guides every appointment, from intimate celebrations to creative projects.</p><p class="note">Add the founder's real name, background, and story here.</p><a class="button" href="#team">Meet our artists</a></div></div></section><section class="section"><div class="shell statement"><div class="eyebrow">Our philosophy</div><h2>Considered makeup.<br>Individual beauty.</h2><p>We value a calm experience, clear communication, and work that feels beautiful in person and on camera.</p></div></section></article>
 <article class="view" data-page="book" hidden>
 <div class="shell intro">
