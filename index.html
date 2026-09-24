@@ -26,7 +26,7 @@
 #sculp-site .shell.cta>p{max-width:610px}
 #sculp-site .shell.cta .actions{margin-top:36px}
 #sculp-site .filters{display:flex;gap:10px;flex-wrap:wrap;margin:32px 0}#sculp-site .filter{border:1px solid var(--line);padding:9px 14px;background:none;font-size:11px;letter-spacing:.12em;text-transform:uppercase}#sculp-site .filter[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:white}#sculp-site .portfolio{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}#sculp-site .portfolio figure{margin:0;grid-column:span 4}#sculp-site .portfolio figure:nth-child(5n+1){grid-column:span 7}#sculp-site .portfolio figure:nth-child(5n+2){grid-column:span 5}#sculp-site .portfolio .photo{min-height:390px}#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:610px}#sculp-site figcaption{padding:10px 0;font-size:11px;letter-spacing:.08em;text-transform:uppercase}#sculp-site .people{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin:50px 0}#sculp-site .people .photo{min-height:450px}#sculp-site .people p{font-size:14px}#sculp-site .faq{max-width:900px;margin-top:40px}#sculp-site details{border-top:1px solid var(--line);padding:16px 0}#sculp-site summary{cursor:pointer}#sculp-site .form{max-width:950px;display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:40px 0}#sculp-site .field{display:flex;flex-direction:column;gap:7px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}#sculp-site .field.full{grid-column:1/-1}#sculp-site input,#sculp-site select,#sculp-site textarea{width:100%;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:0}#sculp-site textarea{min-height:130px;resize:vertical}#sculp-site .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px;padding:65px 0}#sculp-site footer{border-top:1px solid var(--line);background:rgba(250,247,242,.32)}#sculp-site:has(.view[data-page="home"]:not([hidden]))> .cta{display:none}#sculp-site .foot a{display:block;margin:7px 0}#sculp-site .social-link{display:inline-flex!important;align-items:center;gap:9px;width:max-content;margin-top:12px!important;font-size:14px}#sculp-site .social-icon{width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}#sculp-site .social-icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}#sculp-site .social-link:hover span:last-child{border-bottom:1px solid currentColor}#sculp-site .note{font-size:12px;color:var(--muted)}
-#sculp-site .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+#sculp-site .pricing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:48px}
 #sculp-site .price-card{border:1px solid var(--line);background:rgba(250,247,242,.72);padding:clamp(30px,3vw,42px);display:flex;flex-direction:column;min-height:100%}
 #sculp-site .price-card.featured{background:#fffaf4;border-color:rgba(36,33,31,.72);box-shadow:0 18px 45px rgba(80,63,45,.055)}
 #sculp-site .price-card .tag{font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px}
@@ -512,18 +512,6 @@
     <p class="lead">Three ways to work with SCULP, from wedding-day makeup to a fully supported half-day experience.</p>
 
     <div class="pricing-grid">
-      <div class="price-card">
-        <div class="tag">Wedding Day</div>
-        <h3>Wedding Day Makeup</h3>
-        <p>For brides who are ready to go straight into the wedding-day look without a preview session.</p>
-        <div class="from">From $290</div>
-        <div class="tier-list">
-          <div class="tier"><span>Founder / Lead Artist</span><strong>$450</strong></div>
-          <div class="tier"><span>Senior Artist</span><strong>$390</strong></div>
-          <div class="tier"><span>SCULP Artist</span><strong>$290</strong></div>
-        </div>
-      </div>
-
       <div class="price-card">
         <div class="tag">With Preview</div>
         <h3>Wedding Day + Preview</h3>
