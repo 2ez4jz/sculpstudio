@@ -4,6 +4,11 @@
 
 ## 2026-09-23
 
+- 完成全站术语审查：将 42 处 **Makeup / makeup** 全部统一为 **Styling / styling**，覆盖首页、Bridal、Occasions、Education、Team、About、SEO 标题与描述、咨询表单及交互跳转参数。
+- 将 6 处与试妆服务有关的 **Preview / preview** 统一为 **Trial / trial**，包括套餐说明、附加服务、价格说明、What's Included 与 Studio 说明；保留无障碍标签中的 “Selected work preview”，因为它指作品预览而非试妆。
+- 同步将内部区块锚点 `occasion-makeup` 更新为 `occasion-styling`，确保页面链接继续正确跳转。
+- 网站修改提交：[`541aa93`](https://github.com/2ez4jz/sculpstudio/commit/541aa935d7f310c298064d0b570f1d4c2a7fccd1)。
+
 - SCULP Concierge 的 Bridal 说明更新为 **“Wedding-day styling, wedding trial, bridal-party services, and follow-up services…”**。
 - 同步更新页面默认文案与交互数据，确保切换选项后返回 Bridal 仍显示新版内容；标题 **“Start with SCULP Bridal.”** 保持不变。
 - 网站修改提交：[`50cf504`](https://github.com/2ez4jz/sculpstudio/commit/50cf5048edf45403d49a1cf5766571d87c23100e)。
