@@ -4,6 +4,10 @@
 
 ## 2026-09-23
 
+- 首页首屏标题更新为 **“Make moments that matter.”**，正文改为以人物、个人风格和场合为核心的品牌介绍。
+- 保留原有 Hero 的 HTML 结构、按钮和样式，只替换标题与正文，避免影响现有排版系统。
+- 网站修改提交：[`62c0b2b`](https://github.com/2ez4jz/sculpstudio/commit/62c0b2bd8060c7c2b84aa3ca11bfd83c7e7dba23)。
+
 - 将全站服务名称 **Event Makeup** 改为 **Event Styling**，**Personal Makeup** 改为 **Personal Styling**。
 - 同步更新 Occasions 页面、咨询表单、推荐模块及预选服务链接，确保名称一致。
 - 网站修改提交：[`43a1a6a`](https://github.com/2ez4jz/sculpstudio/commit/43a1a6adc2b34b026677998846362bcb93a31350)。
