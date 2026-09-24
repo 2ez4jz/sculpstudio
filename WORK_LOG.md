@@ -4,6 +4,11 @@
 
 ## 2026-09-23
 
+- 首页 Services 左侧 Bridal 正文更新为 **“A look that feels like you…”**，并移除首页显示的 $290 起价。
+- 右侧 Occasions 正文将 “Makeup” 改为 **“Styling”**，覆盖 events、personal appointments、commercial projects、photoshoots 和 education。
+- 保留原有标题、链接与双栏布局。
+- 网站修改提交：[`2fd5b96`](https://github.com/2ez4jz/sculpstudio/commit/2fd5b96581bf4b41d913b563ce33c2d1cc5c7981)。
+
 - 首页首屏位置文案由 **“Toronto · Available for travel”** 更新为 **“Toronto + Available Worldwide”**。
 - 将 “+” 设计为独立的衬线分隔符，并保留原有小标题的大小写、字距和整体位置。
 - 网站修改提交：[`86e6d28`](https://github.com/2ez4jz/sculpstudio/commit/86e6d28099a2c4edb2b51b963235c73b8beb6158)。
