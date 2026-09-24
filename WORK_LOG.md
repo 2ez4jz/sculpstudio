@@ -4,6 +4,10 @@
 
 ## 2026-09-23
 
+- 将全站服务名称 **Event Makeup** 改为 **Event Styling**，**Personal Makeup** 改为 **Personal Styling**。
+- 同步更新 Occasions 页面、咨询表单、推荐模块及预选服务链接，确保名称一致。
+- 网站修改提交：[`43a1a6a`](https://github.com/2ez4jz/sculpstudio/commit/43a1a6adc2b34b026677998846362bcb93a31350)。
+
 - 将左侧套餐的 **Preview** 改为 **Trial**，套餐标题更新为 **Wedding Day + Trial**。
 - 新增 **The Full-Day Experience**：包含最长 10 小时现场服务，起价 $1,490；SCULP Artist / Senior Artist / Founder 价格分别为 $1,490 / $1,690 / $1,990。
 - Bridal 价格区恢复为桌面端三列布局，Half-Day 继续标记为 “Most Chosen”。
