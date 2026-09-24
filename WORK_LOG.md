@@ -4,6 +4,10 @@
 
 ## 2026-09-23
 
+- 首页首屏位置文案由 **“Toronto · Available for travel”** 更新为 **“Toronto + Available Worldwide”**。
+- 将 “+” 设计为独立的衬线分隔符，并保留原有小标题的大小写、字距和整体位置。
+- 网站修改提交：[`86e6d28`](https://github.com/2ez4jz/sculpstudio/commit/86e6d28099a2c4edb2b51b963235c73b8beb6158)。
+
 - 保留首页第二段标题 **“Beauty that still feels like you.”**，正文更新为 “Beauty should feel familiar — only more considered.” 开头的新版品牌文案。
 - 保留原有段落结构和样式，仅替换正文内容。
 - 网站修改提交：[`ad70745`](https://github.com/2ez4jz/sculpstudio/commit/ad7074535b85ed5551f2433be272b9b674883177)。
