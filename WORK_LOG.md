@@ -4,6 +4,10 @@
 
 ## 2026-09-23
 
+- 保留首页第二段标题 **“Beauty that still feels like you.”**，正文更新为 “Beauty should feel familiar — only more considered.” 开头的新版品牌文案。
+- 保留原有段落结构和样式，仅替换正文内容。
+- 网站修改提交：[`ad70745`](https://github.com/2ez4jz/sculpstudio/commit/ad7074535b85ed5551f2433be272b9b674883177)。
+
 - 首页首屏标题更新为 **“Make moments that matter.”**，正文改为以人物、个人风格和场合为核心的品牌介绍。
 - 保留原有 Hero 的 HTML 结构、按钮和样式，只替换标题与正文，避免影响现有排版系统。
 - 网站修改提交：[`62c0b2b`](https://github.com/2ez4jz/sculpstudio/commit/62c0b2bd8060c7c2b84aa3ca11bfd83c7e7dba23)。
