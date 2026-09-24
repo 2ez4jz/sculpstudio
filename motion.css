@@ -1,0 +1,109 @@
+/* SCULP motion layer — After Dark interaction quality in the original visual system. */
+html{scroll-behavior:smooth}
+
+/* Reading progress */
+.sculp-progress{
+  position:fixed;top:0;left:0;width:100%;height:2px;z-index:120;
+  background:#b29a7e;transform:scaleX(0);transform-origin:left;
+  pointer-events:none;will-change:transform;
+}
+
+/* Navigation detail */
+#sculp-site .nav a:not(:last-child){position:relative;text-decoration:none}
+#sculp-site .nav a:not(:last-child)::after{
+  content:"";position:absolute;left:0;right:100%;bottom:-10px;height:1px;
+  background:currentColor;transition:right .36s cubic-bezier(.16,1,.3,1);
+}
+#sculp-site .nav a:not(:last-child):hover::after,
+#sculp-site .nav a:not(:last-child).active::after{right:0}
+#sculp-site .nav a.active{text-decoration:none}
+
+/* Page and scroll reveals. Content stays visible until JS enables motion. */
+#sculp-site .view:not([hidden]){animation:sculp-page-in .55s ease both}
+@keyframes sculp-page-in{from{opacity:.45}to{opacity:1}}
+#sculp-site.motion-ready .view:not([hidden]) .reveal{
+  opacity:0;transform:translateY(28px);filter:blur(2px);
+  transition:
+    opacity .76s ease var(--reveal-delay,0ms),
+    transform .9s cubic-bezier(.16,1,.3,1) var(--reveal-delay,0ms),
+    filter .8s ease var(--reveal-delay,0ms);
+  will-change:opacity,transform,filter;
+}
+#sculp-site.motion-ready .view:not([hidden]) .reveal.in-view{
+  opacity:1;transform:none;filter:none;will-change:auto;
+}
+
+/* Refined feedback while retaining the original surfaces and palette. */
+#sculp-site .button{position:relative;overflow:hidden;isolation:isolate}
+#sculp-site .button::before{
+  content:"";position:absolute;inset:0;z-index:-1;background:rgba(212,190,162,.42);
+  transform:translateX(-102%);transition:transform .45s cubic-bezier(.16,1,.3,1);
+}
+#sculp-site .button:hover::before{transform:none}
+#sculp-site .button.fill::before{background:rgba(255,255,255,.12)}
+#sculp-site .home-service,
+#sculp-site .card,
+#sculp-site .team-person{transition:transform .5s cubic-bezier(.16,1,.3,1)}
+#sculp-site .home-service:hover,
+#sculp-site .card:hover,
+#sculp-site .team-person:hover{transform:translateY(-4px)}
+#sculp-site.motion-ready .view:not([hidden]) .home-service.reveal.in-view:hover,
+#sculp-site.motion-ready .view:not([hidden]) .card.reveal.in-view:hover,
+#sculp-site.motion-ready .view:not([hidden]) .team-person.reveal.in-view:hover,
+#sculp-site.motion-ready .view:not([hidden]) .price-card.reveal.in-view:hover{
+  transform:translateY(-4px);
+}
+#sculp-site details summary{transition:padding-left .35s cubic-bezier(.16,1,.3,1)}
+#sculp-site details summary:hover{padding-left:8px}
+#sculp-site .photo:has(img){cursor:zoom-in}
+
+/* Portfolio lightbox */
+.sculp-lightbox{
+  position:fixed;inset:0;z-index:160;display:none;align-items:center;justify-content:center;
+  padding:70px 82px;background:rgba(31,29,27,.96);color:#faf7f2;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+}
+.sculp-lightbox.open{display:flex;animation:sculp-lightbox-in .28s ease both}
+@keyframes sculp-lightbox-in{from{opacity:0}to{opacity:1}}
+.sculp-lightbox img{display:block;max-width:100%;max-height:calc(100vh - 140px);object-fit:contain}
+.sculp-lightbox button{
+  position:absolute;border:0;background:transparent;color:#faf7f2;cursor:pointer;
+  padding:15px;font:500 32px/1 'Playfair Display',Georgia,serif;
+  transition:opacity .2s ease,transform .2s ease;
+}
+.sculp-lightbox button:hover{opacity:.65;transform:scale(1.06)}
+.sculp-lightbox button:focus-visible{outline:1px solid currentColor;outline-offset:3px}
+.sculp-lightbox .close{right:25px;top:18px}
+.sculp-lightbox .prev{left:16px}
+.sculp-lightbox .next{right:16px}
+.sculp-lightbox .count{
+  position:absolute;bottom:22px;font:600 10px/1 Arial,sans-serif;letter-spacing:.2em;
+}
+.sculp-view-cursor{
+  position:fixed;width:56px;height:56px;z-index:150;display:grid;place-items:center;
+  border:1px solid rgba(250,247,242,.86);border-radius:50%;background:rgba(36,33,31,.18);
+  color:#fff;pointer-events:none;opacity:0;
+  transform:translate(-50%,-50%) scale(.7);
+  transition:opacity .18s ease,transform .24s cubic-bezier(.16,1,.3,1);
+  backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+}
+.sculp-view-cursor::after{content:"VIEW";font:600 8px/1 Arial,sans-serif;letter-spacing:.15em}
+.sculp-view-cursor.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}
+
+@media(max-width:950px){
+  #sculp-site .nav.open{animation:sculp-menu-in .28s ease both}
+  @keyframes sculp-menu-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+}
+@media(max-width:640px){
+  .sculp-lightbox{padding:72px 36px}
+  .sculp-lightbox img{max-height:calc(100vh - 150px)}
+  .sculp-lightbox .prev{left:2px}.sculp-lightbox .next{right:2px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  #sculp-site .view:not([hidden]){animation:none}
+  #sculp-site.motion-ready .view:not([hidden]) .reveal{
+    opacity:1;transform:none;filter:none;transition:none;
+  }
+  .sculp-progress,.sculp-view-cursor{display:none}
+}
