@@ -4,6 +4,10 @@
 
 ## 2026-09-23
 
+- SCULP Concierge 的 Bridal 说明更新为 **“Wedding-day styling, wedding trial, bridal-party services, and follow-up services…”**。
+- 同步更新页面默认文案与交互数据，确保切换选项后返回 Bridal 仍显示新版内容；标题 **“Start with SCULP Bridal.”** 保持不变。
+- 网站修改提交：[`50cf504`](https://github.com/2ez4jz/sculpstudio/commit/50cf5048edf45403d49a1cf5766571d87c23100e)。
+
 - 首页 Services 左侧 Bridal 正文更新为 **“A look that feels like you…”**，并移除首页显示的 $290 起价。
 - 右侧 Occasions 正文将 “Makeup” 改为 **“Styling”**，覆盖 events、personal appointments、commercial projects、photoshoots 和 education。
 - 保留原有标题、链接与双栏布局。
