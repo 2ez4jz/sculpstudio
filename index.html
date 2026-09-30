@@ -17,7 +17,7 @@
 <body>
 <div id="sculp-site">
 <style>
-#sculp-site{--ivory:#f3eee6;--paper:#faf7f2;--ink:#24211f;--charcoal:#211f1c;--muted:#776d63;--line:#d8ccc0;--sand:#e7ddd0;--oak:#d4bea2;background:var(--ivory);color:var(--ink);font:15px/1.6 Arial,Helvetica,sans-serif;min-height:100vh}#sculp-site *{box-sizing:border-box}#sculp-site a{color:inherit;text-decoration:none}#sculp-site button,#sculp-site input,#sculp-site select,#sculp-site textarea{font:inherit}#sculp-site button{cursor:pointer}#sculp-site .shell{max-width:1440px;margin:auto;padding:0 clamp(30px,5vw,96px)}#sculp-site .mast{position:sticky;top:0;z-index:80;background:transparent;border-bottom:0;box-shadow:none;transition:none}#sculp-site .mast::before{content:"";position:absolute;inset:0;background:rgba(243,238,230,.22);border-bottom:1px solid rgba(216,204,192,.24);backdrop-filter:blur(10px) saturate(108%);-webkit-backdrop-filter:blur(10px) saturate(108%);transition:background .28s ease,border-color .28s ease,backdrop-filter .28s ease,-webkit-backdrop-filter .28s ease,box-shadow .28s ease;z-index:0}#sculp-site .mast.scrolled::before{background:rgba(243,238,230,.38);border-bottom-color:rgba(216,204,192,.34);backdrop-filter:blur(14px) saturate(115%);-webkit-backdrop-filter:blur(14px) saturate(115%);box-shadow:0 6px 18px rgba(20,20,18,.035)}#sculp-site .mast-inner{position:relative;z-index:2;min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:20px}#sculp-site .logo{position:relative;z-index:3;font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:28px;line-height:1;letter-spacing:-.035em;font-weight:600;white-space:nowrap}#sculp-site .nav{display:flex;align-items:center;gap:clamp(10px,1.8vw,28px)}#sculp-site .nav a,#sculp-site .mobile-toggle{font-size:11px;letter-spacing:.15em;text-transform:uppercase}#sculp-site .nav a.active{text-decoration:underline;text-underline-offset:8px}#sculp-site .nav a:last-child{border:1px solid rgba(27,27,25,.85);padding:12px 21px;border-radius:999px;background:var(--charcoal);color:var(--paper)}#sculp-site .mobile-toggle{display:none;background:none;border:0}#sculp-site .view[hidden]{display:none!important}#sculp-site main{position:relative;z-index:1}#sculp-site .view[data-page="portfolio"] .intro{padding-top:clamp(110px,12vw,185px)}#sculp-site .view[data-page="team"] .intro,#sculp-site .view[data-page="about"] .intro,#sculp-site .view[data-page="occasions"] .intro,#sculp-site .view[data-page="book"] .intro{padding-top:clamp(104px,10vw,156px)}#sculp-site .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}#sculp-site .hero-location{display:flex;align-items:center;gap:10px;white-space:nowrap}#sculp-site .hero-location .location-plus{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:400;line-height:1;letter-spacing:0;color:var(--oak)}#sculp-site h1,#sculp-site h2,#sculp-site blockquote,#sculp-site .quote,#sculp-site .cta h2{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-style:normal;font-weight:600;letter-spacing:-.035em;line-height:1.03}#sculp-site h1{font-size:clamp(56px,8vw,126px);margin:20px 0 28px}#sculp-site h2{font-size:clamp(42px,5.4vw,80px);margin:15px 0 28px}#sculp-site h3{font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:400;margin:10px 0}#sculp-site p{color:#4d4944;max-width:610px}#sculp-site .lead{font-size:17px;max-width:550px}#sculp-site .section{padding:clamp(84px,9vw,142px) 0;border-top:1px solid var(--line)}#sculp-site .intro{padding:clamp(108px,12vw,184px) 0 clamp(92px,8vw,122px)}#sculp-site .intro p{max-width:650px}#sculp-site .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(44px,6vw,104px);align-items:center}#sculp-site .home-hero{display:grid;grid-template-columns:42% 58%;min-height:min(800px,86vh);align-items:center;padding-top:18px}#sculp-site .home-hero .copy{padding:70px 5vw 70px 0}#sculp-site .home-hero .photo{height:100%;min-height:600px}#sculp-site .photo{position:relative;min-height:360px;background:linear-gradient(140deg,#e2d7ca,#c5ad92);overflow:hidden}#sculp-site .photo:after{content:attr(data-image);position:absolute;bottom:15px;left:15px;padding:6px 9px;background:rgba(251,250,247,.9);color:#514b43;font-size:10px;letter-spacing:.13em;text-transform:uppercase}#sculp-site .photo.tall{min-height:620px}#sculp-site .photo.wide{min-height:520px}#sculp-site .photo.mid{min-height:450px}#sculp-site .photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}#sculp-site .photo:has(img):after{display:none}#sculp-site .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}#sculp-site .button{display:inline-block;padding:13px 19px;border:1px solid var(--ink);background:transparent;text-transform:uppercase;letter-spacing:.13em;font-size:11px;color:var(--ink);text-align:center}#sculp-site .button.fill{background:var(--charcoal);color:var(--paper)}#sculp-site .button:hover{background:var(--oak);color:var(--ink)}#sculp-site .triptych{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:55px}#sculp-site .triptych .photo:first-child{grid-row:span 2;min-height:740px}#sculp-site .triptych .photo{min-height:360px}#sculp-site .three{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:45px}#sculp-site .card{border-top:1px solid var(--ink);padding:20px 0}#sculp-site .card .eyebrow{margin-bottom:30px}#sculp-site .statement{text-align:center;max-width:1040px;margin:auto;padding-inline:clamp(8px,2vw,30px)}#sculp-site .statement p{margin:auto}#sculp-site .statement>p{font-style:italic;font-size:clamp(19px,2vw,29px);line-height:1.45;max-width:1180px;color:var(--ink)}#sculp-site .quote{font-size:clamp(32px,4.5vw,66px);max-width:1050px;margin:0 auto 25px;text-align:center}#sculp-site .muted{color:var(--muted)}#sculp-site .cta{background:var(--charcoal);color:var(--paper);padding:clamp(92px,10vw,148px) 0}#sculp-site .cta p,#sculp-site .cta .eyebrow{color:#c4bfb6}#sculp-site .cta .button{border-color:var(--paper);color:var(--paper)}#sculp-site .cta .button.fill{background:var(--paper);color:var(--ink)}#sculp-site .cta .shell{max-width:1320px;padding-left:clamp(42px,6vw,112px);padding-right:clamp(42px,6vw,112px)}
+#sculp-site{--ivory:#f3eee6;--paper:#faf7f2;--ink:#24211f;--charcoal:#211f1c;--muted:#776d63;--line:#d8ccc0;--sand:#e7ddd0;--oak:#d4bea2;background:var(--ivory);color:var(--ink);font:15px/1.6 Arial,Helvetica,sans-serif;min-height:100vh}#sculp-site *{box-sizing:border-box}#sculp-site a{color:inherit;text-decoration:none}#sculp-site button,#sculp-site input,#sculp-site select,#sculp-site textarea{font:inherit}#sculp-site button{cursor:pointer}#sculp-site .shell{max-width:1440px;margin:auto;padding:0 clamp(30px,5vw,96px)}#sculp-site .mast{position:sticky;top:0;z-index:80;background:transparent;border-bottom:0;box-shadow:none;transition:none}#sculp-site .mast::before{content:"";position:absolute;inset:0;background:rgba(243,238,230,.22);border-bottom:1px solid rgba(216,204,192,.24);backdrop-filter:blur(10px) saturate(108%);-webkit-backdrop-filter:blur(10px) saturate(108%);transition:background .28s ease,border-color .28s ease,backdrop-filter .28s ease,-webkit-backdrop-filter .28s ease,box-shadow .28s ease;z-index:0}#sculp-site .mast.scrolled::before{background:rgba(243,238,230,.38);border-bottom-color:rgba(216,204,192,.34);backdrop-filter:blur(14px) saturate(115%);-webkit-backdrop-filter:blur(14px) saturate(115%);box-shadow:0 6px 18px rgba(20,20,18,.035)}#sculp-site .mast-inner{position:relative;z-index:2;min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:20px}#sculp-site .logo{position:relative;z-index:3;font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:28px;line-height:1;letter-spacing:-.035em;font-weight:600;white-space:nowrap}#sculp-site .nav{display:flex;align-items:center;gap:clamp(10px,1.8vw,28px)}#sculp-site .nav a,#sculp-site .mobile-toggle{font-size:11px;letter-spacing:.15em;text-transform:uppercase}#sculp-site .nav a.active{text-decoration:underline;text-underline-offset:8px}#sculp-site .nav a:last-child{border:1px solid rgba(27,27,25,.85);padding:12px 21px;border-radius:999px;background:var(--charcoal);color:var(--paper)}#sculp-site .mobile-toggle{display:none;background:none;border:0}#sculp-site .view[hidden]{display:none!important}#sculp-site main{position:relative;z-index:1}#sculp-site .view[data-page="portfolio"] .intro{padding-top:clamp(110px,12vw,185px)}#sculp-site .view[data-page="team"] .intro,#sculp-site .view[data-page="about"] .intro,#sculp-site .view[data-page="occasions"] .intro,#sculp-site .view[data-page="book"] .intro{padding-top:clamp(104px,10vw,156px)}#sculp-site .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}#sculp-site .hero-location{display:flex;align-items:center;gap:10px;white-space:nowrap}#sculp-site .hero-location .location-plus{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:400;line-height:1;letter-spacing:0;color:var(--oak)}#sculp-site h1,#sculp-site h2,#sculp-site blockquote,#sculp-site .quote,#sculp-site .cta h2{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-style:normal;font-weight:600;letter-spacing:-.035em;line-height:1.03}#sculp-site h1{font-size:clamp(56px,8vw,126px);margin:20px 0 28px}#sculp-site h2{font-size:clamp(42px,5.4vw,80px);margin:15px 0 28px}#sculp-site h3{font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:400;margin:10px 0}#sculp-site p{color:#4d4944;max-width:610px}#sculp-site .lead{font-size:17px;max-width:550px}#sculp-site .section{padding:clamp(84px,9vw,142px) 0;border-top:1px solid var(--line)}#sculp-site .intro{padding:clamp(108px,12vw,184px) 0 clamp(92px,8vw,122px)}#sculp-site .intro p{max-width:650px}#sculp-site .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(44px,6vw,104px);align-items:center}#sculp-site .home-hero{display:grid;grid-template-columns:42% 58%;min-height:min(800px,86vh);align-items:center;padding-top:18px}#sculp-site .home-hero .copy{padding:70px 5vw 70px 0}#sculp-site .home-hero .photo{height:100%;min-height:600px}#sculp-site .photo{position:relative;min-height:360px;background:linear-gradient(140deg,#e2d7ca,#c5ad92);overflow:hidden}#sculp-site .photo.tall{min-height:620px}#sculp-site .photo.wide{min-height:520px}#sculp-site .photo.mid{min-height:450px}#sculp-site .photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}#sculp-site .photo:has(img):after{display:none}#sculp-site .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}#sculp-site .button{display:inline-block;padding:13px 19px;border:1px solid var(--ink);background:transparent;text-transform:uppercase;letter-spacing:.13em;font-size:11px;color:var(--ink);text-align:center}#sculp-site .button.fill{background:var(--charcoal);color:var(--paper)}#sculp-site .button:hover{background:var(--oak);color:var(--ink)}#sculp-site .triptych{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:55px}#sculp-site .triptych .photo:first-child{grid-row:span 2;min-height:740px}#sculp-site .triptych .photo{min-height:360px}#sculp-site .three{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:45px}#sculp-site .card{border-top:1px solid var(--ink);padding:20px 0}#sculp-site .card .eyebrow{margin-bottom:30px}#sculp-site .statement{text-align:center;max-width:1040px;margin:auto;padding-inline:clamp(8px,2vw,30px)}#sculp-site .statement p{margin:auto}#sculp-site .statement>p{font-style:italic;font-size:clamp(19px,2vw,29px);line-height:1.45;max-width:1180px;color:var(--ink)}#sculp-site .quote{font-size:clamp(32px,4.5vw,66px);max-width:1050px;margin:0 auto 25px;text-align:center}#sculp-site .muted{color:var(--muted)}#sculp-site .cta{background:var(--charcoal);color:var(--paper);padding:clamp(92px,10vw,148px) 0}#sculp-site .cta p,#sculp-site .cta .eyebrow{color:#c4bfb6}#sculp-site .cta .button{border-color:var(--paper);color:var(--paper)}#sculp-site .cta .button.fill{background:var(--paper);color:var(--ink)}#sculp-site .cta .shell{max-width:1320px;padding-left:clamp(42px,6vw,112px);padding-right:clamp(42px,6vw,112px)}
 #sculp-site .cta .shell>h2{max-width:760px}
 #sculp-site .cta .shell>p{max-width:580px}
 #sculp-site .cta .shell>.button{margin-top:16px}
@@ -46,8 +46,8 @@
 #sculp-site .bridal-hero-copy{max-width:620px}
 #sculp-site .bridal-hero-copy h1{margin:.18em 0 .28em}
 #sculp-site .bridal-hero-media .photo{min-height:680px}
-#sculp-site .content-note{margin:0 0 14px;padding:10px 12px;border:1px dashed rgba(126,92,48,.38);background:rgba(236,221,197,.22);font-size:12px;line-height:1.55;color:#765c3c;letter-spacing:.01em}
-#sculp-site .content-note strong{font-weight:650}
+
+
 #sculp-site .team-founder{display:grid;grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr);gap:clamp(54px,7vw,116px);align-items:center}
 #sculp-site .team-founder .photo{min-height:620px}
 #sculp-site .team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(34px,5vw,72px);margin-top:38px}
@@ -103,7 +103,7 @@
 #sculp-site .button{border-color:rgba(36,33,31,.72);border-radius:2px}
 #sculp-site .eyebrow{color:#817467}
 #sculp-site input,#sculp-site select,#sculp-site textarea{background:#fcf8f2;border-color:#dacdc0}#sculp-site input,#sculp-site select{height:54px;min-height:54px;padding:0 18px}#sculp-site select{line-height:54px}#sculp-site textarea{padding:15px 18px;min-height:140px}
-#sculp-site .content-note{background:rgba(231,221,208,.40);border-color:rgba(137,103,67,.34);color:#755c43}
+
 
 
 
@@ -199,7 +199,7 @@
 #sculp-site h1,#sculp-site h2,#sculp-site h3{color:var(--ink)}
 #sculp-site .lead{color:#514a44}
 #sculp-site .section>.shell>.eyebrow + h2,
-#sculp-site .section>.shell>.content-note + h2{margin-top:10px}
+
 #sculp-site .section-kicker{align-items:flex-end}
 #sculp-site .actions{align-items:center}
 #sculp-site .actions>a:not(.button),
@@ -228,7 +228,7 @@
 #sculp-site .photo{isolation:isolate}
 #sculp-site .photo img{transition:transform .45s ease}
 #sculp-site .photo:hover img{transform:scale(1.012)}
-#sculp-site .content-note{border-radius:2px}
+
 #sculp-site .home-service h3{max-width:14ch}
 #sculp-site .home-service .service-context{margin:18px 0 20px}
 #sculp-site .home-studio>div:last-child,
@@ -303,7 +303,6 @@
   <div class="shell home-hero">
     <div class="copy">
       <div class="eyebrow hero-location"><span>Toronto</span><span class="location-plus" aria-hidden="true">+</span><span>Available worldwide</span></div>
-      <div class="content-note"><strong>待老板确认：</strong>首页 Hero 主标题与一句总定位。当前延续品牌方向 “Beauty, considered.”。</div>
       <h1>Make moments<br>that matter.</h1>
       <p class="lead">At SCULP, every look begins with the person. We consider your features, personal style, and the occasion to create beauty that feels polished, balanced, and unmistakably yours. Thoughtfully designed and refined in every detail, each look is made to feel beautiful in the moment—and remembered long after.</p>
       <div class="actions">
@@ -312,7 +311,7 @@
       </div>
     </div>
     <div>
-      <div class="photo arch-top" data-image="待补：首页 Hero 主图"><img src="assets/images/veil-portrait.webp" alt="Bridal portrait with a sheer veil" width="1200" height="1600" loading="eager" decoding="async" fetchpriority="high" style="object-position:50% 42%"></div>
+      <div class="photo arch-top"><img src="assets/images/veil-portrait.webp" alt="Bridal portrait with a sheer veil" width="1200" height="1600" loading="eager" decoding="async" fetchpriority="high" style="object-position:50% 42%"></div>
     </div>
   </div>
 </section>
@@ -320,7 +319,6 @@
 <section class="section surface-soft">
   <div class="shell home-philosophy">
     <div class="eyebrow">The SCULP point of view</div>
-    <div class="content-note"><strong>待老板确认：</strong>是否把 “Beauty that still feels like you.” 作为首页最核心的品牌句。</div>
     <h2>Beauty that still feels like you.</h2>
     <p class="lead">Beauty should feel familiar — only more considered. Guided by your features, your presence, and the way you move through the world, we create a look that feels effortless, intentional, and entirely your own.</p>
   </div>
@@ -332,19 +330,19 @@
     <h2>Made to be remembered.</h2>
 
     <div class="home-work">
-      <div class="photo" data-image="待补：首页 Featured Work 01"><img src="assets/images/garden-room.webp" alt="Bride in a softly lit garden room" width="1689" height="2200" loading="lazy" decoding="async" style="object-position:50% 50%"></div>
+      <div class="photo"><img src="assets/images/garden-room.webp" alt="Bride in a softly lit garden room" width="1689" height="2200" loading="lazy" decoding="async" style="object-position:50% 50%"></div>
       <div class="home-work-stack">
-        <div class="photo" data-image="待补：首页 Featured Work 02"><img src="assets/images/garden-couple.webp" alt="Wedding couple surrounded by greenery" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:50% 45%"></div>
-        <div class="photo" data-image="待补：首页 Featured Work 03"><img src="assets/images/bridal-editorial.webp" alt="Bridal editorial with calla lilies and flowing fabric" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:50% 45%"></div>
+        <div class="photo"><img src="assets/images/garden-couple.webp" alt="Wedding couple surrounded by greenery" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:50% 45%"></div>
+        <div class="photo"><img src="assets/images/bridal-editorial.webp" alt="Bridal editorial with calla lilies and flowing fabric" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:50% 45%"></div>
       </div>
     </div>
 
     <div class="home-strip" aria-label="Selected work preview">
-      <div class="photo" data-image="Bridal"><img src="assets/images/woodland-veil.webp" alt="Bride with a long veil in a woodland setting" width="1061" height="1600" loading="lazy" decoding="async" style="object-position:50% 50%"></div>
-      <div class="photo" data-image="Bridal"><img src="assets/images/floral-ceremony.webp" alt="Bride in a floral ceremony setting" width="1366" height="2048" loading="lazy" decoding="async" style="object-position:50% 45%"></div>
-      <div class="photo" data-image="Bridal"><img src="assets/images/calla-lily-portrait.webp" alt="Bridal editorial portrait with calla lilies" width="1747" height="2200" loading="lazy" decoding="async" style="object-position:50% 35%"></div>
-      <div class="photo" data-image="Bridal"><img src="assets/images/monochrome-bride.webp" alt="Black and white bridal portrait" width="1472" height="2200" loading="lazy" decoding="async" style="object-position:50% 40%"></div>
-      <div class="photo" data-image="Bridal"><img src="assets/images/garden-wedding.webp" alt="Newlyweds in a sunlit garden" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 40%"></div>
+      <div class="photo"><img src="assets/images/woodland-veil.webp" alt="Bride with a long veil in a woodland setting" width="1061" height="1600" loading="lazy" decoding="async" style="object-position:50% 50%"></div>
+      <div class="photo"><img src="assets/images/floral-ceremony.webp" alt="Bride in a floral ceremony setting" width="1366" height="2048" loading="lazy" decoding="async" style="object-position:50% 45%"></div>
+      <div class="photo"><img src="assets/images/calla-lily-portrait.webp" alt="Bridal editorial portrait with calla lilies" width="1747" height="2200" loading="lazy" decoding="async" style="object-position:50% 35%"></div>
+      <div class="photo"><img src="assets/images/monochrome-bride.webp" alt="Black and white bridal portrait" width="1472" height="2200" loading="lazy" decoding="async" style="object-position:50% 40%"></div>
+      <div class="photo"><img src="assets/images/garden-wedding.webp" alt="Newlyweds in a sunlit garden" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 40%"></div>
     </div>
 
     <div class="actions"><a href="#portfolio">View full portfolio →</a></div>
@@ -404,8 +402,7 @@
 <section class="section architectural-section">
   <div class="shell home-studio">
     <div>
-      <div class="content-note"><strong>待补（Studio 完工后）：</strong>首页 Studio 图只选最强 1 张，建议完整空间或非常有辨识度的拱形 / 化妆区视角。</div>
-      <div class="photo" data-image="待补：首页 Studio 主图"></div>
+      <div class="photo"></div>
     </div>
     <div>
       <div class="eyebrow">The Studio</div>
@@ -418,7 +415,7 @@
 
 <section class="section">
   <div class="shell home-team">
-    <div class="photo tall" data-image="待补：Team / Artist working in studio"></div>
+    <div class="photo tall"></div>
     <div>
       <div class="eyebrow">The artists</div>
       <h2>Different artists. One SCULP point of view.</h2>
@@ -467,7 +464,6 @@
   <div class="shell bridal-hero">
     <div class="bridal-hero-copy">
       <div class="eyebrow">SCULP Bridal · Toronto & beyond</div>
-      <div class="content-note"><strong>待老板确认：</strong>Hero 主标题与一句品牌文案。当前为第一版占位文案。</div>
       <h1>Bridal beauty,<br>considered.</h1>
       <p class="lead">Refined styling shaped around you, your dress, your setting, and the way the day will be remembered.</p>
       <div class="actions">
@@ -478,7 +474,7 @@
     </div>
 
     <div class="bridal-hero-media">
-      <div class="photo tall arch-top" data-image="待补：SCULP Bridal Hero 主图"><img src="assets/images/chair-portrait.webp" alt="Bride with an elegant updo and pearl earrings" width="1334" height="2000" loading="eager" decoding="async" fetchpriority="high" style="object-position:50% 45%"></div>
+      <div class="photo tall arch-top"><img src="assets/images/chair-portrait.webp" alt="Bride with an elegant updo and pearl earrings" width="1334" height="2000" loading="eager" decoding="async" fetchpriority="high" style="object-position:50% 45%"></div>
     </div>
   </div>
 </section>
@@ -486,11 +482,10 @@
 <section class="section">
   <div class="shell split">
     <div>
-      <div class="photo tall" data-image="待补：Bridal Approach 图片"><img src="assets/images/bridal-profile.webp" alt="Bridal profile with a delicate veil" width="1472" height="2200" loading="lazy" decoding="async" style="object-position:50% 35%"></div>
+      <div class="photo tall"><img src="assets/images/bridal-profile.webp" alt="Bridal profile with a delicate veil" width="1472" height="2200" loading="lazy" decoding="async" style="object-position:50% 35%"></div>
     </div>
     <div>
       <div class="eyebrow">The bridal approach</div>
-      <div class="content-note"><strong>待老板确认：</strong>是否把“Still entirely you.”作为 Bridal 的核心理念句。</div>
       <h2>Still entirely you.</h2>
       <p>We begin with your features, personal style, dress, setting, light and photography. The goal is not to place a look on you, but to refine one that feels considered, comfortable and recognizably yours.</p>
     </div>
@@ -548,7 +543,6 @@
     <div class="artist-note">
       <div>
         <div class="eyebrow">Choose your artist</div>
-        <div class="content-note"><strong>待老板确认：</strong>三档 Artist 的正式英文命名，以及是否需要一句更明确的“经验不同、标准一致”说明。</div>
         <p>Pricing reflects artist experience and role within the studio. Every SCULP artist works within the same studio point of view and service standard.</p>
       </div>
       <a class="button" href="#team">Meet the artists →</a>
@@ -560,7 +554,6 @@
   <div class="shell">
     <div class="eyebrow">Additional services</div>
     <h2>For the people around you.</h2>
-    <div class="content-note"><strong>待老板确认：</strong>伴娘/妈妈妆 $200 / $180 / $160 是否对应 1人 / 3人以上 / 5人以上；确认后可改成正式价格说明。</div>
     <div class="service-list">
       <div class="service-row"><span>Trial Session</span><span>$390 / $300 / $260</span></div>
       <div class="service-row"><span>Bridesmaids & Mothers</span><span>$200 / $180 / $160</span></div>
@@ -585,7 +578,6 @@
         <p>Professional and prestige beauty products selected for performance, comfort and finish.</p>
       </div>
       <div class="card">
-        <div class="content-note"><strong>待老板确认：</strong>手工配饰具体包含什么、押金金额/方式、归还时间。</div>
         <h3>Finishing Details</h3>
         <p>Selected handmade accessories and styling details can be incorporated where appropriate.</p>
       </div>
@@ -597,7 +589,6 @@
   <div class="shell">
     <div class="eyebrow">Booking notes</div>
     <h2>Before your date is confirmed.</h2>
-    <div class="content-note"><strong>待老板确认：</strong>定金正式称呼（deposit / retainer）、取消与改期政策、不可退款条款的最终法律/业务表述。</div>
     <ul class="booking-notes">
       <li>A 50% retainer is required to secure the booking.</li>
       <li>The remaining balance is collected after the wedding service.</li>
@@ -611,7 +602,6 @@
 <article class="view" data-page="occasions" hidden>
 <div class="shell intro">
   <div class="eyebrow">SCULP Occasions</div>
-  <div class="content-note"><strong>待老板确认：</strong>Occasions 页主标题与总定位。当前版本把页面定义为“非婚礼化妆 + 教学”的总入口。</div>
   <h1>Beauty for life,<br>camera, and learning.</h1>
   <p class="lead">Styling services for events, personal appointments, commercial projects and photoshoots — plus private and group education.</p>
   <div class="actions"><a class="button fill" href="#book">Enquire</a><a class="button" href="#occasion-styling">Explore services</a></div>
@@ -620,7 +610,6 @@
 <section class="section" id="occasion-styling">
   <div class="shell">
     <div class="eyebrow">Styling services</div>
-    <div class="content-note"><strong>待老板确认：</strong>“Styling Services”下是否最终保留 4 类：Event / Personal / Commercial / Photoshoot。若实际业务不接其中某类，应现在删掉而不是上线后再改。</div>
     <h2>Made for the moment.</h2>
     <p class="lead">Choose the setting. We shape the look around the person, the purpose and the camera.</p>
 
@@ -629,7 +618,6 @@
         <div class="eyebrow">01</div>
         <h3>Event Styling</h3>
         <p>For celebrations, dinners, graduations and occasions where you want to feel polished and camera-ready.</p>
-        <div class="content-note"><strong>待老板确认：</strong>Event Styling 实际覆盖哪些场景；是否包含 prom / graduation / birthday / gala / wedding guest 等。</div>
         
       </div>
 
@@ -637,7 +625,6 @@
         <div class="eyebrow">02</div>
         <h3>Personal Styling</h3>
         <p>For everyday refinement, dates, important meetings or simply looking and feeling more considered.</p>
-        <div class="content-note"><strong>待老板确认：</strong>是否真的提供“日常 / Personal Styling”单次服务；如果只做活动妆，这一项应删除或改名。</div>
         
       </div>
 
@@ -645,7 +632,6 @@
         <div class="eyebrow">03</div>
         <h3>Commercial Beauty</h3>
         <p>For campaigns, advertising, branded content and creative commercial projects.</p>
-        <div class="content-note"><strong>待老板确认：</strong>商业项目是按 day rate、half-day、小时还是 project quote 报价；是否涉及 assistant、travel、usage 或其他商业条款。</div>
         
       </div>
 
@@ -653,7 +639,6 @@
         <div class="eyebrow">04</div>
         <h3>Photoshoot Styling</h3>
         <p>For portraits, engagements, editorial-style sessions and studio photography.</p>
-        <div class="content-note"><strong>待老板确认：</strong>Photoshoot 是否包含 engagement / portrait / personal branding / headshot / creative shoot；需要明确与 Commercial 的边界。</div>
         
       </div>
     </div>
@@ -667,17 +652,14 @@
 <section class="section" id="occasion-education">
   <div class="shell">
     <div class="eyebrow">Education</div>
-    <div class="content-note"><strong>待老板确认：</strong>教学业务是否统一放在 Occasions 下。当前结构分成 1-on-1 和 Group 两类，不再另外开 Course 页面。</div>
     <h2>Learn your own face.</h2>
     <p class="lead">Practical styling education shaped around your goals, products, features and routine.</p>
-    <div class="content-note"><strong>待补（Studio 完工后）：</strong>教学场景图 1–2 张。若 1-on-1 / Group Class 在 Studio 进行，优先拍真实教学状态，而不是空空间。</div>
 
     <div class="split">
       <div class="card">
         <div class="eyebrow">Private</div>
         <h3>1-on-1 Styling Lesson</h3>
         <p>A personalized lesson focused on your features, technique, product use and a routine you can repeat with confidence.</p>
-        <div class="content-note"><strong>待老板确认：</strong>课程时长、是否需要自带化妆品、是否包含产品推荐 / face chart / follow-up、适合新手还是进阶用户。</div>
         
       </div>
 
@@ -685,7 +667,6 @@
         <div class="eyebrow">Group</div>
         <h3>Group Styling Class</h3>
         <p>For friends, small groups, events or brand-led sessions. Format and focus can be tailored to the group.</p>
-        <div class="content-note"><strong>待老板确认：</strong>团课最少 / 最多人数、时长、场地、是否可做私人聚会 / corporate / brand workshop，以及报价方式。</div>
         
       </div>
     </div>
@@ -699,7 +680,6 @@
 <section class="section">
   <div class="shell statement">
     <div class="eyebrow">Pricing</div>
-    <div class="content-note"><strong>待老板确认：</strong>哪些服务适合公开固定价格 / starting from，哪些只适合 Request a Quote。建议 Commercial 保留 quote，其余服务可在价格确认后公开。</div>
     <h2>Tell us what you’re planning.</h2>
     <p>We’ll help identify the right service, format, and artist for the brief.</p>
     <div class="actions" style="justify-content:center"><a class="button fill" href="#book">Start an enquiry</a></div>
@@ -708,7 +688,6 @@
 
 <section class="section">
   <div class="shell">
-    <div class="content-note"><strong>待补图片：</strong>Occasions 页面后续建议至少准备 4–6 张：Event 1–2、Personal 1、Commercial 1–2、Education 1–2。若素材不足，不建议每个服务都硬塞图片，可以用 2–3 张强图做 editorial 分隔。</div>
   </div>
 </section>
 </article>
@@ -720,24 +699,24 @@
 
   <div class="portfolio-featured" aria-label="Featured portfolio">
     <figure>
-      <div class="photo" data-image="待补：Portfolio Featured 01"><img src="assets/images/window-bouquet.webp" alt="Bride holding a bouquet beside a window" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 40%"></div>
+      <div class="photo"><img src="assets/images/window-bouquet.webp" alt="Bride holding a bouquet beside a window" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 40%"></div>
     </figure>
     <div class="stack">
-      <figure><div class="photo" data-image="待补：Portfolio Featured 02"><img src="assets/images/garden-couple.webp" alt="Wedding couple surrounded by greenery" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:50% 45%"></div></figure>
-      <figure><div class="photo" data-image="待补：Portfolio Featured 03"><img src="assets/images/bridal-editorial.webp" alt="Bridal editorial with calla lilies and flowing fabric" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:50% 45%"></div></figure>
+      <figure><div class="photo"><img src="assets/images/garden-couple.webp" alt="Wedding couple surrounded by greenery" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:50% 45%"></div></figure>
+      <figure><div class="photo"><img src="assets/images/bridal-editorial.webp" alt="Bridal editorial with calla lilies and flowing fabric" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:50% 45%"></div></figure>
     </div>
   </div>
 
   <div class="portfolio-strip-wrap">
     <div class="portfolio-strip" id="portfolio-strip" aria-label="Scrollable portfolio gallery">
-      <figure class="portfolio-thumb" data-category="bridal"><div class="photo" data-image="Bridal"><img src="assets/images/veil-portrait.webp" alt="Bridal portrait with a sheer veil" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 42%"></div><figcaption>Bridal</figcaption></figure>
-      <figure class="portfolio-thumb" data-category="bridal"><div class="photo" data-image="Bridal"><img src="assets/images/woodland-veil.webp" alt="Bride with a long veil in a woodland setting" width="1061" height="1600" loading="lazy" decoding="async" style="object-position:50% 50%"></div><figcaption>Bridal</figcaption></figure>
-      <figure class="portfolio-thumb" data-category="bridal"><div class="photo" data-image="Bridal"><img src="assets/images/floral-ceremony.webp" alt="Bride in a floral ceremony setting" width="1366" height="2048" loading="lazy" decoding="async" style="object-position:50% 45%"></div><figcaption>Bridal</figcaption></figure>
-      <figure class="portfolio-thumb" data-category="bridal"><div class="photo" data-image="Bridal"><img src="assets/images/bridal-profile.webp" alt="Bridal profile with a delicate veil" width="1472" height="2200" loading="lazy" decoding="async" style="object-position:50% 35%"></div><figcaption>Bridal</figcaption></figure>
-      <figure class="portfolio-thumb" data-category="bridal"><div class="photo" data-image="Bridal"><img src="assets/images/monochrome-bride.webp" alt="Black and white bridal portrait" width="1472" height="2200" loading="lazy" decoding="async" style="object-position:50% 40%"></div><figcaption>Bridal</figcaption></figure>
-      <figure class="portfolio-thumb" data-category="bridal"><div class="photo" data-image="Bridal"><img src="assets/images/garden-wedding.webp" alt="Newlyweds in a sunlit garden" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 40%"></div><figcaption>Bridal</figcaption></figure>
-      <figure class="portfolio-thumb" data-category="bridal"><div class="photo" data-image="Bridal"><img src="assets/images/castle-couple.webp" alt="Wedding couple at a stone castle" width="1366" height="2048" loading="lazy" decoding="async" style="object-position:50% 40%"></div><figcaption>Bridal</figcaption></figure>
-      <figure class="portfolio-thumb" data-category="bridal"><div class="photo" data-image="Bridal"><img src="assets/images/calla-lily-portrait.webp" alt="Bridal editorial portrait with calla lilies" width="1747" height="2200" loading="lazy" decoding="async" style="object-position:50% 35%"></div><figcaption>Bridal</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/veil-portrait.webp" alt="Bridal portrait with a sheer veil" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 42%"></div><figcaption>Bridal</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/woodland-veil.webp" alt="Bride with a long veil in a woodland setting" width="1061" height="1600" loading="lazy" decoding="async" style="object-position:50% 50%"></div><figcaption>Bridal</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/floral-ceremony.webp" alt="Bride in a floral ceremony setting" width="1366" height="2048" loading="lazy" decoding="async" style="object-position:50% 45%"></div><figcaption>Bridal</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/bridal-profile.webp" alt="Bridal profile with a delicate veil" width="1472" height="2200" loading="lazy" decoding="async" style="object-position:50% 35%"></div><figcaption>Bridal</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/monochrome-bride.webp" alt="Black and white bridal portrait" width="1472" height="2200" loading="lazy" decoding="async" style="object-position:50% 40%"></div><figcaption>Bridal</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/garden-wedding.webp" alt="Newlyweds in a sunlit garden" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 40%"></div><figcaption>Bridal</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/castle-couple.webp" alt="Wedding couple at a stone castle" width="1366" height="2048" loading="lazy" decoding="async" style="object-position:50% 40%"></div><figcaption>Bridal</figcaption></figure>
+      <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/calla-lily-portrait.webp" alt="Bridal editorial portrait with calla lilies" width="1747" height="2200" loading="lazy" decoding="async" style="object-position:50% 35%"></div><figcaption>Bridal</figcaption></figure>
     </div>
     <div class="portfolio-hint">
       <span>Drag or scroll to explore.</span>
@@ -753,24 +732,20 @@
 <article class="view" data-page="team" hidden>
 <div class="shell intro">
   <div class="eyebrow">The people behind SCULP</div>
-  <div class="content-note"><strong>待老板确认：</strong>Team 页核心标题。当前建议用“Different artists. One SCULP point of view.”，强调个人风格不同但工作室标准一致。</div>
   <h1>Different artists.<br>One SCULP point of view.</h1>
   <p class="lead">Meet the artists behind the studio - each with an individual eye, experience and specialty, connected by a shared approach to modern beauty.</p>
-  <div class="content-note"><strong>待补（Studio 完工后）：</strong>团队环境照 1 张。建议不是站成一排合照，而是 Artist 在 Studio 工作、准备或交流的自然画面。</div>
 </div>
 
 <section class="section">
   <div class="shell team-founder">
     <div>
-      <div class="content-note"><strong>待补：</strong>Miranda 个人主肖像 1 张。建议半身或工作状态，画面质感应明显高于普通证件式头像。</div>
-      <div class="photo tall arch-top" data-image="待补：Miranda Founder Portrait"></div>
+      <div class="photo tall arch-top"></div>
     </div>
     <div>
       <div class="eyebrow">Founder / Creative Styling Director</div>
       <h2>Miranda</h2>
       <p>With over 10 years of experience, Miranda brings a background in fashion and celebrity beauty to modern bridal styling. Her work spans international Fashion Weeks, runway shows and advertising campaigns for global brands, giving her bridal work a distinctly editorial eye.</p>
       <p>She has also created beauty for luxury destination weddings around the world, working with clients across different cultures and settings to create looks that feel refined, elegant and personal.</p>
-      <div class="content-note"><strong>待老板确认：</strong>Founder 是否需要补充更个人化的品牌故事，例如为什么创立 SCULP、最看重什么、个人最擅长的妆感。现在内容更偏履历。</div>
       <a class="button" href="#portfolio">View Miranda's work →</a>
     </div>
   </div>
@@ -780,12 +755,10 @@
   <div class="shell">
     <div class="eyebrow">Senior Styling Artists</div>
     <h2>Experience, with a distinct point of view.</h2>
-    <div class="content-note"><strong>待确认：</strong>Team 页职位命名要和 Bridal 价格体系统一。目前原官网使用 Senior Styling Artist / Styling Artist，而 Bridal 价格页使用 Senior Artist / SCULP Artist。</div>
 
     <div class="team-grid">
       <div class="team-person">
-        <div class="content-note"><strong>待补：</strong>Yuki 个人肖像 1 张。</div>
-        <div class="photo" data-image="待补：Yuki Portrait"></div>
+        <div class="photo"></div>
         <div class="eyebrow">Senior Styling Artist</div>
         <h3>Yuki</h3>
         <p>With over 10 years in bridal beauty, Yuki combines technical expertise with a refined artistic approach. Professionally trained in Hong Kong and South Korea, she holds ITEC and City &amp; Guilds certifications and has a background in beauty education and entrepreneurship.</p>
@@ -793,8 +766,7 @@
       </div>
 
       <div class="team-person">
-        <div class="content-note"><strong>待补：</strong>Mira 个人肖像 1 张。</div>
-        <div class="photo" data-image="待补：Mira Portrait"></div>
+        <div class="photo"></div>
         <div class="eyebrow">Senior Styling Artist</div>
         <h3>Mira</h3>
         <p>Mira specializes in modern bridal beauty with a particular focus on New Chinese Style styling, combining Chinese elegance with contemporary technique for polished, fashion-forward looks.</p>
@@ -811,8 +783,7 @@
 
     <div class="team-grid junior">
       <div class="team-person">
-        <div class="content-note"><strong>待补：</strong>Angelina 个人肖像。</div>
-        <div class="photo" data-image="待补：Angelina Portrait"></div>
+        <div class="photo"></div>
         <div class="eyebrow">Styling Artist</div>
         <h3>Angelina</h3>
         <p>Bridal, editorial and commercial beauty with a modern Korean-inspired approach - refined, fresh and designed to photograph beautifully.</p>
@@ -820,8 +791,7 @@
       </div>
 
       <div class="team-person">
-        <div class="content-note"><strong>待补：</strong>Elaine 个人肖像。</div>
-        <div class="photo" data-image="待补：Elaine Portrait"></div>
+        <div class="photo"></div>
         <div class="eyebrow">Styling Artist</div>
         <h3>Elaine</h3>
         <p>Bridal, portrait and special-event styling with a soft, charming and modern point of view that keeps the client's own features at the centre.</p>
@@ -829,8 +799,7 @@
       </div>
 
       <div class="team-person">
-        <div class="content-note"><strong>待补：</strong>Emily 个人肖像。</div>
-        <div class="photo" data-image="待补：Emily Portrait"></div>
+        <div class="photo"></div>
         <div class="eyebrow">Styling Artist</div>
         <h3>Emily</h3>
         <p>Fresh, polished beauty shaped around the client's features, personality and occasion, with a thoughtful and detail-oriented approach.</p>
@@ -838,8 +807,7 @@
       </div>
 
       <div class="team-person">
-        <div class="content-note"><strong>待补：</strong>Giselle 个人肖像。</div>
-        <div class="photo" data-image="待补：Giselle Portrait"></div>
+        <div class="photo"></div>
         <div class="eyebrow">Styling Artist</div>
         <h3>Giselle</h3>
         <p>Soft glam, modern Western and Thai-inspired beauty, with sculpted features, radiant skin and a more defined fashion-led finish.</p>
@@ -852,7 +820,6 @@
 <section class="section">
   <div class="shell team-standard">
     <div class="eyebrow">The SCULP Standard</div>
-    <div class="content-note"><strong>待老板确认：</strong>这一段是新结构里很重要的内容，需要老板确认 SCULP 对所有 Artist 的共同标准到底是什么。下面先放建议方向。</div>
     <h2>Different hands. A shared standard.</h2>
     <p class="lead">Artist selection should feel like choosing a point of view - not choosing between good and bad. The studio standard should remain consistent across every booking.</p>
     <div class="three">
@@ -880,7 +847,6 @@
 <article class="view" data-page="about" hidden>
 <div class="shell intro">
   <div class="eyebrow">About SCULP</div>
-  <div class="content-note"><strong>待老板确认：</strong>About 页主标题。当前建议用 “Beauty, with intention.”，不虚构创业故事，直接从品牌方法进入。</div>
   <h1>Beauty,<br>with intention.</h1>
   <p class="lead">SCULP Studio is a Toronto-based beauty studio creating refined styling for weddings, events, commercial work, portraits, and education.</p>
   <p>Our approach is simple: begin with the person, understand the context, and build a look that feels considered rather than imposed.</p>
@@ -889,12 +855,10 @@
 <section class="section">
   <div class="shell split">
     <div>
-      <div class="content-note"><strong>待补：</strong>About 主视觉 1 张。建议 Founder 工作状态、后台准备、妆面细节或 studio 氛围图；不建议放普通团队合照。</div>
-      <div class="photo tall arch-soft" data-image="待补：About / Founder at work"></div>
+      <div class="photo tall arch-soft"></div>
     </div>
     <div>
       <div class="eyebrow">Our Philosophy</div>
-      <div class="content-note"><strong>待老板确认：</strong>是否把 “Beauty should still feel like you.” 作为 About 页核心品牌句。</div>
       <h2>Beauty should still feel like you.</h2>
       <p>We believe styling works best when it responds to the individual — their features, personal style, setting, clothing, light, and the way the final look will be seen both in person and on camera.</p>
       <p>Rather than applying the same formula to every face, we focus on balance, proportion, texture, and detail.</p>
@@ -928,24 +892,21 @@
 <section class="section surface-soft architectural-section">
   <div class="shell">
     <div class="eyebrow">The Studio</div>
-    <div class="content-note"><strong>待补（Studio 装修完成后）：</strong>空间主图 1 张 + 细节图 2 张。建议优先拍整体空间、化妆台/镜面、材质或品牌细节。这里是 Studio 图片的主要展示位置。</div>
     <h2>A space for beauty,<br>detail, and calm.</h2>
     <p class="lead">The studio is designed as an extension of the SCULP approach — considered, refined, and centered on the experience of getting ready.</p>
     <div class="studio-gallery">
-      <div class="photo" data-image="待补：Studio Main Interior"></div>
+      <div class="photo"></div>
       <div class="studio-stack">
-        <div class="photo" data-image="待补：Studio Detail 01"></div>
-        <div class="photo" data-image="待补：Studio Detail 02"></div>
+        <div class="photo"></div>
+        <div class="photo"></div>
       </div>
     </div>
-    <div class="content-note" style="margin-top:18px"><strong>待老板确认：</strong>Studio 是否接待 Bridal Trial / 1-on-1 Lesson / Group Class / Personal Styling 等到店服务；确认后可在这里加入更具体的空间用途文案。</div>
   </div>
 </section>
 
 <section class="section surface-soft">
   <div class="shell statement">
     <div class="eyebrow">The SCULP Standard</div>
-    <div class="content-note"><strong>待老板确认：</strong>这部分是品牌态度，不是事实履历。请确认“不同 Artist、共同标准”以及下面两句是否符合老板真正想表达的 SCULP。</div>
     <h2>Different artists.<br>A shared point of view.</h2>
     <p>Each SCULP artist brings their own experience, strengths, and aesthetic. What connects the team is a shared commitment to thoughtful beauty, professional preparation, attention to detail, and a service experience that feels calm, considered, and personal.</p>
     <blockquote>We do not believe every client should look the same. We do believe every client should feel understood.</blockquote>
@@ -971,7 +932,6 @@
 <div class="shell intro">
   <div class="book-intro">
     <div class="eyebrow">Enquiries</div>
-    <div class="content-note"><strong>待老板确认：</strong>Book 页主标题与回复时效。当前建议把它做成最直接、最实用的转化页，不放作品图或品牌故事。</div>
     <h1>Tell us what<br>you're planning.</h1>
     <p class="lead">Share the essentials below. We’ll review your enquiry and guide you toward the right service, artist, and next step.</p>
   </div>
@@ -1061,7 +1021,6 @@
 
       <div class="book-expectation">
         <div class="eyebrow">What happens next</div>
-        <div class="content-note"><strong>待老板确认：</strong>请确认真实回复时效、定金规则，以及什么状态才算正式锁定日期。以下先按当前 Bridal 逻辑做占位。</div>
         <div class="book-expectation-grid">
           <div>
             <h3>We review</h3>
