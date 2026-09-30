@@ -97,3 +97,6 @@
 - 2026-09-30: Updated the homepage Selected Work trio to images 717, 666, and 598, and corrected the Occasions feature crop focal points.
 
 - 2026-09-30: Swapped homepage Selected Work images 598 and 717, placing 598 in the large left position and 717 at lower right.
+
+- 2026-09-30: Updated the homepage Selected Work trio to 706 at left, 717 at upper right, and the 694 couple portrait at lower right.
+- 2026-09-30: Replaced the left homepage Selected Work image with 598, keeping 717 at upper right and the 694 couple portrait at lower right.
