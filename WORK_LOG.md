@@ -87,3 +87,5 @@
 - 网站修改提交：[`b0fb6ea`](https://github.com/2ez4jz/sculpstudio/commit/b0fb6ea45f076dba3736abc2526607093550a19c)。
 
 - 2026-09-30: Updated the homepage Selected Work trio with the three supplied images, placing the second film portrait in the largest position and optimizing all three as WebP.
+
+- 2026-09-30: Swapped the left feature and lower-right Selected Work images, moving the sepia portrait into the largest position.
