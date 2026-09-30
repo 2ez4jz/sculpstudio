@@ -89,3 +89,5 @@
 - 2026-09-30: Updated the homepage Selected Work trio with the three supplied images, placing the second film portrait in the largest position and optimizing all three as WebP.
 
 - 2026-09-30: Swapped the left feature and lower-right Selected Work images, moving the sepia portrait into the largest position.
+
+- 2026-09-30: Re-curated the homepage Selected Work trio with images 708, 707, and 714 for a cohesive bridal story across scene, detail, and emotion.
