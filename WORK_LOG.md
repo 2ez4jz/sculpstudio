@@ -91,3 +91,5 @@
 - 2026-09-30: Swapped the left feature and lower-right Selected Work images, moving the sepia portrait into the largest position.
 
 - 2026-09-30: Re-curated the homepage Selected Work trio with images 708, 707, and 714 for a cohesive bridal story across scene, detail, and emotion.
+
+- 2026-09-30: Rebuilt the non-hero image system across Home, Bridal, Occasions, Portfolio, and About using the 20 supplied photographs; added page-specific visual narratives and optimized WebP assets.
