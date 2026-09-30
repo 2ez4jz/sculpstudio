@@ -103,3 +103,4 @@
 - 2026-09-30: Restored image 706 to the largest left homepage position, with 717 at upper right and the 694 couple portrait at lower right.
 - 2026-09-30: Replaced the Bridal approach feature image with the supplied orchid-bouquet bridal portrait and tuned its focal crop.
 - 2026-09-30: Moved the Bridal approach portrait crop to the top edge so the bride’s full head remains visible.
+- 2026-09-30: Replaced the homepage Craft feature image with the supplied auburn editorial makeup close-up and tuned its crop.
