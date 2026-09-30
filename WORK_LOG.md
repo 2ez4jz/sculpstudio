@@ -93,3 +93,5 @@
 - 2026-09-30: Re-curated the homepage Selected Work trio with images 708, 707, and 714 for a cohesive bridal story across scene, detail, and emotion.
 
 - 2026-09-30: Rebuilt the non-hero image system across Home, Bridal, Occasions, Portfolio, and About using the 20 supplied photographs; added page-specific visual narratives and optimized WebP assets.
+
+- 2026-09-30: Updated the homepage Selected Work trio to images 717, 666, and 598, and corrected the Occasions feature crop focal points.
