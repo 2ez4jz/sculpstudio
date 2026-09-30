@@ -55,7 +55,7 @@ html{scroll-behavior:smooth}
 }
 #sculp-site details summary{transition:padding-left .35s cubic-bezier(.16,1,.3,1)}
 #sculp-site details summary:hover{padding-left:8px}
-#sculp-site .photo:has(img){cursor:zoom-in}
+#sculp-site .view[data-page="portfolio"] .photo:has(img){cursor:zoom-in}
 
 /* Portfolio lightbox */
 .sculp-lightbox{
