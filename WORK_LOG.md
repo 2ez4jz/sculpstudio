@@ -85,3 +85,5 @@
 - 将 Bridal 价格卡片中的 “Most Chosen” 从 **Wedding Day + Preview** 移至 **The Half-Day Experience**，并同步移动卡片强调样式。
 - Wedding Day + Preview 的小标签改为 “With Preview”；价格和套餐内容未改。
 - 网站修改提交：[`b0fb6ea`](https://github.com/2ez4jz/sculpstudio/commit/b0fb6ea45f076dba3736abc2526607093550a19c)。
+
+- 2026-09-30: Updated the homepage Selected Work trio with the three supplied images, placing the second film portrait in the largest position and optimizing all three as WebP.
