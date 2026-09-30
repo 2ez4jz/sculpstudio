@@ -95,3 +95,5 @@
 - 2026-09-30: Rebuilt the non-hero image system across Home, Bridal, Occasions, Portfolio, and About using the 20 supplied photographs; added page-specific visual narratives and optimized WebP assets.
 
 - 2026-09-30: Updated the homepage Selected Work trio to images 717, 666, and 598, and corrected the Occasions feature crop focal points.
+
+- 2026-09-30: Swapped homepage Selected Work images 598 and 717, placing 598 in the large left position and 717 at lower right.
