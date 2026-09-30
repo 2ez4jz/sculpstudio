@@ -101,3 +101,4 @@
 - 2026-09-30: Updated the homepage Selected Work trio to 706 at left, 717 at upper right, and the 694 couple portrait at lower right.
 - 2026-09-30: Replaced the left homepage Selected Work image with 598, keeping 717 at upper right and the 694 couple portrait at lower right.
 - 2026-09-30: Restored image 706 to the largest left homepage position, with 717 at upper right and the 694 couple portrait at lower right.
+- 2026-09-30: Replaced the Bridal approach feature image with the supplied orchid-bouquet bridal portrait and tuned its focal crop.
