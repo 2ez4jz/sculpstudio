@@ -301,6 +301,50 @@
 @media(max-width:950px){#sculp-site .team-grid:not(.junior){gap:24px}#sculp-site .team-grid:not(.junior) .team-person>.photo{max-width:none}}
 @media(max-width:640px){#sculp-site .team-grid:not(.junior){grid-template-columns:1fr;gap:48px}}
 </style>
+<style>
+/* Mobile rhythm: preserve the editorial composition with lighter spacing. */
+@media(max-width:640px){
+  #sculp-site .mast-inner{min-height:68px}
+  #sculp-site .logo{font-size:20px}
+  #sculp-site .mobile-toggle{min-height:44px;min-width:64px}
+  #sculp-site .nav a{min-height:44px;display:flex;align-items:center}
+  #sculp-site .nav.open{max-height:calc(100svh - 68px);overflow-y:auto;gap:8px}
+  #sculp-site .home-hero{padding-top:16px;gap:20px}
+  #sculp-site .home-hero .photo{height:clamp(300px,52vh,480px);min-height:0;height:clamp(300px,52svh,480px)}
+  #sculp-site .home-hero .copy{padding:12px 0 44px}
+  #sculp-site .home-hero .copy h1{font-size:clamp(44px,12.5vw,62px);max-width:none;line-height:1.02;margin:16px 0 20px}
+  #sculp-site .home-hero .copy .lead{max-width:none}
+  #sculp-site .view[data-page="home"] .section{padding:48px 0}
+  #sculp-site .home-philosophy h2{margin-top:12px;margin-bottom:18px}
+  #sculp-site .home-work{margin-top:28px;gap:14px}
+  #sculp-site .home-work>.photo{min-height:0;height:clamp(380px,112vw,460px)}
+  #sculp-site .home-work-stack{gap:14px}
+  #sculp-site .home-work-stack .photo{min-height:0;height:clamp(300px,90vw,360px)}
+  #sculp-site .home-strip .photo{min-height:280px}
+  #sculp-site .home-services{margin-top:28px;gap:24px}
+  #sculp-site .home-service{padding-top:20px}
+  #sculp-site .home-service.primary{padding-right:0}
+  #sculp-site .concierge{gap:24px}
+  #sculp-site .concierge-intro h2{max-width:none;margin-bottom:16px}
+  #sculp-site .concierge-options{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #sculp-site .concierge-option{min-height:64px;padding:14px 12px;font-size:14px;line-height:1.4;border-right:1px solid var(--line)}
+  #sculp-site .concierge-option:nth-child(2n){border-right:0}
+  #sculp-site .concierge-option:nth-last-child(-n+2){border-bottom:0!important}
+  #sculp-site .concierge-option:focus-visible{outline:2px solid var(--oak);outline-offset:-4px}
+  #sculp-site .concierge-result{padding-top:24px}
+  #sculp-site .concierge-result h3{font-size:32px;max-width:none}
+  #sculp-site .concierge-result .actions{margin-top:20px;gap:16px}
+  #sculp-site .home-studio,#sculp-site .home-team{gap:28px}
+  #sculp-site .home-studio .photo{min-height:0;height:clamp(320px,95vw,380px)}
+  #sculp-site .home-team .photo{min-height:0;height:clamp(420px,120vw,480px)}
+  #sculp-site .trust-strip{gap:20px;padding:24px 0}
+  #sculp-site .home-final{gap:24px}
+  #sculp-site .portfolio-featured .photo{min-height:440px}
+  #sculp-site .portfolio-featured .stack .photo{min-height:340px}
+  #sculp-site .studio-gallery .studio-stack .photo{min-height:320px}
+  #sculp-site .triptych .photo:not(:first-child){min-height:340px}
+}
+</style>
 <link rel="stylesheet" href="motion.css">
 <header class="mast"><div class="shell mast-inner"><a class="logo" href="#home">SCULP STUDIO</a><button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="sculp-nav">MENU ☰</button><nav class="nav" id="sculp-nav" aria-label="Main navigation"><a href="#bridal">BRIDAL</a><a href="#occasions">OCCASIONS</a><a href="#portfolio">PORTFOLIO</a><a href="#team">TEAM</a><a href="#about">ABOUT</a><a href="#book">ENQUIRE</a></nav></div></header>
 <main>
