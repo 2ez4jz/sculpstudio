@@ -104,8 +104,16 @@
 #sculp-site .portfolio-gallery figcaption{display:none}
 #sculp-site .artist-work-slot{aspect-ratio:4/5;border:1px solid var(--line);background:linear-gradient(145deg,rgba(250,247,242,.7),rgba(231,221,208,.5));display:flex;align-items:flex-end;padding:18px;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
 #sculp-site .artist-work-cta .actions{justify-content:flex-start}
+#sculp-site .artist-floating-nav{position:fixed;right:clamp(16px,2.5vw,34px);bottom:clamp(16px,2.5vw,32px);z-index:95;display:flex;align-items:flex-end;gap:8px}
+#sculp-site .artist-top-button,#sculp-site .artist-switcher>summary{border:1px solid rgba(36,33,31,.24);background:rgba(250,247,242,.94);color:var(--ink);box-shadow:0 10px 30px rgba(36,33,31,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:12px 15px;font-size:10px;line-height:1;letter-spacing:.14em;text-transform:uppercase;list-style:none;cursor:pointer}
+#sculp-site .artist-switcher>summary::-webkit-details-marker{display:none}
+#sculp-site .artist-switcher-menu{position:absolute;right:0;bottom:calc(100% + 10px);width:190px;padding:8px;background:rgba(250,247,242,.97);border:1px solid rgba(36,33,31,.18);box-shadow:0 18px 50px rgba(36,33,31,.16);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+#sculp-site .artist-switcher-menu a{display:flex;align-items:center;justify-content:space-between;padding:10px 11px;font-size:12px;border-bottom:1px solid rgba(36,33,31,.09)}
+#sculp-site .artist-switcher-menu a:last-child{border-bottom:0}
+#sculp-site .artist-switcher-menu a:hover,#sculp-site .artist-switcher-menu a[aria-current="true"]{background:var(--charcoal);color:var(--paper)}
+#sculp-site .artist-switcher-menu a[aria-current="true"]::after{content:"•"}
 @media(max-width:950px){#sculp-site .artist-work-gallery,#sculp-site .portfolio-gallery{column-count:2}#sculp-site .artist-directory-head,#sculp-site .artist-work-heading{align-items:flex-start;flex-direction:column}#sculp-site .artist-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:640px){#sculp-site .artist-work-gallery,#sculp-site .portfolio-gallery{column-count:1}#sculp-site .artist-directory-grid{grid-template-columns:1fr}#sculp-site .artist-work-slot{aspect-ratio:4/3}}
+@media(max-width:640px){#sculp-site .artist-floating-nav{right:14px;bottom:calc(14px + env(safe-area-inset-bottom))}#sculp-site .artist-top-button,#sculp-site .artist-switcher>summary{padding:11px 12px}#sculp-site .artist-switcher-menu{max-height:65vh;overflow:auto}#sculp-site .artist-work-gallery,#sculp-site .portfolio-gallery{column-count:1}#sculp-site .artist-directory-grid{grid-template-columns:1fr}#sculp-site .artist-work-slot{aspect-ratio:4/3}}
 #sculp-site .studio-gallery{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:28px}
 #sculp-site .studio-gallery .photo{min-height:520px}
 #sculp-site .studio-gallery .studio-stack{display:grid;grid-template-rows:1fr 1fr;gap:18px}
@@ -919,6 +927,21 @@
 <section class="section artist-work-section" id="artist-yuki"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Yuki</h2></div><p>Reserved for Yuki's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
 
 <section class="cta artist-work-cta"><div class="shell"><div class="eyebrow">Find your artist</div><h2>Ready to plan your look?</h2><p>Tell us about your date, service, and the kind of styling you have in mind. We'll guide you toward the right artist.</p><div class="actions"><a class="button fill" href="#book">Start an enquiry</a><a class="button" href="#portfolio">← Back to portfolio</a></div></div></section>
+<nav class="artist-floating-nav" aria-label="Artist portfolio shortcuts">
+  <button class="artist-top-button" type="button" aria-label="Back to top">↑ Top</button>
+  <details class="artist-switcher">
+    <summary>Artists</summary>
+    <div class="artist-switcher-menu">
+      <a href="#artist-portfolios?section=artist-miranda">Miranda</a>
+      <a href="#artist-portfolios?section=artist-angelina">Angelina</a>
+      <a href="#artist-portfolios?section=artist-elaine">Elaine</a>
+      <a href="#artist-portfolios?section=artist-emily">Emily</a>
+      <a href="#artist-portfolios?section=artist-giselle">Giselle</a>
+      <a href="#artist-portfolios?section=artist-mira">Mira</a>
+      <a href="#artist-portfolios?section=artist-yuki">Yuki</a>
+    </div>
+  </details>
+</nav>
 </article>
 <article class="view" data-page="team" hidden>
 <div class="shell intro">
@@ -1280,6 +1303,12 @@ function applyArtistPortfolio(params){
   });
   var prompt=root.querySelector('#artist-select-prompt');
   if(prompt)prompt.hidden=matched;
+  root.querySelectorAll('.artist-switcher-menu a').forEach(function(link){
+    var active=!!selected&&link.getAttribute('href').indexOf('section='+selected)>-1;
+    if(active)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');
+  });
+  var switcher=root.querySelector('.artist-switcher');
+  if(switcher)switcher.removeAttribute('open');
 }
 
 function route(){
@@ -1313,6 +1342,12 @@ window.addEventListener('hashchange',route);route();
 root.querySelector('.mobile-toggle').addEventListener('click',function(){
   var menu=root.querySelector('.nav'),open=menu.classList.toggle('open');
   this.setAttribute('aria-expanded',String(open));
+});
+
+var artistTopButton=root.querySelector('.artist-top-button');
+if(artistTopButton)artistTopButton.addEventListener('click',function(){
+  var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'});
 });
 
 var mast=root.querySelector('.mast');
