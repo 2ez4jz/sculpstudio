@@ -343,6 +343,8 @@
 #sculp-site .natural-three figure{margin:0}
 #sculp-site .natural-three .photo,#sculp-site .natural-three .photo:first-child{min-height:0!important;height:auto!important;aspect-ratio:auto!important;grid-column:auto!important;grid-row:auto!important;overflow:visible}
 #sculp-site .natural-three .photo img{position:static!important;inset:auto!important;width:100%;height:auto!important;display:block;object-fit:contain!important}
+#sculp-site .border-trim,#sculp-site .natural-three .photo.border-trim{overflow:hidden!important}
+#sculp-site .border-trim img{transform:scale(1.055);transform-origin:center}
 @media(max-width:950px){#sculp-site .natural-three{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:640px){#sculp-site .natural-three{grid-template-columns:1fr!important}}
 
@@ -389,12 +391,17 @@
     <h2>Made to be remembered.</h2>
 
     <div class="home-work natural-three">
-      <div class="photo"><img src="assets/images/collection-706.webp" alt="Bride beside a delicate reception table" width="1200" height="1600" loading="lazy" decoding="async"></div>
-      <div class="photo"><img src="assets/images/collection-717.webp" alt="Bridal editorial with a sculptural dried bouquet" width="1285" height="1800" loading="lazy" decoding="async"></div>
-      <div class="photo"><img src="assets/images/home-selected-right-bottom.webp" alt="Bride reclining among sculptural white fabric" width="1492" height="996" loading="lazy" decoding="async"></div>
+      <div class="photo"><img src="assets/images/editorial/editorial-02.webp" alt="Sculptural paired beauty portrait" width="1080" height="1619" loading="lazy" decoding="async"></div>
+      <div class="photo"><img src="assets/images/editorial/editorial-01.webp" alt="Fashion beauty portrait in a sculptural fur hood" width="1090" height="1635" loading="lazy" decoding="async"></div>
+      <div class="photo"><img src="assets/images/editorial/editorial-16.webp" alt="Graphic editorial eye makeup in vivid colour" width="1080" height="1618" loading="lazy" decoding="async"></div>
     </div>
 
     <div class="home-strip" aria-label="Selected work preview">
+      <div class="photo"><img src="assets/images/editorial/editorial-13.webp" alt="Soft modern beauty portrait on a rose background" width="1080" height="1350" loading="lazy" decoding="async"></div>
+      <div class="photo"><img src="assets/images/editorial/editorial-14.webp" alt="Editorial fashion styling in black and gold" width="1080" height="1398" loading="lazy" decoding="async"></div>
+      <div class="photo"><img src="assets/images/editorial/editorial-17.webp" alt="Beauty portrait in dramatic pink light" width="1350" height="1800" loading="lazy" decoding="async"></div>
+      <div class="photo"><img src="assets/images/editorial/editorial-18.webp" alt="Soft editorial beauty portrait with a flower" width="1080" height="1398" loading="lazy" decoding="async"></div>
+      <div class="photo"><img src="assets/images/editorial/editorial-21.webp" alt="Monochrome sculptural beauty profile" width="1084" height="1175" loading="lazy" decoding="async"></div>
       <div class="photo"><img src="assets/images/collection-517.webp" alt="Bride in a sculptural gown and long veil" width="1193" height="1800" loading="lazy" decoding="async" style="object-position:50% 38%"></div>
       <div class="photo"><img src="assets/images/collection-598.webp" alt="Bride smiling with a yellow floral bouquet" width="1201" height="1600" loading="lazy" decoding="async" style="object-position:50% 38%"></div>
       <div class="photo"><img src="assets/images/collection-650.webp" alt="Soft bridal profile beside a window" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 34%"></div>
@@ -726,9 +733,11 @@
   <p class="lead">Styling services for events, personal appointments, commercial projects and photoshoots — plus private and group education.</p>
   <div class="actions"><a class="button fill" href="#book">Enquire</a><a class="button" href="#occasion-styling">Explore services</a></div>
   <div class="portfolio-featured natural-three" aria-label="Occasion and editorial beauty">
-    <figure><div class="photo"><img src="assets/images/collection-715.webp" alt="Editorial evening beauty in a black setting" width="1201" height="1800" loading="lazy" decoding="async"></div></figure>
-    <figure><div class="photo"><img src="assets/images/occasions-feature-motion-red.webp" alt="Editorial red beauty portrait with a layered motion effect" width="1365" height="2048" loading="lazy" decoding="async"></div></figure>
-    <figure><div class="photo"><img src="assets/images/occasions-feature-couple.webp" alt="Black-and-white evening portrait of a couple" width="1065" height="1600" loading="lazy" decoding="async"></div></figure>
+    <figure><div class="photo border-trim"><img src="assets/images/editorial/editorial-10.webp" alt="Backstage creative makeup and sculptural hair styling" width="1080" height="1620" loading="lazy" decoding="async"></div></figure>
+    <figure><div class="photo"><img src="assets/images/editorial/editorial-15.webp" alt="Full-length editorial fashion styling in yellow and black" width="1080" height="1723" loading="lazy" decoding="async"></div></figure>
+    <figure><div class="photo"><img src="assets/images/editorial/editorial-20.webp" alt="Evening beauty portrait in a black dress" width="1080" height="1620" loading="lazy" decoding="async"></div></figure>
+    <figure><div class="photo"><img src="assets/images/editorial/editorial-19.webp" alt="Red carpet styling at the Toronto International Film Festival" width="1024" height="1536" loading="lazy" decoding="async"></div></figure>
+    <figure><div class="photo"><img src="assets/images/editorial/editorial-11.webp" alt="Special-event styling at an awards presentation" width="1080" height="720" loading="lazy" decoding="async"></div></figure>
   </div>
 </div>
 
@@ -823,6 +832,12 @@
   <p class="lead">A curated collection of bridal, beauty, wedding, and editorial work by SCULP Studio.</p>
 
   <div class="portfolio-gallery" aria-label="Portfolio gallery">
+      <figure data-category="editorial"><div class="photo"><img src="assets/images/editorial/editorial-02.webp" alt="Sculptural paired beauty portrait" width="1080" height="1619" loading="lazy" decoding="async"></div><figcaption>Editorial</figcaption></figure>
+      <figure data-category="editorial"><div class="photo"><img src="assets/images/editorial/editorial-01.webp" alt="Fashion beauty portrait in a sculptural fur hood" width="1090" height="1635" loading="lazy" decoding="async"></div><figcaption>Editorial</figcaption></figure>
+      <figure data-category="beauty"><div class="photo"><img src="assets/images/editorial/editorial-16.webp" alt="Graphic editorial eye makeup in vivid colour" width="1080" height="1618" loading="lazy" decoding="async"></div><figcaption>Beauty</figcaption></figure>
+      <figure data-category="editorial"><div class="photo"><img src="assets/images/editorial/editorial-14.webp" alt="Editorial fashion styling in black and gold" width="1080" height="1398" loading="lazy" decoding="async"></div><figcaption>Editorial</figcaption></figure>
+      <figure data-category="beauty"><div class="photo"><img src="assets/images/editorial/editorial-17.webp" alt="Beauty portrait in dramatic pink light" width="1350" height="1800" loading="lazy" decoding="async"></div><figcaption>Beauty</figcaption></figure>
+      <figure data-category="editorial"><div class="photo"><img src="assets/images/editorial/editorial-21.webp" alt="Monochrome sculptural beauty profile" width="1084" height="1175" loading="lazy" decoding="async"></div><figcaption>Editorial</figcaption></figure>
       <figure data-category="editorial"><div class="photo"><img src="assets/images/collection-717.webp" alt="Bridal editorial with a sculptural dried bouquet" width="1285" height="1800" loading="lazy" decoding="async"></div><figcaption>Editorial</figcaption></figure>
       <figure data-category="bridal"><div class="photo"><img src="assets/images/collection-536.webp" alt="Bride framed by sweeping fabric" width="1800" height="1204" loading="lazy" decoding="async"></div><figcaption>Bridal</figcaption></figure>
       <figure data-category="wedding"><div class="photo"><img src="assets/images/collection-666.webp" alt="Wedding couple celebrating beneath a veil" width="1800" height="1200" loading="lazy" decoding="async"></div><figcaption>Wedding</figcaption></figure>
@@ -1007,7 +1022,31 @@
   </div>
 </section>
 <section class="section artist-work-section" id="artist-mira"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Mira</h2></div><p>Reserved for Mira's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
-<section class="section artist-work-section" id="artist-miranda"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Miranda</h2></div><p>Reserved for Miranda's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
+<section class="section artist-work-section" id="artist-miranda">
+  <div class="shell">
+    <div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Miranda</h2></div><p>Editorial beauty, fashion, creative makeup, and special-event work selected from Miranda's portfolio.</p></div>
+    <div class="artist-work-gallery" aria-label="Miranda portfolio gallery">
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-02.webp" alt="Sculptural paired beauty portrait by Miranda" width="1080" height="1619" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-09.webp" alt="Clean modern beauty close-up by Miranda" width="1080" height="1720" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-13.webp" alt="Soft modern beauty portrait on a rose background" width="1080" height="1350" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-21.webp" alt="Monochrome sculptural beauty profile" width="1084" height="1175" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-03.webp" alt="Black-and-white editorial portrait by Miranda" width="1080" height="1620" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-16.webp" alt="Graphic editorial eye makeup in vivid colour" width="1080" height="1618" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-14.webp" alt="Editorial fashion styling in black and gold" width="1080" height="1398" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-17.webp" alt="Beauty portrait in dramatic pink light" width="1350" height="1800" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-18.webp" alt="Soft editorial beauty portrait with a flower" width="1080" height="1398" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-04.webp" alt="Sculptural fashion beauty portrait with expressive hands" width="1080" height="810" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-01.webp" alt="Fashion beauty portrait in a sculptural fur hood" width="1090" height="1635" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-05.webp" alt="Floral editorial beauty portrait by Miranda" width="1080" height="1406" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-06.webp" alt="Creative wet-look beauty portrait with flowers" width="1080" height="1406" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo border-trim"><img src="assets/images/editorial/editorial-10.webp" alt="Backstage creative makeup and sculptural hair styling" width="1080" height="1620" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-15.webp" alt="Full-length editorial fashion styling in yellow and black" width="1080" height="1723" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-20.webp" alt="Evening beauty portrait in a black dress" width="1080" height="1620" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-19.webp" alt="Red carpet styling at the Toronto International Film Festival" width="1024" height="1536" loading="lazy" decoding="async"></div></figure>
+      <figure><div class="photo"><img src="assets/images/editorial/editorial-11.webp" alt="Special-event styling at an awards presentation" width="1080" height="720" loading="lazy" decoding="async"></div></figure>
+    </div>
+  </div>
+</section>
 <section class="section artist-work-section" id="artist-yuki">
   <div class="shell">
     <div class="artist-work-heading">
