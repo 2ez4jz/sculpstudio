@@ -74,6 +74,11 @@
 #sculp-site .portfolio-thumb .photo{min-height:220px}
 #sculp-site .portfolio-thumb figcaption{font-size:11px;color:var(--muted);margin-top:8px}
 #sculp-site .portfolio-hint{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:8px;font-size:12px;color:var(--muted)}
+#sculp-site .portfolio-gallery,#sculp-site .artist-work-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,42px) 18px;align-items:start;margin-top:36px}
+#sculp-site .portfolio-gallery figure,#sculp-site .artist-work-gallery figure{margin:0;min-width:0}
+#sculp-site .portfolio-gallery .photo,#sculp-site .artist-work-gallery .photo{min-height:0;height:auto;background:none;overflow:visible}
+#sculp-site .portfolio-gallery .photo img,#sculp-site .artist-work-gallery .photo img{position:static;display:block;width:100%;height:auto;object-fit:contain}
+#sculp-site .portfolio-gallery figcaption{padding-top:10px;color:var(--muted)}
 #sculp-site .artist-directory{margin-top:clamp(78px,9vw,132px);padding-top:clamp(58px,7vw,94px);border-top:1px solid var(--line)}
 #sculp-site .artist-directory-head{display:flex;justify-content:space-between;gap:32px;align-items:end}
 #sculp-site .artist-directory-head p{margin:0;max-width:48ch}
@@ -86,15 +91,16 @@
 #sculp-site .view[data-page="artist-portfolios"] .intro{padding-bottom:clamp(64px,7vw,96px)}
 #sculp-site .artist-work-back{margin-bottom:34px}
 #sculp-site .artist-work-index{margin-top:46px}
+#sculp-site .artist-select-prompt{margin-top:clamp(52px,6vw,82px);padding-top:28px;border-top:1px solid var(--line);color:var(--muted)}
 #sculp-site .artist-work-section{scroll-margin-top:104px}
 #sculp-site .artist-work-heading{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:34px}
 #sculp-site .artist-work-heading h2{margin:8px 0 0}
 #sculp-site .artist-work-heading p{margin:0;max-width:42ch}
-#sculp-site .artist-work-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+#sculp-site .artist-work-gallery{margin-top:0}
 #sculp-site .artist-work-slot{aspect-ratio:4/5;border:1px solid var(--line);background:linear-gradient(145deg,rgba(250,247,242,.7),rgba(231,221,208,.5));display:flex;align-items:flex-end;padding:18px;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
 #sculp-site .artist-work-cta .actions{justify-content:flex-start}
-@media(max-width:950px){#sculp-site .artist-directory-head,#sculp-site .artist-work-heading{align-items:flex-start;flex-direction:column}#sculp-site .artist-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:640px){#sculp-site .artist-directory-grid,#sculp-site .artist-work-gallery{grid-template-columns:1fr}#sculp-site .artist-work-slot{aspect-ratio:4/3}}
+@media(max-width:950px){#sculp-site .portfolio-gallery,#sculp-site .artist-work-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}#sculp-site .artist-directory-head,#sculp-site .artist-work-heading{align-items:flex-start;flex-direction:column}#sculp-site .artist-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){#sculp-site .portfolio-gallery,#sculp-site .artist-directory-grid,#sculp-site .artist-work-gallery{grid-template-columns:1fr}#sculp-site .artist-work-slot{aspect-ratio:4/3}}
 #sculp-site .studio-gallery{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:28px}
 #sculp-site .studio-gallery .photo{min-height:520px}
 #sculp-site .studio-gallery .studio-stack{display:grid;grid-template-rows:1fr 1fr;gap:18px}
@@ -326,7 +332,7 @@
 @media(max-width:950px){#sculp-site .team-grid:not(.junior){gap:24px}#sculp-site .team-grid:not(.junior) .team-person>.photo{max-width:none}}
 @media(max-width:640px){#sculp-site .team-grid:not(.junior){grid-template-columns:1fr;gap:48px}}
 </style>
-<link rel="stylesheet" href="motion.css">
+<link rel="stylesheet" href="motion.css?v=20261001-portfolio-grid">
 <header class="mast"><div class="shell mast-inner"><a class="logo" href="#home">SCULP STUDIO</a><button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="sculp-nav">MENU ☰</button><nav class="nav" id="sculp-nav" aria-label="Main navigation"><a href="#bridal">BRIDAL</a><a href="#occasions">OCCASIONS</a><a href="#portfolio">PORTFOLIO</a><a href="#team">TEAM</a><a href="#about">ABOUT</a><a href="#book">ENQUIRE</a></nav></div></header>
 <main>
 <article class="view" data-page="home">
@@ -799,18 +805,10 @@
   <h1>Portfolio.</h1>
   <p class="lead">A curated collection of bridal, beauty, wedding, and editorial work by SCULP Studio.</p>
 
-  <div class="portfolio-featured" aria-label="Featured portfolio">
-    <figure>
-      <div class="photo"><img src="assets/images/collection-717.webp" alt="Bridal editorial with a sculptural dried bouquet" width="1285" height="1800" loading="lazy" decoding="async" style="object-position:50% 38%"></div>
-    </figure>
-    <div class="stack">
-      <figure><div class="photo"><img src="assets/images/collection-536.webp" alt="Bride framed by sweeping fabric" width="1800" height="1204" loading="lazy" decoding="async" style="object-position:50% 44%"></div></figure>
-      <figure><div class="photo"><img src="assets/images/collection-666.webp" alt="Wedding couple celebrating beneath a veil" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:50% 48%"></div></figure>
-    </div>
-  </div>
-
-  <div class="portfolio-strip-wrap">
-    <div class="portfolio-strip" id="portfolio-strip" aria-label="Scrollable portfolio gallery">
+  <div class="portfolio-gallery" aria-label="Portfolio gallery">
+      <figure data-category="editorial"><div class="photo"><img src="assets/images/collection-717.webp" alt="Bridal editorial with a sculptural dried bouquet" width="1285" height="1800" loading="lazy" decoding="async"></div><figcaption>Editorial</figcaption></figure>
+      <figure data-category="bridal"><div class="photo"><img src="assets/images/collection-536.webp" alt="Bride framed by sweeping fabric" width="1800" height="1204" loading="lazy" decoding="async"></div><figcaption>Bridal</figcaption></figure>
+      <figure data-category="wedding"><div class="photo"><img src="assets/images/collection-666.webp" alt="Wedding couple celebrating beneath a veil" width="1800" height="1200" loading="lazy" decoding="async"></div><figcaption>Wedding</figcaption></figure>
       <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/collection-694.webp" alt="Beauty portrait of a bride and groom" width="1080" height="1440" loading="lazy" decoding="async" style="object-position:50% 34%"></div><figcaption>Bridal</figcaption></figure>
       <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/collection-517.webp" alt="Bride in a sculptural gown and long veil" width="1193" height="1800" loading="lazy" decoding="async" style="object-position:50% 38%"></div><figcaption>Bridal</figcaption></figure>
       <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/collection-598.webp" alt="Bride smiling with a yellow floral bouquet" width="1201" height="1600" loading="lazy" decoding="async" style="object-position:50% 36%"></div><figcaption>Bridal</figcaption></figure>
@@ -828,11 +826,6 @@
       <figure class="portfolio-thumb" data-category="occasion"><div class="photo"><img src="assets/images/collection-715.webp" alt="Editorial evening beauty in a black setting" width="1201" height="1800" loading="lazy" decoding="async" style="object-position:50% 38%"></div><figcaption>Occasion</figcaption></figure>
       <figure class="portfolio-thumb" data-category="beauty"><div class="photo"><img src="assets/images/collection-716.webp" alt="Soft natural bridal beauty portrait" width="1190" height="1800" loading="lazy" decoding="async" style="object-position:50% 34%"></div><figcaption>Beauty</figcaption></figure>
       <figure class="portfolio-thumb" data-category="bridal"><div class="photo"><img src="assets/images/collection-718.webp" alt="Full-length bridal portrait with a sculptural bouquet" width="1285" height="1800" loading="lazy" decoding="async" style="object-position:50% 42%"></div><figcaption>Bridal</figcaption></figure>
-    </div>
-    <div class="portfolio-hint">
-      <span>Drag or scroll to explore.</span>
-      <span>Selected work · more images can be added later</span>
-    </div>
   </div>
 
   <div class="actions" style="margin-top:34px">
@@ -874,6 +867,7 @@
     <a class="button" href="#artist-portfolios?section=artist-miranda">Miranda</a>
     <a class="button" href="#artist-portfolios?section=artist-yuki">Yuki</a>
   </div>
+  <p class="artist-select-prompt" id="artist-select-prompt">Choose an artist to view their complete portfolio.</p>
 </div>
 
 <section class="section artist-work-section" id="artist-angelina"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Angelina</h2></div><p>Reserved for Angelina's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
@@ -1237,6 +1231,17 @@ function applyBookPrefill(params){
   }
 }
 
+function applyArtistPortfolio(params){
+  var selected=params&&params.get('section'),matched=false;
+  root.querySelectorAll('.artist-work-section').forEach(function(panel){
+    var show=!!selected&&panel.id===selected;
+    panel.hidden=!show;
+    if(show)matched=true;
+  });
+  var prompt=root.querySelector('#artist-select-prompt');
+  if(prompt)prompt.hidden=matched;
+}
+
 function route(){
   var hash=getHashParts(),key=hash.page;
   if(pages.indexOf(key)<0)key='home';
@@ -1250,6 +1255,7 @@ function route(){
   menu.classList.remove('open');
   root.querySelector('.mobile-toggle').setAttribute('aria-expanded','false');
   if(key==='book')applyBookPrefill(hash.params);
+  if(key==='artist-portfolios')applyArtistPortfolio(hash.params);
 
   var section=hash.params.get('section');
   if(section){
@@ -1297,7 +1303,6 @@ function enableDragScroll(el){
   el.addEventListener('pointercancel',end);
   el.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
 }
-enableDragScroll(root.querySelector('#portfolio-strip'));
 enableDragScroll(root.querySelector('.home-strip'));
 
 var conciergeData={
@@ -1331,7 +1336,7 @@ if(form)form.addEventListener('submit',function(event){
   window.location.href='mailto:hello@sculpstudio.ca?subject='+subject+'&body='+encodeURIComponent(lines.join('\n'));
 });
 })();</script>
-<script src="motion.js" defer></script>
+<script src="motion.js?v=20261001-portfolio-grid" defer></script>
 </div>
 </body>
 </html>
