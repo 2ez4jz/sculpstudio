@@ -27,6 +27,10 @@
 #sculp-site .shell.cta .actions{margin-top:36px}
 #sculp-site .filters{display:flex;gap:10px;flex-wrap:wrap;margin:32px 0}#sculp-site .filter{border:1px solid var(--line);padding:9px 14px;background:none;font-size:11px;letter-spacing:.12em;text-transform:uppercase}#sculp-site .filter[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:white}#sculp-site .portfolio{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}#sculp-site .portfolio figure{margin:0;grid-column:span 4}#sculp-site .portfolio figure:nth-child(5n+1){grid-column:span 7}#sculp-site .portfolio figure:nth-child(5n+2){grid-column:span 5}#sculp-site .portfolio .photo{min-height:390px}#sculp-site .portfolio figure:nth-child(5n+1) .photo{min-height:610px}#sculp-site figcaption{padding:10px 0;font-size:11px;letter-spacing:.08em;text-transform:uppercase}#sculp-site .people{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin:50px 0}#sculp-site .people .photo{min-height:450px}#sculp-site .people p{font-size:14px}#sculp-site .faq{max-width:900px;margin-top:40px}#sculp-site details{border-top:1px solid var(--line);padding:16px 0}#sculp-site summary{cursor:pointer}#sculp-site .form{max-width:950px;display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:40px 0}#sculp-site .field{display:flex;flex-direction:column;gap:7px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}#sculp-site .field.full{grid-column:1/-1}#sculp-site input,#sculp-site select,#sculp-site textarea{width:100%;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:0}#sculp-site textarea{min-height:130px;resize:vertical}#sculp-site .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px;padding:65px 0}#sculp-site footer{border-top:1px solid var(--line);background:rgba(250,247,242,.32)}#sculp-site:has(.view[data-page="home"]:not([hidden]))> .cta{display:none}#sculp-site .foot a{display:block;margin:7px 0}#sculp-site .social-link{display:inline-flex!important;align-items:center;gap:9px;width:max-content;margin-top:12px!important;font-size:14px}#sculp-site .social-icon{width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}#sculp-site .social-icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}#sculp-site .social-link:hover span:last-child{border-bottom:1px solid currentColor}#sculp-site .note{font-size:12px;color:var(--muted)}
 #sculp-site .pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:48px}
+#sculp-site .pricing-group{margin-top:48px}
+#sculp-site .pricing-group+.pricing-group{margin-top:clamp(72px,8vw,112px);padding-top:clamp(54px,6vw,82px);border-top:1px solid var(--line)}
+#sculp-site .pricing-group-heading h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:clamp(32px,3.4vw,48px);line-height:1.08;margin:10px 0 14px}
+#sculp-site .pricing-group-heading p{margin:0;max-width:620px}
 #sculp-site .price-card{border:1px solid var(--line);background:rgba(250,247,242,.72);padding:clamp(30px,3vw,42px);display:flex;flex-direction:column;min-height:100%}
 #sculp-site .price-card.featured{background:#fffaf4;border-color:rgba(36,33,31,.72);box-shadow:0 18px 45px rgba(80,63,45,.055)}
 #sculp-site .price-card .tag{font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px}
@@ -301,50 +305,6 @@
 @media(max-width:950px){#sculp-site .team-grid:not(.junior){gap:24px}#sculp-site .team-grid:not(.junior) .team-person>.photo{max-width:none}}
 @media(max-width:640px){#sculp-site .team-grid:not(.junior){grid-template-columns:1fr;gap:48px}}
 </style>
-<style>
-/* Mobile rhythm: preserve the editorial composition with lighter spacing. */
-@media(max-width:640px){
-  #sculp-site .mast-inner{min-height:68px}
-  #sculp-site .logo{font-size:20px}
-  #sculp-site .mobile-toggle{min-height:44px;min-width:64px}
-  #sculp-site .nav a{min-height:44px;display:flex;align-items:center}
-  #sculp-site .nav.open{max-height:calc(100svh - 68px);overflow-y:auto;gap:8px}
-  #sculp-site .home-hero{padding-top:16px;gap:20px}
-  #sculp-site .home-hero .photo{height:clamp(300px,52vh,480px);min-height:0;height:clamp(300px,52svh,480px)}
-  #sculp-site .home-hero .copy{padding:12px 0 44px}
-  #sculp-site .home-hero .copy h1{font-size:clamp(44px,12.5vw,62px);max-width:none;line-height:1.02;margin:16px 0 20px}
-  #sculp-site .home-hero .copy .lead{max-width:none}
-  #sculp-site .view[data-page="home"] .section{padding:48px 0}
-  #sculp-site .home-philosophy h2{margin-top:12px;margin-bottom:18px}
-  #sculp-site .home-work{margin-top:28px;gap:14px}
-  #sculp-site .home-work>.photo{min-height:0;height:clamp(380px,112vw,460px)}
-  #sculp-site .home-work-stack{gap:14px}
-  #sculp-site .home-work-stack .photo{min-height:0;height:clamp(300px,90vw,360px)}
-  #sculp-site .home-strip .photo{min-height:280px}
-  #sculp-site .home-services{margin-top:28px;gap:24px}
-  #sculp-site .home-service{padding-top:20px}
-  #sculp-site .home-service.primary{padding-right:0}
-  #sculp-site .concierge{gap:24px}
-  #sculp-site .concierge-intro h2{max-width:none;margin-bottom:16px}
-  #sculp-site .concierge-options{grid-template-columns:repeat(2,minmax(0,1fr))}
-  #sculp-site .concierge-option{min-height:64px;padding:14px 12px;font-size:14px;line-height:1.4;border-right:1px solid var(--line)}
-  #sculp-site .concierge-option:nth-child(2n){border-right:0}
-  #sculp-site .concierge-option:nth-last-child(-n+2){border-bottom:0!important}
-  #sculp-site .concierge-option:focus-visible{outline:2px solid var(--oak);outline-offset:-4px}
-  #sculp-site .concierge-result{padding-top:24px}
-  #sculp-site .concierge-result h3{font-size:32px;max-width:none}
-  #sculp-site .concierge-result .actions{margin-top:20px;gap:16px}
-  #sculp-site .home-studio,#sculp-site .home-team{gap:28px}
-  #sculp-site .home-studio .photo{min-height:0;height:clamp(320px,95vw,380px)}
-  #sculp-site .home-team .photo{min-height:0;height:clamp(420px,120vw,480px)}
-  #sculp-site .trust-strip{gap:20px;padding:24px 0}
-  #sculp-site .home-final{gap:24px}
-  #sculp-site .portfolio-featured .photo{min-height:440px}
-  #sculp-site .portfolio-featured .stack .photo{min-height:340px}
-  #sculp-site .studio-gallery .studio-stack .photo{min-height:320px}
-  #sculp-site .triptych .photo:not(:first-child){min-height:340px}
-}
-</style>
 <link rel="stylesheet" href="motion.css">
 <header class="mast"><div class="shell mast-inner"><a class="logo" href="#home">SCULP STUDIO</a><button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="sculp-nav">MENU ☰</button><nav class="nav" id="sculp-nav" aria-label="Main navigation"><a href="#bridal">BRIDAL</a><a href="#occasions">OCCASIONS</a><a href="#portfolio">PORTFOLIO</a><a href="#team">TEAM</a><a href="#about">ABOUT</a><a href="#book">ENQUIRE</a></nav></div></header>
 <main>
@@ -563,42 +523,94 @@
         <h2>Choose your experience.</h2>
       </div>
     </div>
-    <p class="lead">Three ways to work with SCULP, from wedding-day styling to a fully supported half-day experience.</p>
+    <p class="lead">Begin with a dedicated bridal trial, then choose the level of wedding-day support that fits your plans.</p>
 
-    <div class="pricing-grid">
-      <div class="price-card">
-        <div class="tag">With Trial</div>
-        <h3>Wedding Day + Trial</h3>
-        <p>Trial and wedding-day styling planned together, so the final look is already understood before the celebration.</p>
-        <div class="from">From $590</div>
-        <div class="tier-list">
-          <div class="tier"><span>Founder / Lead Artist</span><strong>$790</strong></div>
-          <div class="tier"><span>Senior Artist</span><strong>$690</strong></div>
-          <div class="tier"><span>SCULP Artist</span><strong>$590</strong></div>
+    <div class="pricing-group">
+      <div class="pricing-group-heading">
+        <div class="eyebrow">01 · Bridal Trial</div>
+        <h3>Design the look before the day.</h3>
+        <p>Explore one, two or three complete styling directions, with time to refine the final wedding-day look.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="tag">One Look · Approx. 3 Hours</div>
+          <h3>One-Look Trial</h3>
+          <p>A focused session to develop and refine one complete bridal styling direction.</p>
+          <div class="from">Starts at $290</div>
+          <div class="tier-list">
+            <div class="tier"><span>Founder / Creative Styling Director</span><strong>$390</strong></div>
+            <div class="tier"><span>Senior Styling Artist</span><strong>$340</strong></div>
+            <div class="tier"><span>Styling Artist</span><strong>$290</strong></div>
+          </div>
+        </div>
+
+        <div class="price-card featured">
+          <div class="tag">Two Looks · Approx. 4–5 Hours</div>
+          <h3>Two-Look Trial</h3>
+          <p>Compare two styling directions and refine the details, balance and finish of the final look.</p>
+          <div class="from">Starts at $390</div>
+          <div class="tier-list">
+            <div class="tier"><span>Founder / Creative Styling Director</span><strong>$490</strong></div>
+            <div class="tier"><span>Senior Styling Artist</span><strong>$440</strong></div>
+            <div class="tier"><span>Styling Artist</span><strong>$390</strong></div>
+          </div>
+        </div>
+
+        <div class="price-card">
+          <div class="tag">Three Looks · Approx. 5–6 Hours</div>
+          <h3>Three-Look Trial</h3>
+          <p>An extended session for exploring three styling directions before confirming the final plan.</p>
+          <div class="from">Starts at $490</div>
+          <div class="tier-list">
+            <div class="tier"><span>Founder / Creative Styling Director</span><strong>$590</strong></div>
+            <div class="tier"><span>Senior Styling Artist</span><strong>$540</strong></div>
+            <div class="tier"><span>Styling Artist</span><strong>$490</strong></div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="price-card featured">
-        <div class="tag">Most Chosen</div>
-        <h3>The Half-Day Experience</h3>
-        <p>Trial, wedding-day styling, up to 8 hours of touch-ups, and groom styling.</p>
-        <div class="from">From $1,190</div>
-        <div class="tier-list">
-          <div class="tier"><span>Founder / Lead Artist</span><strong>$1,690</strong></div>
-          <div class="tier"><span>Senior Artist</span><strong>$1,390</strong></div>
-          <div class="tier"><span>SCULP Artist</span><strong>$1,190</strong></div>
-        </div>
+    <div class="pricing-group">
+      <div class="pricing-group-heading">
+        <div class="eyebrow">02 · Wedding-Day Services</div>
+        <h3>Choose the support you need.</h3>
+        <p>From bridal styling to six- or ten-hour on-site support, each service is shaped around the pace of your day.</p>
       </div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="tag">Wedding Day</div>
+          <h3>Bridal Styling</h3>
+          <p>Complete bridal hair and styling, with the final look shaped around you, your dress and the setting.</p>
+          <div class="from">Starts at $300</div>
+          <div class="tier-list">
+            <div class="tier"><span>Founder / Creative Styling Director</span><strong>$500</strong></div>
+            <div class="tier"><span>Senior Styling Artist</span><strong>$400</strong></div>
+            <div class="tier"><span>Styling Artist</span><strong>$300</strong></div>
+          </div>
+        </div>
 
-      <div class="price-card">
-        <div class="tag">Full-Day Bridal</div>
-        <h3>The Full-Day Experience</h3>
-        <p>Wedding-day styling and up to 10 hours of on-site touch-ups and styling support.</p>
-        <div class="from">From $1,490</div>
-        <div class="tier-list">
-          <div class="tier"><span>Founder / Lead Artist</span><strong>$1,990</strong></div>
-          <div class="tier"><span>Senior Artist</span><strong>$1,690</strong></div>
-          <div class="tier"><span>SCULP Artist</span><strong>$1,490</strong></div>
+        <div class="price-card featured">
+          <div class="tag">Most Chosen · 6 Hours</div>
+          <h3>The Half-Day Experience</h3>
+          <p>Wedding-day styling and up to six hours of on-site touch-ups and styling support.</p>
+          <div class="from">Starts at $600</div>
+          <div class="tier-list">
+            <div class="tier"><span>Founder / Creative Styling Director</span><strong>$1,200</strong></div>
+            <div class="tier"><span>Senior Styling Artist</span><strong>$900</strong></div>
+            <div class="tier"><span>Styling Artist</span><strong>$600</strong></div>
+          </div>
+        </div>
+
+        <div class="price-card">
+          <div class="tag">Full-Day Bridal · 10 Hours</div>
+          <h3>The Full-Day Experience</h3>
+          <p>Wedding-day styling and up to ten hours of on-site touch-ups and styling support.</p>
+          <div class="from">Starts at $1,000</div>
+          <div class="tier-list">
+            <div class="tier"><span>Founder / Creative Styling Director</span><strong>$1,400</strong></div>
+            <div class="tier"><span>Senior Styling Artist</span><strong>$1,200</strong></div>
+            <div class="tier"><span>Styling Artist</span><strong>$1,000</strong></div>
+          </div>
         </div>
       </div>
     </div>
@@ -618,12 +630,11 @@
     <div class="eyebrow">Additional services</div>
     <h2>For the people around you.</h2>
     <div class="service-list">
-      <div class="service-row"><span>Trial Session</span><span>$390 / $300 / $260</span></div>
       <div class="service-row"><span>Bridesmaids & Mothers</span><span>$200 / $180 / $160</span></div>
       <div class="service-row"><span>Groom Styling</span><span>$120</span></div>
       <div class="service-row"><span>Additional Touch-Up Time</span><span>$100 / hour</span></div>
     </div>
-    <p class="note">Trial pricing follows Founder / Lead Artist, Senior Artist, and SCULP Artist. Bridal-party quantity tiers will be clarified once confirmed.</p>
+    <p class="note">Bridal-party quantity tiers will be clarified once confirmed.</p>
   </div>
 </section>
 
@@ -671,7 +682,7 @@
   <div class="portfolio-featured" aria-label="Occasion and editorial beauty">
     <figure><div class="photo"><img src="assets/images/collection-715.webp" alt="Editorial evening beauty in a black setting" width="1201" height="1800" loading="lazy" decoding="async" style="object-position:50% 8%"></div></figure>
     <div class="stack">
-      <figure><div class="photo"><img src="assets/images/occasions-feature-red-flower.webp" alt="Editorial beauty portrait framed by red flowers" width="1080" height="1440" loading="lazy" decoding="async" style="object-position:50% 47%"></div></figure>
+      <figure><div class="photo"><img src="assets/images/occasions-feature-motion-red.webp" alt="Editorial red beauty portrait with a layered motion effect" width="1365" height="2048" loading="lazy" decoding="async" style="object-position:54% 12%"></div></figure>
       <figure><div class="photo"><img src="assets/images/occasions-feature-couple.webp" alt="Black-and-white evening portrait of a couple" width="1065" height="1600" loading="lazy" decoding="async" style="object-position:50% 44%"></div></figure>
     </div>
   </div>
@@ -1040,9 +1051,9 @@
         <label class="field">Preferred artist *
           <select name="artist" required>
             <option value="">Select a preference</option>
-            <option>Founder / Lead Artist</option>
-            <option>Senior Artist</option>
-            <option>SCULP Artist</option>
+            <option>Founder / Creative Styling Director</option>
+            <option>Senior Styling Artist</option>
+            <option>Styling Artist</option>
             <option>No Preference</option>
           </select>
         </label>
