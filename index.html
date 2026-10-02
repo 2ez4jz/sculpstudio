@@ -79,6 +79,11 @@
 #sculp-site .portfolio-gallery .photo,#sculp-site .artist-work-gallery .photo{min-height:0;height:auto;background:none;overflow:visible}
 #sculp-site .portfolio-gallery .photo img,#sculp-site .artist-work-gallery .photo img{position:static;display:block;width:100%;height:auto;object-fit:contain}
 #sculp-site .portfolio-gallery figcaption{padding-top:10px;color:var(--muted)}
+#sculp-site .artist-work-gallery{counter-reset:artist-work}
+#sculp-site .artist-work-gallery figure{counter-increment:artist-work}
+#sculp-site .artist-work-gallery figure:nth-child(6n+2),#sculp-site .artist-work-gallery figure:nth-child(6n+6){margin-top:clamp(18px,3vw,48px)}
+#sculp-site .artist-work-gallery figcaption{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:11px;padding-top:9px;border-top:1px solid var(--line);color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+#sculp-site .artist-work-gallery figcaption::after{content:counter(artist-work,decimal-leading-zero);font-variant-numeric:tabular-nums}
 #sculp-site .artist-directory{margin-top:clamp(78px,9vw,132px);padding-top:clamp(58px,7vw,94px);border-top:1px solid var(--line)}
 #sculp-site .artist-directory-head{display:flex;justify-content:space-between;gap:32px;align-items:end}
 #sculp-site .artist-directory-head p{margin:0;max-width:48ch}
@@ -100,7 +105,7 @@
 #sculp-site .artist-work-slot{aspect-ratio:4/5;border:1px solid var(--line);background:linear-gradient(145deg,rgba(250,247,242,.7),rgba(231,221,208,.5));display:flex;align-items:flex-end;padding:18px;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
 #sculp-site .artist-work-cta .actions{justify-content:flex-start}
 @media(max-width:950px){#sculp-site .portfolio-gallery,#sculp-site .artist-work-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}#sculp-site .artist-directory-head,#sculp-site .artist-work-heading{align-items:flex-start;flex-direction:column}#sculp-site .artist-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:640px){#sculp-site .portfolio-gallery,#sculp-site .artist-directory-grid,#sculp-site .artist-work-gallery{grid-template-columns:1fr}#sculp-site .artist-work-slot{aspect-ratio:4/3}}
+@media(max-width:640px){#sculp-site .portfolio-gallery,#sculp-site .artist-directory-grid,#sculp-site .artist-work-gallery{grid-template-columns:1fr}#sculp-site .artist-work-gallery figure:nth-child(n){margin-top:0}#sculp-site .artist-work-slot{aspect-ratio:4/3}}
 #sculp-site .studio-gallery{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:28px}
 #sculp-site .studio-gallery .photo{min-height:520px}
 #sculp-site .studio-gallery .studio-stack{display:grid;grid-template-rows:1fr 1fr;gap:18px}
@@ -870,7 +875,42 @@
   <p class="artist-select-prompt" id="artist-select-prompt">Choose an artist to view their complete portfolio.</p>
 </div>
 
-<section class="section artist-work-section" id="artist-angelina"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Angelina</h2></div><p>Reserved for Angelina's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
+<section class="section artist-work-section" id="artist-angelina">
+  <div class="shell">
+    <div class="artist-work-heading">
+      <div><div class="eyebrow">Selected work</div><h2>Angelina</h2></div>
+      <p>Bridal, beauty, wedding, and occasion work selected from Angelina's portfolio.</p>
+    </div>
+    <div class="artist-work-gallery" aria-label="Angelina portfolio gallery">
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-01.webp" alt="Soft bridal beauty close-up by Angelina" width="1080" height="1440" loading="lazy" decoding="async"></div><figcaption><span>Beauty</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-02.webp" alt="Bride outdoors in softly lit styling by Angelina" width="1318" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Bridal</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-03.webp" alt="Sunlit beauty portrait with soft fringe by Angelina" width="1080" height="1440" loading="lazy" decoding="async"></div><figcaption><span>Beauty</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-04.webp" alt="Full-length bride beside city windows by Angelina" width="1350" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Bridal</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-05.webp" alt="Backlit bridal portrait in a veil by Angelina" width="1350" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Bridal</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-06.webp" alt="Creative winter beauty portrait by Angelina" width="1080" height="1440" loading="lazy" decoding="async"></div><figcaption><span>Editorial</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-07.webp" alt="Newlyweds celebrating with colourful ribbons" width="1350" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Wedding</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-08.webp" alt="Modern bridal beauty portrait by Angelina" width="1199" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Bridal</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-09.webp" alt="Bride in a sculptural lace gown by Angelina" width="1200" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Bridal</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-10.webp" alt="Elegant indoor wedding portrait" width="1200" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Wedding</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-11.webp" alt="Warm editorial beauty close-up by Angelina" width="1080" height="1440" loading="lazy" decoding="async"></div><figcaption><span>Editorial</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-12.webp" alt="Bride holding white flowers outdoors" width="1280" height="1748" loading="lazy" decoding="async"></div><figcaption><span>Bridal</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-13.webp" alt="Bridal hair detail with a teal floral accent" width="1080" height="1619" loading="lazy" decoding="async"></div><figcaption><span>Beauty</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-14.webp" alt="Bridal beauty portrait with baby's breath flowers" width="1080" height="1440" loading="lazy" decoding="async"></div><figcaption><span>Beauty</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-15.webp" alt="Creative winter profile beauty portrait by Angelina" width="1080" height="1440" loading="lazy" decoding="async"></div><figcaption><span>Editorial</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-16.webp" alt="Newlyweds walking through a garden venue" width="1320" height="1760" loading="lazy" decoding="async"></div><figcaption><span>Wedding</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-17.webp" alt="Newlyweds seated at a floral reception table" width="1320" height="1760" loading="lazy" decoding="async"></div><figcaption><span>Wedding</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-18.webp" alt="Newlyweds beneath a garden floral arch" width="1297" height="1729" loading="lazy" decoding="async"></div><figcaption><span>Wedding</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-19.webp" alt="Playful veil beauty portrait by Angelina" width="1080" height="1440" loading="lazy" decoding="async"></div><figcaption><span>Editorial</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-20.webp" alt="Warm directional-light beauty portrait by Angelina" width="1080" height="1440" loading="lazy" decoding="async"></div><figcaption><span>Beauty</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-21.webp" alt="City wedding portrait beside tall windows" width="1201" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Wedding</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-22.webp" alt="Bride holding a white bouquet during wedding preparations" width="1200" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Bridal</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-23.webp" alt="Relaxed seated portrait of newlyweds" width="1397" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Wedding</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-24.webp" alt="Full-length indoor portrait of newlyweds" width="1224" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Wedding</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-25.webp" alt="Soft occasion styling with a white dress" width="1200" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Occasion</span></figcaption></figure>
+      <figure><div class="photo"><img src="assets/images/artists/angelina/angelina-26.webp" alt="Soft occasion portrait with a celebration cake" width="1200" height="1800" loading="lazy" decoding="async"></div><figcaption><span>Occasion</span></figcaption></figure>
+    </div>
+  </div>
+</section>
 <section class="section artist-work-section" id="artist-elaine"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Elaine</h2></div><p>Reserved for Elaine's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
 <section class="section artist-work-section" id="artist-emily"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Emily</h2></div><p>Reserved for Emily's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
 <section class="section artist-work-section" id="artist-giselle"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Giselle</h2></div><p>Reserved for Giselle's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
