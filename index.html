@@ -79,11 +79,6 @@
 #sculp-site .portfolio-gallery .photo,#sculp-site .artist-work-gallery .photo{min-height:0;height:auto;background:none;overflow:visible}
 #sculp-site .portfolio-gallery .photo img,#sculp-site .artist-work-gallery .photo img{position:static;display:block;width:100%;height:auto;object-fit:contain}
 #sculp-site .portfolio-gallery figcaption{padding-top:10px;color:var(--muted)}
-#sculp-site .artist-work-gallery{counter-reset:artist-work}
-#sculp-site .artist-work-gallery figure{counter-increment:artist-work}
-#sculp-site .artist-work-gallery figure:nth-child(6n+2),#sculp-site .artist-work-gallery figure:nth-child(6n+6){margin-top:clamp(18px,3vw,48px)}
-#sculp-site .artist-work-gallery figcaption{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:11px;padding-top:9px;border-top:1px solid var(--line);color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
-#sculp-site .artist-work-gallery figcaption::after{content:counter(artist-work,decimal-leading-zero);font-variant-numeric:tabular-nums}
 #sculp-site .artist-directory{margin-top:clamp(78px,9vw,132px);padding-top:clamp(58px,7vw,94px);border-top:1px solid var(--line)}
 #sculp-site .artist-directory-head{display:flex;justify-content:space-between;gap:32px;align-items:end}
 #sculp-site .artist-directory-head p{margin:0;max-width:48ch}
@@ -101,11 +96,16 @@
 #sculp-site .artist-work-heading{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:34px}
 #sculp-site .artist-work-heading h2{margin:8px 0 0}
 #sculp-site .artist-work-heading p{margin:0;max-width:42ch}
-#sculp-site .artist-work-gallery{margin-top:0}
+#sculp-site .artist-work-gallery{display:block;column-count:3;column-gap:14px;margin-top:0}
+#sculp-site .artist-work-gallery figure:nth-child(n){display:inline-block;width:100%;margin:0 0 14px;break-inside:avoid;page-break-inside:avoid}
+#sculp-site .artist-work-gallery figcaption{display:none}
+#sculp-site .portfolio-gallery{display:block;column-count:3;column-gap:14px}
+#sculp-site .portfolio-gallery figure:nth-child(n){display:inline-block;width:100%;margin:0 0 14px;break-inside:avoid;page-break-inside:avoid}
+#sculp-site .portfolio-gallery figcaption{display:none}
 #sculp-site .artist-work-slot{aspect-ratio:4/5;border:1px solid var(--line);background:linear-gradient(145deg,rgba(250,247,242,.7),rgba(231,221,208,.5));display:flex;align-items:flex-end;padding:18px;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
 #sculp-site .artist-work-cta .actions{justify-content:flex-start}
-@media(max-width:950px){#sculp-site .portfolio-gallery,#sculp-site .artist-work-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}#sculp-site .artist-directory-head,#sculp-site .artist-work-heading{align-items:flex-start;flex-direction:column}#sculp-site .artist-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:640px){#sculp-site .portfolio-gallery,#sculp-site .artist-directory-grid,#sculp-site .artist-work-gallery{grid-template-columns:1fr}#sculp-site .artist-work-gallery figure:nth-child(n){margin-top:0}#sculp-site .artist-work-slot{aspect-ratio:4/3}}
+@media(max-width:950px){#sculp-site .artist-work-gallery,#sculp-site .portfolio-gallery{column-count:2}#sculp-site .artist-directory-head,#sculp-site .artist-work-heading{align-items:flex-start;flex-direction:column}#sculp-site .artist-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){#sculp-site .artist-work-gallery,#sculp-site .portfolio-gallery{column-count:1}#sculp-site .artist-directory-grid{grid-template-columns:1fr}#sculp-site .artist-work-slot{aspect-ratio:4/3}}
 #sculp-site .studio-gallery{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:28px}
 #sculp-site .studio-gallery .photo{min-height:520px}
 #sculp-site .studio-gallery .studio-stack{display:grid;grid-template-rows:1fr 1fr;gap:18px}
@@ -846,12 +846,12 @@
       <p>Explore each artist's individual point of view. Every portfolio is presented with the same space and visual weight.</p>
     </div>
     <div class="artist-directory-grid">
+      <a class="artist-directory-card" href="#artist-portfolios?section=artist-miranda"><div class="photo"><img src="assets/images/miranda-portrait.webp" alt="Miranda" width="1025" height="1535" loading="lazy" decoding="async" style="object-position:50% 10%"></div><h3>Miranda</h3><span>View portfolio →</span></a>
       <a class="artist-directory-card" href="#artist-portfolios?section=artist-angelina"><div class="photo"><img src="assets/images/angelina-portrait.webp" alt="Angelina" width="814" height="1086" loading="lazy" decoding="async" style="object-position:50% 20%"></div><h3>Angelina</h3><span>View portfolio →</span></a>
       <a class="artist-directory-card" href="#artist-portfolios?section=artist-elaine"><div class="photo"><img src="assets/images/elaine-portrait.webp" alt="Elaine" width="1280" height="1908" loading="lazy" decoding="async" style="object-position:50% 15%"></div><h3>Elaine</h3><span>View portfolio →</span></a>
       <a class="artist-directory-card" href="#artist-portfolios?section=artist-emily"><div class="photo"><img src="assets/images/emily-portrait.webp" alt="Emily" width="960" height="1440" loading="lazy" decoding="async" style="object-position:50% 30%"></div><h3>Emily</h3><span>View portfolio →</span></a>
       <a class="artist-directory-card" href="#artist-portfolios?section=artist-giselle"><div class="photo"><img src="assets/images/giselle-portrait.webp" alt="Giselle" width="1280" height="1920" loading="lazy" decoding="async" style="object-position:50% 15%"></div><h3>Giselle</h3><span>View portfolio →</span></a>
       <a class="artist-directory-card" href="#artist-portfolios?section=artist-mira"><div class="photo"><img src="assets/images/mira-portrait.webp" alt="Mira" width="844" height="1264" loading="lazy" decoding="async" style="object-position:50% 0%"></div><h3>Mira</h3><span>View portfolio →</span></a>
-      <a class="artist-directory-card" href="#artist-portfolios?section=artist-miranda"><div class="photo"><img src="assets/images/miranda-portrait.webp" alt="Miranda" width="1025" height="1535" loading="lazy" decoding="async" style="object-position:50% 10%"></div><h3>Miranda</h3><span>View portfolio →</span></a>
       <a class="artist-directory-card" href="#artist-portfolios?section=artist-yuki"><div class="photo"><img src="assets/images/yuki-portrait.webp" alt="Yuki" width="904" height="1340" loading="lazy" decoding="async" style="object-position:50% 10%"></div><h3>Yuki</h3><span>View portfolio →</span></a>
     </div>
   </section>
@@ -864,12 +864,12 @@
   <h1>Artist Portfolios.</h1>
   <p class="lead">Different artists, individual points of view, and one shared studio standard. Select an artist below or explore every portfolio.</p>
   <div class="actions artist-work-index" aria-label="Artist portfolio index">
+    <a class="button" href="#artist-portfolios?section=artist-miranda">Miranda</a>
     <a class="button" href="#artist-portfolios?section=artist-angelina">Angelina</a>
     <a class="button" href="#artist-portfolios?section=artist-elaine">Elaine</a>
     <a class="button" href="#artist-portfolios?section=artist-emily">Emily</a>
     <a class="button" href="#artist-portfolios?section=artist-giselle">Giselle</a>
     <a class="button" href="#artist-portfolios?section=artist-mira">Mira</a>
-    <a class="button" href="#artist-portfolios?section=artist-miranda">Miranda</a>
     <a class="button" href="#artist-portfolios?section=artist-yuki">Yuki</a>
   </div>
   <p class="artist-select-prompt" id="artist-select-prompt">Choose an artist to view their complete portfolio.</p>
