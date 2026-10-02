@@ -74,6 +74,27 @@
 #sculp-site .portfolio-thumb .photo{min-height:220px}
 #sculp-site .portfolio-thumb figcaption{font-size:11px;color:var(--muted);margin-top:8px}
 #sculp-site .portfolio-hint{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:8px;font-size:12px;color:var(--muted)}
+#sculp-site .artist-directory{margin-top:clamp(78px,9vw,132px);padding-top:clamp(58px,7vw,94px);border-top:1px solid var(--line)}
+#sculp-site .artist-directory-head{display:flex;justify-content:space-between;gap:32px;align-items:end}
+#sculp-site .artist-directory-head p{margin:0;max-width:48ch}
+#sculp-site .artist-directory-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 20px;margin-top:42px}
+#sculp-site .artist-directory-card{display:block;border-top:1px solid var(--ink);padding-top:12px}
+#sculp-site .artist-directory-card .photo{min-height:0;aspect-ratio:4/5;margin-bottom:16px}
+#sculp-site .artist-directory-card h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:clamp(25px,2.2vw,34px);line-height:1.08;margin:0 0 8px}
+#sculp-site .artist-directory-card span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+#sculp-site .artist-directory-card:hover span{color:var(--ink)}
+#sculp-site .view[data-page="artist-portfolios"] .intro{padding-bottom:clamp(64px,7vw,96px)}
+#sculp-site .artist-work-back{margin-bottom:34px}
+#sculp-site .artist-work-index{margin-top:46px}
+#sculp-site .artist-work-section{scroll-margin-top:104px}
+#sculp-site .artist-work-heading{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:34px}
+#sculp-site .artist-work-heading h2{margin:8px 0 0}
+#sculp-site .artist-work-heading p{margin:0;max-width:42ch}
+#sculp-site .artist-work-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+#sculp-site .artist-work-slot{aspect-ratio:4/5;border:1px solid var(--line);background:linear-gradient(145deg,rgba(250,247,242,.7),rgba(231,221,208,.5));display:flex;align-items:flex-end;padding:18px;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+#sculp-site .artist-work-cta .actions{justify-content:flex-start}
+@media(max-width:950px){#sculp-site .artist-directory-head,#sculp-site .artist-work-heading{align-items:flex-start;flex-direction:column}#sculp-site .artist-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){#sculp-site .artist-directory-grid,#sculp-site .artist-work-gallery{grid-template-columns:1fr}#sculp-site .artist-work-slot{aspect-ratio:4/3}}
 #sculp-site .studio-gallery{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:28px}
 #sculp-site .studio-gallery .photo{min-height:520px}
 #sculp-site .studio-gallery .studio-stack{display:grid;grid-template-rows:1fr 1fr;gap:18px}
@@ -817,7 +838,53 @@
   <div class="actions" style="margin-top:34px">
     <a class="button fill" href="#book">Start an enquiry</a>
   </div>
+
+  <section class="artist-directory" aria-labelledby="portfolio-artists-title">
+    <div class="artist-directory-head">
+      <div>
+        <div class="eyebrow">Explore by artist</div>
+        <h2 id="portfolio-artists-title">Artist portfolios.</h2>
+      </div>
+      <p>Explore each artist's individual point of view. Every portfolio is presented with the same space and visual weight.</p>
+    </div>
+    <div class="artist-directory-grid">
+      <a class="artist-directory-card" href="#artist-portfolios?section=artist-angelina"><div class="photo"><img src="assets/images/angelina-portrait.webp" alt="Angelina" width="814" height="1086" loading="lazy" decoding="async" style="object-position:50% 20%"></div><h3>Angelina</h3><span>View portfolio →</span></a>
+      <a class="artist-directory-card" href="#artist-portfolios?section=artist-elaine"><div class="photo"><img src="assets/images/elaine-portrait.webp" alt="Elaine" width="1280" height="1908" loading="lazy" decoding="async" style="object-position:50% 15%"></div><h3>Elaine</h3><span>View portfolio →</span></a>
+      <a class="artist-directory-card" href="#artist-portfolios?section=artist-emily"><div class="photo"><img src="assets/images/emily-portrait.webp" alt="Emily" width="960" height="1440" loading="lazy" decoding="async" style="object-position:50% 30%"></div><h3>Emily</h3><span>View portfolio →</span></a>
+      <a class="artist-directory-card" href="#artist-portfolios?section=artist-giselle"><div class="photo"><img src="assets/images/giselle-portrait.webp" alt="Giselle" width="1280" height="1920" loading="lazy" decoding="async" style="object-position:50% 15%"></div><h3>Giselle</h3><span>View portfolio →</span></a>
+      <a class="artist-directory-card" href="#artist-portfolios?section=artist-mira"><div class="photo"><img src="assets/images/mira-portrait.webp" alt="Mira" width="844" height="1264" loading="lazy" decoding="async" style="object-position:50% 0%"></div><h3>Mira</h3><span>View portfolio →</span></a>
+      <a class="artist-directory-card" href="#artist-portfolios?section=artist-miranda"><div class="photo"><img src="assets/images/miranda-portrait.webp" alt="Miranda" width="1025" height="1535" loading="lazy" decoding="async" style="object-position:50% 10%"></div><h3>Miranda</h3><span>View portfolio →</span></a>
+      <a class="artist-directory-card" href="#artist-portfolios?section=artist-yuki"><div class="photo"><img src="assets/images/yuki-portrait.webp" alt="Yuki" width="904" height="1340" loading="lazy" decoding="async" style="object-position:50% 10%"></div><h3>Yuki</h3><span>View portfolio →</span></a>
+    </div>
+  </section>
 </div>
+</article>
+<article class="view" data-page="artist-portfolios" hidden>
+<div class="shell intro">
+  <div class="artist-work-back"><a class="button" href="#portfolio">← Back to portfolio</a></div>
+  <div class="eyebrow">SCULP Studio · Individual work</div>
+  <h1>Artist Portfolios.</h1>
+  <p class="lead">Different artists, individual points of view, and one shared studio standard. Select an artist below or explore every portfolio.</p>
+  <div class="actions artist-work-index" aria-label="Artist portfolio index">
+    <a class="button" href="#artist-portfolios?section=artist-angelina">Angelina</a>
+    <a class="button" href="#artist-portfolios?section=artist-elaine">Elaine</a>
+    <a class="button" href="#artist-portfolios?section=artist-emily">Emily</a>
+    <a class="button" href="#artist-portfolios?section=artist-giselle">Giselle</a>
+    <a class="button" href="#artist-portfolios?section=artist-mira">Mira</a>
+    <a class="button" href="#artist-portfolios?section=artist-miranda">Miranda</a>
+    <a class="button" href="#artist-portfolios?section=artist-yuki">Yuki</a>
+  </div>
+</div>
+
+<section class="section artist-work-section" id="artist-angelina"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Angelina</h2></div><p>Reserved for Angelina's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
+<section class="section artist-work-section" id="artist-elaine"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Elaine</h2></div><p>Reserved for Elaine's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
+<section class="section artist-work-section" id="artist-emily"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Emily</h2></div><p>Reserved for Emily's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
+<section class="section artist-work-section" id="artist-giselle"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Giselle</h2></div><p>Reserved for Giselle's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
+<section class="section artist-work-section" id="artist-mira"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Mira</h2></div><p>Reserved for Mira's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
+<section class="section artist-work-section" id="artist-miranda"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Miranda</h2></div><p>Reserved for Miranda's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
+<section class="section artist-work-section" id="artist-yuki"><div class="shell"><div class="artist-work-heading"><div><div class="eyebrow">Selected work</div><h2>Yuki</h2></div><p>Reserved for Yuki's individual portfolio selection.</p></div><div class="artist-work-gallery"><div class="artist-work-slot">Portfolio image 01</div><div class="artist-work-slot">Portfolio image 02</div><div class="artist-work-slot">Portfolio image 03</div></div></div></section>
+
+<section class="cta artist-work-cta"><div class="shell"><div class="eyebrow">Find your artist</div><h2>Ready to plan your look?</h2><p>Tell us about your date, service, and the kind of styling you have in mind. We'll guide you toward the right artist.</p><div class="actions"><a class="button fill" href="#book">Start an enquiry</a><a class="button" href="#portfolio">← Back to portfolio</a></div></div></section>
 </article>
 <article class="view" data-page="team" hidden>
 <div class="shell intro">
@@ -836,7 +903,7 @@
       <h2>Miranda</h2>
       <p>With over 10 years of experience, Miranda brings a background in fashion and celebrity beauty to modern bridal styling. Her work spans international Fashion Weeks, runway shows and advertising campaigns for global brands, giving her bridal work a distinctly editorial eye.</p>
       <p>She has also created beauty for luxury destination weddings around the world, working with clients across different cultures and settings to create looks that feel refined, elegant and personal.</p>
-      <a class="button" href="#portfolio">View Miranda's work →</a>
+      <a class="button" href="#artist-portfolios?section=artist-miranda">View Miranda's work →</a>
     </div>
   </div>
 </section>
@@ -853,6 +920,7 @@
         <h3>Yuki</h3>
         <p>With over 10 years in bridal beauty, Yuki combines technical expertise with a refined artistic approach. Professionally trained in Hong Kong and South Korea, she holds ITEC and City &amp; Guilds certifications and has a background in beauty education and entrepreneurship.</p>
         <p class="service-context">Background: former styling instructor at Elite College; co-founder of Miyan Beauty Clinic.</p>
+        <a class="button" href="#artist-portfolios?section=artist-yuki">View Yuki's work →</a>
       </div>
 
       <div class="team-person">
@@ -861,6 +929,7 @@
         <h3>Mira</h3>
         <p>Mira specializes in modern bridal beauty with a particular focus on New Chinese Style styling, combining Chinese elegance with contemporary technique for polished, fashion-forward looks.</p>
         <p class="service-context">Specialty: Modern Bridal · New Chinese Style</p>
+        <a class="button" href="#artist-portfolios?section=artist-mira">View Mira's work →</a>
       </div>
     </div>
   </div>
@@ -878,6 +947,7 @@
         <h3>Angelina</h3>
         <p>Bridal, editorial and commercial beauty with a modern Korean-inspired approach - refined, fresh and designed to photograph beautifully.</p>
         <p class="service-context">Specialty: Korean-inspired · Bridal · Editorial</p>
+        <a class="button" href="#artist-portfolios?section=artist-angelina">View Angelina's work →</a>
       </div>
 
       <div class="team-person">
@@ -886,6 +956,7 @@
         <h3>Elaine</h3>
         <p>Bridal, portrait and special-event styling with a soft, charming and modern point of view that keeps the client's own features at the centre.</p>
         <p class="service-context">Specialty: Bridal · Portrait · Event</p>
+        <a class="button" href="#artist-portfolios?section=artist-elaine">View Elaine's work →</a>
       </div>
 
       <div class="team-person">
@@ -894,6 +965,7 @@
         <h3>Emily</h3>
         <p>Fresh, polished beauty shaped around the client's features, personality and occasion, with a thoughtful and detail-oriented approach.</p>
         <p class="service-context">Specialty: Fresh · Polished · Personalized</p>
+        <a class="button" href="#artist-portfolios?section=artist-emily">View Emily's work →</a>
       </div>
 
       <div class="team-person">
@@ -902,6 +974,7 @@
         <h3>Giselle</h3>
         <p>Soft glam, modern Western and Thai-inspired beauty, with sculpted features, radiant skin and a more defined fashion-led finish.</p>
         <p class="service-context">Specialty: Soft Glam · Western · Thai-inspired</p>
+        <a class="button" href="#artist-portfolios?section=artist-giselle">View Giselle's work →</a>
       </div>
     </div>
   </div>
@@ -1144,7 +1217,7 @@
 </main><footer><div class="shell foot"><div><a class="logo" href="#home">SCULP STUDIO</a><p>Bridal, event, commercial beauty & education.<br>Toronto, Ontario · Available for travel</p></div><div><div class="eyebrow">Explore</div><a href="#bridal">Bridal</a><a href="#occasions">Occasions</a><a href="#portfolio">Portfolio</a><a href="#team">Team</a><a href="#about">About</a></div><div><div class="eyebrow">Connect</div><a href="#book">Enquire</a><a href="mailto:hello@sculpstudio.ca">hello@sculpstudio.ca</a><a class="social-link" href="https://www.instagram.com/sculp_studio/" target="_blank" rel="noopener noreferrer" aria-label="SCULP Studio on Instagram"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></span><span>Instagram</span></a></div></div></footer>
 <script>(function(){
 var root=document.getElementById('sculp-site');if(!root)return;
-var pages=['home','bridal','occasions','portfolio','team','about','book'];
+var pages=['home','bridal','occasions','portfolio','artist-portfolios','team','about','book'];
 
 function getHashParts(){
   var raw=location.hash.slice(1),parts=raw.split('?');
@@ -1169,7 +1242,7 @@ function route(){
   if(pages.indexOf(key)<0)key='home';
   root.querySelectorAll('.view').forEach(function(el){el.hidden=el.dataset.page!==key});
   root.querySelectorAll('.nav a').forEach(function(el){
-    var href=el.getAttribute('href')||'',active=href==='#'+key;
+    var href=el.getAttribute('href')||'',active=href==='#'+key||(key==='artist-portfolios'&&href==='#portfolio');
     el.classList.toggle('active',active);
     if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');
   });

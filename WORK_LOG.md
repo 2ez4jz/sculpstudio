@@ -4,6 +4,8 @@
 
 ## 2026-10-01
 
+- 新增独立 Artist Portfolios 页面：为七位化妆师按字母顺序设置等尺寸入口与各三个作品预留位；Portfolio 底部加入统一入口，Team 每位成员加入对应作品按钮，页面补充咨询 CTA 与返回 Portfolio 按钮。检查两版均为 7 个入口、7 个作品区、21 个预留位，无 HTML 解析或差异格式错误；当前环境缺少浏览器执行文件，未完成自动截图检查。
+
 - 调整 Bridal Trial 的 Senior Styling Artist 中间档价格：One-Look $350、Two-Look $450、Three-Look $550；其他档位与 Wedding-Day Services 保持不变。
 
 - 重构 Bridal Pricing：先展示 Bridal Trial，再展示 Wedding-Day Services；两组各三档服务，采用新价格表数字并补入中间价。化妆师职务统一为 Team 页的 Founder / Creative Styling Director、Senior Styling Artist 与 Styling Artist；移除 Additional Services 中重复的 Trial Session。
