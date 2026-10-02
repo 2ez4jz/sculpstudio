@@ -4,6 +4,8 @@
 
 ## 2026-10-01
 
+- 调整 Bridal Trial 的 Senior Styling Artist 中间档价格：One-Look $350、Two-Look $450、Three-Look $550；其他档位与 Wedding-Day Services 保持不变。
+
 - 重构 Bridal Pricing：先展示 Bridal Trial，再展示 Wedding-Day Services；两组各三档服务，采用新价格表数字并补入中间价。化妆师职务统一为 Team 页的 Founder / Creative Styling Director、Senior Styling Artist 与 Styling Artist；移除 Additional Services 中重复的 Trial Session。
 
 - 更新 Occasions 首屏右上图片为红色重影妆容肖像；保留左侧白裙图与右下黑白双人照，形成氛围、妆容创意与场合叙事的组合，并校准横向裁剪焦点。
