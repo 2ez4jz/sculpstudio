@@ -4,6 +4,8 @@
 
 ## 2026-10-03
 
+- 将 Bridal 的 The Half-Day Experience 中 Signature Artist / Founder 价格由 $1,200 调整为 $1,100；Director Artist $900、Senior Artist $600 及其他套餐价格不变。
+
 - 从本次提供的七组真实反馈中筛选三条互补内容，翻译并精简为英文客户原话，分别突出婚礼当天的自信感、长时间持妆与临时变动下的服务可靠性；以响应式三栏文字评价区放在首页 The Artists 上方，手机端改为单栏。
 
 - 将首页 SCULP Concierge 的第三个选择从 “I’m creating images” 改为更直接的 “I have a photoshoot”，对应内容与跳转保持不变。
