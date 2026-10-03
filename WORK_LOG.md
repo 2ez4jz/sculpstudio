@@ -4,6 +4,8 @@
 
 ## 2026-10-03
 
+- 按页面截图从 Miranda 个人 Portfolio 精确移除 7 张指定作品：粉色侧躺妆面、面纱特写、黑白侧脸、鲜色眼妆、黑金服装、双人黑衣与毛绒帽造型；其他页面正在使用的同源图片保持不变。
+
 - 删除 About 页原有的 “The SCULP eye / Texture, proportion, presence” 婚礼作品区，替换为真实 Studio 空间与到访信息：精选休息区、化妆台、咨询区三张照片；裁掉原图中的 Miyan Beauty 标志并重新导出；加入 200 Town Centre Boulevard, Unit 409, Markham 地址、停车与入口示意图。
 
 - 移除 Portfolio 首页整组混合作品图和中间咨询按钮，页面开场后直接显示八位化妆师入口；将该组 26 张作品完整转入 Miranda 个人 Portfolio，并替换她原有的 18 张作品顺序，不重复叠加。
