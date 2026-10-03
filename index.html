@@ -352,14 +352,15 @@
 #sculp-site .studio-gallery::after{content:"";position:absolute;left:-18px;bottom:-18px;width:72px;height:72px;border-left:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);pointer-events:none}
 #sculp-site .studio-visit{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:clamp(28px,5vw,76px);align-items:start}
 #sculp-site .studio-visit-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-#sculp-site .studio-visit-gallery .photo{min-height:260px}
-#sculp-site .studio-visit-gallery .photo:first-child{grid-column:1/-1;min-height:520px}
+#sculp-site .studio-visit-gallery .photo{min-height:0;height:auto;background:none;overflow:hidden}
+#sculp-site .studio-visit-gallery .photo:first-child{grid-column:1/-1;min-height:0}
+#sculp-site .studio-visit-gallery .photo img{position:static;display:block;width:100%;height:auto;object-fit:contain}
 #sculp-site .studio-visit-copy{position:sticky;top:120px}
 #sculp-site .studio-address{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:clamp(24px,2.2vw,34px);line-height:1.25;color:var(--ink);margin:24px 0}
 #sculp-site .studio-map{margin-top:30px;border:1px solid var(--line)}
 #sculp-site .studio-map img{display:block;width:100%;height:auto}
 @media(max-width:950px){#sculp-site .studio-visit{grid-template-columns:1fr}#sculp-site .studio-visit-copy{position:static}#sculp-site .studio-map{max-width:560px}}
-@media(max-width:640px){#sculp-site .studio-visit-gallery{grid-template-columns:1fr}#sculp-site .studio-visit-gallery .photo:first-child{grid-column:auto;min-height:360px}#sculp-site .studio-visit-gallery .photo{min-height:300px}}
+@media(max-width:640px){#sculp-site .studio-visit-gallery{grid-template-columns:1fr}#sculp-site .studio-visit-gallery .photo:first-child{grid-column:auto}#sculp-site .studio-visit-gallery .photo{min-height:0}}
 #sculp-site .home-studio .photo{box-shadow:0 24px 60px rgba(79,61,43,.045)}
 #sculp-site .about-next{position:relative}
 #sculp-site .about-next::after{content:"";position:absolute;right:0;top:-1px;width:72px;height:1px;background:var(--ink)}
@@ -778,7 +779,6 @@
     <figure><div class="photo"><img src="assets/images/editorial/editorial-16.webp" alt="Graphic editorial eye makeup in vivid colour" width="1080" height="1618" loading="lazy" decoding="async"></div></figure>
     <figure><div class="photo"><img src="assets/images/editorial/editorial-17.webp" alt="Beauty portrait in dramatic pink light" width="1350" height="1800" loading="lazy" decoding="async"></div></figure>
     <figure><div class="photo"><img src="assets/images/editorial/editorial-18.webp" alt="Soft editorial beauty portrait with a flower" width="1080" height="1398" loading="lazy" decoding="async"></div></figure>
-    <figure><div class="photo"><img src="assets/images/editorial/editorial-20.webp" alt="Evening beauty portrait in a black dress" width="1080" height="1620" loading="lazy" decoding="async"></div></figure>
   </div>
 </div>
 
