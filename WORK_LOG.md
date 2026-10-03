@@ -4,6 +4,8 @@
 
 ## 2026-10-03
 
+- 在 Bridal 定价页 Choose Your Artist 下方、Additional Services 之前加入 Civil Ceremony Styling 价格图；桌面端居中限宽展示，手机端自适应满宽，保持原比例和全部价格文字可见。
+
 - 将首页评价区中间一条替换为强调审美、技术与 editorial-level makeup 的客户反馈，避免与左侧持妆体验重复；三条现分别体现情绪体验、艺术与技术、临场服务。
 
 - 将 Bridal Stories 三图最右侧替换为本次提供的柔和妆面与纹理盘发特写；压缩为原比例 WebP，不做强制裁剪，左侧与中间图片保持不变。
