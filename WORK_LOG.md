@@ -4,6 +4,12 @@
 
 ## 2026-10-03
 
+- 删除 About 页原有的 “The SCULP eye / Texture, proportion, presence” 婚礼作品区，替换为真实 Studio 空间与到访信息：精选休息区、化妆台、咨询区三张照片；裁掉原图中的 Miyan Beauty 标志并重新导出；加入 200 Town Centre Boulevard, Unit 409, Markham 地址、停车与入口示意图。
+
+- 移除 Portfolio 首页整组混合作品图和中间咨询按钮，页面开场后直接显示八位化妆师入口；将该组 26 张作品完整转入 Miranda 个人 Portfolio，并替换她原有的 18 张作品顺序，不重复叠加。
+
+- 将 Occasion 首屏作品从 5 张扩充为 12 张明确非婚礼的编辑、时装、红毯、晚宴与后台造型图；用自然比例三列瀑布流排版，三列分别以双人创意构图、毛绒时装和鲜色眼妆开场，平板2列、手机1列。同步为 Event Styling、Personal Styling、Commercial Beauty、Photoshoot Styling 增加起价 $200、$150、$100/小时、$200。
+
 - 在 Bridal 定价页 Choose Your Artist 下方、Additional Services 之前加入 Civil Ceremony Styling 价格图；桌面端居中限宽展示，手机端自适应满宽，保持原比例和全部价格文字可见。
 
 - 将首页评价区中间一条替换为强调审美、技术与 editorial-level makeup 的客户反馈，避免与左侧持妆体验重复；三条现分别体现情绪体验、艺术与技术、临场服务。
