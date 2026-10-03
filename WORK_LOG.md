@@ -2,6 +2,10 @@
 
 按多伦多时间记录网站修改。每次改动后，在这里追加日期、改动内容和对应提交，方便回看。
 
+## 2026-10-03
+
+- 将首页 SCULP Concierge 的第三个选择从 “I’m creating images” 改为更直接的 “I have a photoshoot”，对应内容与跳转保持不变。
+
 ## 2026-10-02
 
 - 删除首页重复的 Selected Work / Made to be remembered 展示栏，包括三张主图、横向预览和作品集链接；首页现由品牌理念直接进入 Services，保留 Portfolio 与各化妆师作品页的完整图片展示。
