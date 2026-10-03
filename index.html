@@ -387,34 +387,6 @@
 
 <section class="section">
   <div class="shell">
-    <div class="eyebrow">Selected work</div>
-    <h2>Made to be remembered.</h2>
-
-    <div class="home-work natural-three">
-      <div class="photo"><img src="assets/images/editorial/editorial-02.webp" alt="Sculptural paired beauty portrait" width="1080" height="1619" loading="lazy" decoding="async"></div>
-      <div class="photo"><img src="assets/images/editorial/editorial-01.webp" alt="Fashion beauty portrait in a sculptural fur hood" width="1090" height="1635" loading="lazy" decoding="async"></div>
-      <div class="photo"><img src="assets/images/editorial/editorial-16.webp" alt="Graphic editorial eye makeup in vivid colour" width="1080" height="1618" loading="lazy" decoding="async"></div>
-    </div>
-
-    <div class="home-strip" aria-label="Selected work preview">
-      <div class="photo"><img src="assets/images/editorial/editorial-13.webp" alt="Soft modern beauty portrait on a rose background" width="1080" height="1350" loading="lazy" decoding="async"></div>
-      <div class="photo"><img src="assets/images/editorial/editorial-14.webp" alt="Editorial fashion styling in black and gold" width="1080" height="1398" loading="lazy" decoding="async"></div>
-      <div class="photo"><img src="assets/images/editorial/editorial-17.webp" alt="Beauty portrait in dramatic pink light" width="1350" height="1800" loading="lazy" decoding="async"></div>
-      <div class="photo"><img src="assets/images/editorial/editorial-18.webp" alt="Soft editorial beauty portrait with a flower" width="1080" height="1398" loading="lazy" decoding="async"></div>
-      <div class="photo"><img src="assets/images/editorial/editorial-21.webp" alt="Monochrome sculptural beauty profile" width="1084" height="1175" loading="lazy" decoding="async"></div>
-      <div class="photo"><img src="assets/images/collection-517.webp" alt="Bride in a sculptural gown and long veil" width="1193" height="1800" loading="lazy" decoding="async" style="object-position:50% 38%"></div>
-      <div class="photo"><img src="assets/images/collection-598.webp" alt="Bride smiling with a yellow floral bouquet" width="1201" height="1600" loading="lazy" decoding="async" style="object-position:50% 38%"></div>
-      <div class="photo"><img src="assets/images/collection-650.webp" alt="Soft bridal profile beside a window" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 34%"></div>
-      <div class="photo"><img src="assets/images/collection-706.webp" alt="Bride beside a delicate reception table" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 42%"></div>
-      <div class="photo"><img src="assets/images/collection-718.webp" alt="Full-length bridal portrait with a sculptural bouquet" width="1285" height="1800" loading="lazy" decoding="async" style="object-position:50% 42%"></div>
-    </div>
-
-    <div class="actions"><a href="#portfolio">View full portfolio →</a></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="shell">
     <div class="eyebrow">Services</div>
     <h2>Start with the occasion.</h2>
     <div class="home-services">
@@ -1508,32 +1480,6 @@ if(artistTopButton)artistTopButton.addEventListener('click',function(){
 var mast=root.querySelector('.mast');
 function updateMast(){if(mast)mast.classList.toggle('scrolled',window.scrollY>28)}
 window.addEventListener('scroll',updateMast,{passive:true});updateMast();
-
-function enableDragScroll(el){
-  if(!el)return;
-  var down=false,startX=0,startScroll=0,moved=false;
-  el.addEventListener('pointerdown',function(e){
-    if(e.pointerType==='touch')return;
-    down=true;moved=false;startX=e.clientX;startScroll=el.scrollLeft;
-    el.classList.add('dragging');
-    el.setPointerCapture(e.pointerId);
-  });
-  el.addEventListener('pointermove',function(e){
-    if(!down)return;
-    var dx=e.clientX-startX;
-    if(Math.abs(dx)>4)moved=true;
-    el.scrollLeft=startScroll-dx;
-  });
-  function end(e){
-    if(!down)return;
-    down=false;el.classList.remove('dragging');
-    try{el.releasePointerCapture(e.pointerId)}catch(_){}
-  }
-  el.addEventListener('pointerup',end);
-  el.addEventListener('pointercancel',end);
-  el.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
-}
-enableDragScroll(root.querySelector('.home-strip'));
 
 var conciergeData={
   wedding:{label:'Recommended · Bridal',title:'Start with SCULP Bridal.',copy:'Wedding-day styling, wedding trial, bridal-party services, and follow-up services are all planned from one place.',primary:'Explore Bridal',href:'#bridal?section=bridal-services',secondary:'Enquire with Bridal pre-selected →',secondaryHref:'#book?service=Bridal'},

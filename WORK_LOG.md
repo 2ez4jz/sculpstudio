@@ -4,6 +4,8 @@
 
 ## 2026-10-02
 
+- 删除首页重复的 Selected Work / Made to be remembered 展示栏，包括三张主图、横向预览和作品集链接；首页现由品牌理念直接进入 Services，保留 Portfolio 与各化妆师作品页的完整图片展示。
+
 - 全站统一三档化妆师职称：Founder / Creative Styling Director 改为 Signature Artist / Founder，Senior Styling Artist 改为 Director Artist，Styling Artist 改为 Senior Artist；同步更新 Team 分组、Bridal 价格表、预约选项与图片辅助文本，价格数字不变。
 
 - 从 editorial 包的 22 张照片中精选 18 张并压缩为原比例 WebP：将双人创意构图、毛绒时装与鲜色眼妆等张力强的作品前置；替换首页 Selected Work 主图并扩充横向预览，在主 Portfolio 前部增加 6 张非婚礼作品，完整开通 Miranda 的 18 张编辑作品集，Occasion 改为创意妆、时装、晚宴、TIFF 红毯与活动现场组合。对自带白色外框的后台照只做轻微裁边，不改人物比例。
