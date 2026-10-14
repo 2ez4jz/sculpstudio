@@ -1470,7 +1470,7 @@
         </label>
 
         <div class="field full">
-          <button class="button fill" type="submit">Prepare email enquiry →</button>
+          <button class="button fill" type="submit">Continue to email →</button>
           <p class="note">This currently opens your email app with the enquiry filled in. Please send the email there to complete your request.</p>
         </div>
       </form>
@@ -1484,7 +1484,7 @@
           </div>
           <div>
             <h3>We reply</h3>
-            <p>We’ll confirm availability and guide you through the most suitable next step.</p>
+            <p>We’ll reply within 24 hours of receiving your enquiry to confirm availability and guide you through the next step.</p>
           </div>
           <div>
             <h3>You confirm</h3>
@@ -1507,10 +1507,23 @@
   </div>
 </div>
 </article>
+<article class="view" data-page="enquiry-ready" hidden>
+  <div class="shell intro">
+    <div class="eyebrow">Your SCULP enquiry</div>
+    <h1 id="enquiry-ready-title" tabindex="-1">One final step.</h1>
+    <p class="lead">Your enquiry is ready to send.</p>
+    <p>Please click <strong>Send</strong> in your email app to complete your enquiry. <strong>We’ll reply within 24 hours of receiving your email.</strong></p>
+    <p>If your email app did not open, use the button below or email <a href="mailto:sculpstudio.ca@gmail.com">sculpstudio.ca@gmail.com</a> directly.</p>
+    <div class="actions">
+      <a class="button fill" id="enquiry-open-email" href="mailto:sculpstudio.ca@gmail.com">Open email app →</a>
+      <a class="button" href="#book">Back to enquiry</a>
+    </div>
+  </div>
+</article>
 </main><footer><div class="shell foot"><div><a class="logo" href="#home">SCULP STUDIO</a><p>Bridal, event, commercial beauty & education.<br>Toronto, Ontario · Available for travel</p></div><div><div class="eyebrow">Explore</div><a href="#bridal">Bridal</a><a href="#occasions">Occasions</a><a href="#portfolio">Portfolio</a><a href="#team">Team</a><a href="#about">About</a></div><div><div class="eyebrow">Connect</div><a href="#book">Enquire</a><a href="mailto:sculpstudio.ca@gmail.com">sculpstudio.ca@gmail.com</a><a class="social-link" href="https://www.instagram.com/sculp_studio/" target="_blank" rel="noopener noreferrer" aria-label="SCULP Studio on Instagram"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></span><span>Instagram</span></a></div></div></footer>
 <script>(function(){
 var root=document.getElementById('sculp-site');if(!root)return;
-var pages=['home','bridal','occasions','portfolio','artist-portfolios','team','about','book'];
+var pages=['home','bridal','occasions','portfolio','artist-portfolios','team','about','book','enquiry-ready'];
 
 function getHashParts(){
   var raw=location.hash.slice(1),parts=raw.split('?');
@@ -1573,7 +1586,7 @@ function route(){
     window.scrollTo(0,0);
   }
 }
-window.addEventListener('hashchange',route);route();
+window.addEventListener('hashchange',route);window.addEventListener('popstate',route);route();
 
 root.querySelector('.mobile-toggle').addEventListener('click',function(){
   var menu=root.querySelector('.nav'),open=menu.classList.toggle('open');
@@ -1618,7 +1631,12 @@ if(form)form.addEventListener('submit',function(event){
     lines.push(key.toUpperCase()+': '+(data.get(key)||'—'));
   });
   var subject=encodeURIComponent('SCULP enquiry — '+data.get('service')+' — '+data.get('date'));
-  window.location.href='mailto:sculpstudio.ca@gmail.com?subject='+subject+'&body='+encodeURIComponent(lines.join('\n'));
+  var emailUrl='mailto:sculpstudio.ca@gmail.com?subject='+subject+'&body='+encodeURIComponent(lines.join('\n'));
+  root.querySelector('#enquiry-open-email').setAttribute('href',emailUrl);
+  history.pushState(null,'','#enquiry-ready');
+  route();
+  root.querySelector('#enquiry-ready-title').focus({preventScroll:true});
+  window.location.href=emailUrl;
 });
 })();</script>
 <script src="motion.js?v=20261001-portfolio-grid" defer></script>
