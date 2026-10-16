@@ -6,6 +6,12 @@
 <title>SCULP Studio | Bridal & Beauty Styling Toronto</title>
 <meta name="description" content="Toronto beauty studio for bridal, event, commercial and photoshoot styling, plus private and group education. Available for travel.">
 <meta name="theme-color" content="#f3eee6">
+<link rel="canonical" href="https://sculpstudio.ca/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SCULP Studio | Bridal & Beauty Styling Toronto">
+<meta property="og:description" content="Toronto bridal makeup, beauty styling and education. Explore our artists and enquire about your date.">
+<meta property="og:url" content="https://sculpstudio.ca/">
 <style>html,body{margin:0;padding:0;background:#f3eee6}body{min-height:100vh}@media(max-width:620px){#sculp-site .studio-gallery .studio-stack{grid-template-columns:1fr}#sculp-site .portfolio-featured .stack{grid-template-columns:1fr}#sculp-site .portfolio-thumb{flex-basis:72vw}#sculp-site .team-grid,#sculp-site .team-grid.junior{grid-template-columns:1fr}#sculp-site .team-founder .photo{min-height:480px}}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1638,11 +1644,36 @@ root.querySelectorAll('.concierge-option').forEach(function(btn){
 });
 
 var form=root.querySelector('#sculp-form');
+// Retain only campaign tags for enquiry attribution; do not track personal fields.
+var campaign=new URLSearchParams(window.location.search);
+var attributionKeys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+var attribution={};
+attributionKeys.forEach(function(key){
+  var value=campaign.get(key);
+  if(value)attribution[key]=value.slice(0,120);
+});
+try{
+  var saved=JSON.parse(sessionStorage.getItem('sculp_campaign')||'{}');
+  attribution=Object.assign(saved,attribution);
+  sessionStorage.setItem('sculp_campaign',JSON.stringify(attribution));
+}catch(e){}
+if(form){
+  var dateField=form.querySelector('input[name="date"]');
+  if(dateField){
+    var setDateFloor=function(){
+      var d=new Date(), local=new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);
+      dateField.min=local;
+    };
+    setDateFloor();
+  }
+}
+
 if(form)form.addEventListener('submit',async function(event){
   event.preventDefault();
   if(this.dataset.sending==='true'||!this.reportValidity())return;
   var data=new FormData(this);
   if(data.get('_honey'))return;
+  Object.keys(attribution).forEach(function(key){data.set(key,attribution[key]);});
   var button=this.querySelector('button[type="submit"]'),error=root.querySelector('#enquiry-error');
   data.set('_subject','SCULP enquiry — '+data.get('service')+' — '+(data.get('date')||'Date to be confirmed'));
   error.hidden=true;this.dataset.sending='true';button.disabled=true;button.textContent='Sending…';this.setAttribute('aria-busy','true');
