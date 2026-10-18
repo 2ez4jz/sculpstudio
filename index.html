@@ -1678,6 +1678,15 @@ if(form)form.addEventListener('submit',async function(event){
   data.set('_subject','SCULP enquiry — '+data.get('service')+' — '+(data.get('date')||'Date to be confirmed'));
   error.hidden=true;this.dataset.sending='true';button.disabled=true;button.textContent='Sending…';this.setAttribute('aria-busy','true');
   try{
+    // Persist a real lead first. FormSubmit email remains as the existing notification.
+    var submissionId=this.dataset.submissionId||(this.dataset.submissionId=crypto.randomUUID());
+    var leadPayload=Object.fromEntries(data.entries());
+    leadPayload.submission_id=submissionId;
+    leadPayload.referrer=document.referrer||'';
+    var saved=await fetch('https://lztzzdhqghwubygpzcbq.supabase.co/functions/v1/sculp-enquiry',{
+      method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(leadPayload)
+    });
+    if(!saved.ok)throw new Error('database');
     var response=await fetch('https://formsubmit.co/ajax/sculpstudio.ca@gmail.com',{
       method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},
       body:JSON.stringify(Object.fromEntries(data.entries()))
@@ -1686,11 +1695,11 @@ if(form)form.addEventListener('submit',async function(event){
     if(!response.ok||(result.success!==true&&result.success!=='true')){
       throw new Error(/activat/i.test(result.message||'')?'activation':'send');
     }
-    this.reset();
+    this.reset();delete this.dataset.submissionId;
     history.pushState(null,'','#enquiry-sent');route();
     root.querySelector('#enquiry-sent-title').focus({preventScroll:true});
   }catch(err){
-    error.textContent=err.message==='activation'
+    error.textContent=err.message==='database'?'We could not save your enquiry. Your details are still here. Please try again or email us directly.':err.message==='activation'
       ?'Our enquiry form is awaiting email verification. Please email sculpstudio.ca@gmail.com directly. Your details have been kept here.'
       :'We could not confirm your submission. Your details have been kept here. Please try again or email sculpstudio.ca@gmail.com directly.';
     error.hidden=false;error.scrollIntoView({behavior:'smooth',block:'center'});
