@@ -21,6 +21,8 @@ nav, sections, schema, copy = [], [], [], ['# SCULP Studio — FAQ & Bridal Guid
 - Find an answer / 查找答案
 - Questions, answered. / 常见问题解答
 - Mobile stages: Enquiry / Trial / Preparation / Wedding day — 手机阶段：咨询 / 试妆 / 婚前准备 / 婚礼当天
+- Journey controls: Previous / Next stage / 1 of 4 — 旅程控件：上一步 / 下一阶段 / 第 1 阶段，共 4 阶段
+- Decorative couple scenes: reviewing a date, exploring a look, arranging a veil, holding hands — 装饰人物：查看日程、探索妆容、整理头纱、牵手
 - What would you like to know? / 您想了解什么？
 - Search booking, trials, travel… / 搜索预订、试妆、上门服务等问题……
 - 20 questions, thoughtfully answered. / 20 个常见问题，为您细致解答。
@@ -48,10 +50,12 @@ for n, cat in enumerate(data['categories'], 1):
         copy.extend([f'### {q["q"]}\n', q['a']+'\n', f'**{q["q_zh"]}**\n', q['a_zh']+'\n', f'Anchor: `/faq/#{q["id"]}`\n'])
     sections.append(f'<section class="faq-category" id="{cat["id"]}" aria-labelledby="heading-{cat["id"]}"><h2 id="heading-{cat["id"]}">{e(cat["en"])}</h2>{"".join(rows)}</section>')
 journey_nav, panels = [], []
+journey_art = (ROOT / 'scripts/journey-figures.svg').read_text()
 copy.append('## The Bridal Journey / 新娘体验旅程\n')
 for n, stage in enumerate(data['journey']):
     short_name = ['Enquiry', 'Trial', 'Preparation', 'Wedding day'][n]
-    journey_nav.append(f'<button type="button" id="stage-{stage["id"]}" data-stage="{n}" aria-label="{e(stage["name"])}" aria-controls="panel-{stage["id"]}"><span class="stage-node" aria-hidden="true">0{n+1}</span><span class="stage-label-desktop">{e(stage["name"])}</span><span class="stage-label-mobile" aria-hidden="true">{e(short_name)}</span></button>')
+    art_id = ['enquiry', 'trial', 'preparation', 'wedding'][n]
+    journey_nav.append(f'<button type="button" id="stage-{stage["id"]}" data-stage="{n}" aria-label="{e(stage["name"])}" aria-controls="panel-{stage["id"]}"><svg class="stage-illustration" viewBox="0 0 120 100" aria-hidden="true" focusable="false"><use href="#couple-{art_id}"/></svg><span class="stage-node" aria-hidden="true">0{n+1}</span><span class="stage-label-desktop">{e(stage["name"])}</span><span class="stage-label-mobile" aria-hidden="true">{e(short_name)}</span></button>')
     panels.append(f'<section class="journey-panel" id="panel-{stage["id"]}" aria-labelledby="stage-{stage["id"]}"><div class="journey-copy"><h3>{e(stage["title"])}</h3><p>{e(stage["copy"])}</p><a class="text-link" href="#{stage["related"]}">{e(stage["link_label"])}</a></div><ul>{"".join("<li>"+e(item)+"</li>" for item in stage["items"])}</ul></section>')
     copy.extend([f'### {stage["name"]} / {stage["name_zh"]}\n', stage['title']+'\n', stage['copy']+'\n', stage['title_zh']+'\n', stage['copy_zh']+'\n'])
     copy.extend(f'- {en} / {zh}' for en, zh in zip(stage['items'], stage['items_zh']))
@@ -67,13 +71,13 @@ page = f'''<!doctype html>
 <meta property="og:url" content="https://sculpstudio.ca/faq/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/faq/faq.css?v=20261021-4"><script src="/faq/faq.js?v=20261021-4" defer></script>
+<link rel="stylesheet" href="/faq/faq.css?v=20261021-5"><script src="/faq/faq.js?v=20261021-5" defer></script>
 <script type="application/ld+json">{json.dumps({'@context':'https://schema.org','@type':'FAQPage','mainEntity':schema},ensure_ascii=False).replace('</','<\\/')}</script>
 </head><body><div id="sculp-site"><a class="skip-link" href="#guide">Skip to bridal guide</a>
 {header}
 <main id="guide">
 <section class="guide-hero shell" aria-labelledby="guide-title"><div class="guide-intro"><p class="guide-name">The Bridal Guide</p><h1 id="guide-title">Every detail,<br>beautifully considered.</h1></div><div class="guide-introduction"><p class="guide-description">A thoughtful guide to your bridal beauty experience, from your first enquiry to the final touch.</p><a class="text-link faq-jump" href="#faq-answers">Find an answer<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a></div></section>
-<section id="bridal-journey" class="journey" aria-labelledby="journey-title"><div class="shell"><div class="journey-heading"><h2 id="journey-title">The Bridal Journey</h2><p>From the first conversation to the final touch.<br>Find your place, and see what comes next.</p></div><div class="journey-nav" aria-label="The bridal journey stages"><div class="journey-track" aria-hidden="true"><span></span></div>{''.join(journey_nav)}</div><div class="journey-panels">{''.join(panels)}</div></div></section>
+<section id="bridal-journey" class="journey" aria-labelledby="journey-title">{journey_art}<div class="shell"><div class="journey-heading"><h2 id="journey-title">The Bridal Journey</h2><p>From the first conversation to the final touch.<br>Find your place, and see what comes next.</p></div><div class="journey-nav" aria-label="The bridal journey stages"><div class="journey-track" aria-hidden="true"><span></span></div><div class="journey-marker" aria-hidden="true"><span>01</span></div>{''.join(journey_nav)}</div><div class="journey-panels">{''.join(panels)}</div><div class="journey-controls" hidden><button type="button" class="journey-previous" aria-label="Previous journey stage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg><span>Previous</span></button><span class="journey-count" aria-hidden="true">1 of 4</span><button type="button" class="journey-next" aria-label="Next journey stage"><span>Next stage</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button><span class="sr-only journey-status" role="status" aria-live="polite" aria-atomic="true"></span></div></div></section>
 <section id="faq-answers" class="faq-section" aria-labelledby="questions-title" tabindex="-1"><div class="faq-heading shell"><h2 id="questions-title">Questions, answered.</h2><div class="search-area" hidden><label for="faq-search">What would you like to know?</label><div class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input type="search" id="faq-search" placeholder="Search booking, trials, travel…" autocomplete="off" maxlength="160" aria-describedby="search-status"><button type="button" id="clear-search" aria-label="Clear search" hidden>Clear</button></div><p id="search-status" class="search-status" role="status" aria-live="polite" aria-atomic="true">20 questions, thoughtfully answered.</p></div></div>
 <div class="guide-body shell"><aside class="guide-sidebar"><nav class="category-nav" aria-label="FAQ categories">{''.join(nav)}</nav><div class="sidebar-note"><p>Something more personal?</p><a class="text-link" href="/#book" data-enquiry="sidebar">We're here to help</a></div></aside><div class="faq-content"><div id="no-results" class="no-results" hidden><h2>Let's find your answer.</h2><p>No questions match your search. Try “trial”, “travel” or “booking”, or ask our team.</p><button class="text-link" type="button" id="reset-search">Show all questions</button><a class="text-link" href="/#book" data-enquiry="no-results">Enquire with SCULP</a></div>{''.join(sections)}</div></div></section>
 <section class="closing"><div class="shell"><h2>Your day is<br>uniquely yours.</h2><div><p>Let's create an experience that feels entirely your own.</p><a class="button" href="/#book" data-enquiry="closing">ENQUIRE WITH SCULP</a></div></div></section>

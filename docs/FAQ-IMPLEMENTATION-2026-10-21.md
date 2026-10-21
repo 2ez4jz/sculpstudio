@@ -25,6 +25,14 @@ The future design-reference preference is recorded in `AGENTS.md`.
 
 To edit content, update `faq/content.json`, run `python3 scripts/build-faq.py`, and commit the source and generated page/copy together. If header/footer changes later, rerun the generator to sync the FAQ shell. No dependency installation or framework build is required for the static page.
 
+## Follow-up — illustrated couple and journey interaction
+
+Each stage now has the same bride and groom in an original, code-native SVG vignette: reviewing a calendar, exploring a look, arranging a veil and holding hands. The figures reuse the page's charcoal, ivory and sand variables; no bitmap downloads, icon package or animation dependency. Source: `scripts/journey-figures.svg`, embedded by the renderer. Decorative illustrations are hidden from assistive technology; stage names remain the accessible tab labels.
+
+The selected couple lifts gently, while one circular marker glides along the rail in 500ms. The stage copy enters from the selected direction, with a short stagger finishing within 480ms. New Previous/Next stage buttons include boundary disabled states, a plain stage count and a live stage announcement. Existing arrow/Home/End tab navigation remains. Rapid selections cancel earlier entrances. Responsive/font changes remeasure the marker without animated repositioning. Reduced motion removes the spatial effects and cancels any in-flight content animation when the preference changes; all four stages remain readable without JavaScript.
+
+Chromium iframe checks at 375, 390, 430, 1000 and 1440px: four illustrations and labels fit, no document overflow, exactly one selected tab/visible panel, and the settled marker aligns with its node (0px measured error). Click, Previous/Next, End, sequential repeated selections, FAQ jump/search and no-JavaScript fallback were checked. Reduced-motion handling was source-verified; no OS-level preference emulation or physical Safari test. Original FAQ copy/IDs/schema, font families and the root site are unchanged. The new English control/scene wording has a Chinese counterpart in the bilingual review copy.
+
 ## Follow-up — consistent typography
 
 The FAQ now uses two font families with fixed roles: Playfair Display for all display/section/stage headings, and Arial/Helvetica for body, lists, answers and controls. Display headings use upright 600 weight throughout. Removed the secondary Cormorant Garamond family and the hero/closing italic treatments. The headline text is unchanged.

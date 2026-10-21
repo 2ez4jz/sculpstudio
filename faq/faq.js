@@ -112,17 +112,57 @@
   var journey = document.querySelector('.journey-nav');
   var stages = Array.from(journey.querySelectorAll('[data-stage]'));
   var panels = Array.from(document.querySelectorAll('.journey-panel'));
+  var marker = journey.querySelector('.journey-marker');
+  var rail = journey.querySelector('.journey-track');
+  var controls = document.querySelector('.journey-controls');
+  var previous = controls.querySelector('.journey-previous');
+  var next = controls.querySelector('.journey-next');
+  var current = 0;
+  var entrance = [];
+  function cancelEntrance() { entrance.forEach(function (animation) { animation.cancel(); }); entrance = []; }
+  function positionJourney(immediate) {
+    var bounds = journey.getBoundingClientRect();
+    var nodes = stages.map(function (stage) { return stage.querySelector('.stage-node').getBoundingClientRect(); });
+    var first = nodes[0], last = nodes[nodes.length - 1], selected = nodes[current];
+    if (immediate) journey.classList.add('is-positioning');
+    rail.style.left = (first.left + first.width / 2 - bounds.left) + 'px';
+    rail.style.top = (first.top + first.height / 2 - bounds.top) + 'px';
+    rail.style.width = (last.left + last.width / 2 - first.left - first.width / 2) + 'px';
+    marker.style.width = selected.width + 'px'; marker.style.height = selected.height + 'px';
+    marker.style.transform = 'translate(' + (selected.left - bounds.left) + 'px,' + (selected.top - bounds.top) + 'px)';
+    if (immediate) { marker.getBoundingClientRect(); journey.classList.remove('is-positioning'); }
+  }
+  function revealPanel(n, direction) {
+    if (reduce.matches || typeof panels[n].animate !== 'function') return;
+    var parts = panels[n].querySelectorAll('h3, .journey-copy p, .text-link, li');
+    Array.from(parts).forEach(function (part, i) {
+      entrance.push(part.animate([
+        { opacity: 0.35, transform: 'translateX(' + direction * 14 + 'px)' },
+        { opacity: 1, transform: 'translateX(0)' }
+      ], { duration: 340, delay: Math.min(i, 4) * 35, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'backwards' }));
+    });
+  }
   journey.setAttribute('role', 'tablist'); journey.dataset.enhanced = '';
   document.querySelector('.journey-panels').dataset.enhanced = '';
+  controls.hidden = false;
   function selectStage(n, focus, animate) {
+    var changed = n !== current;
+    var direction = n > current ? 1 : -1;
+    current = n;
+    cancelEntrance();
     stages.forEach(function (stage, i) { stage.setAttribute('aria-selected', String(i === n)); stage.tabIndex = i === n ? 0 : -1; });
-    panels.forEach(function (panel, i) { panel.hidden = i !== n; panel.classList.toggle('is-entering', i === n && animate && !reduce.matches); });
-    journey.style.setProperty('--stage', String(n));
-    journey.querySelector('.journey-track span').style.transform = 'scaleX(' + n / 3 + ')';
+    panels.forEach(function (panel, i) { panel.hidden = i !== n; });
+    marker.querySelector('span').textContent = String(n + 1).padStart(2, '0');
+    rail.querySelector('span').style.transform = 'scaleX(' + n / (stages.length - 1) + ')';
+    previous.disabled = n === 0; next.disabled = n === stages.length - 1;
+    previous.setAttribute('aria-label', n > 0 ? 'Previous: ' + stages[n - 1].getAttribute('aria-label') : 'Previous journey stage');
+    next.setAttribute('aria-label', n < stages.length - 1 ? 'Next: ' + stages[n + 1].getAttribute('aria-label') : 'Next journey stage');
+    controls.querySelector('.journey-count').textContent = (n + 1) + ' of ' + stages.length;
+    positionJourney(!animate || reduce.matches);
     if (focus) stages[n].focus({ preventScroll: true });
-    if (animate) {
-      var stageRect = stages[n].getBoundingClientRect(), navRect = journey.getBoundingClientRect();
-      if (stageRect.left < navRect.left || stageRect.right > navRect.right) journey.scrollTo({ left: stages[n].offsetLeft - 8, behavior: reduce.matches ? 'auto' : 'smooth' });
+    if (animate && changed) {
+      revealPanel(n, direction);
+      controls.querySelector('.journey-status').textContent = stages[n].getAttribute('aria-label') + ': ' + panels[n].querySelector('h3').textContent;
       track('bridal_journey_stage', { stage: stages[n].id.replace('stage-', '') });
     }
   }
@@ -140,7 +180,18 @@
       e.preventDefault(); selectStage(next, true, true);
     });
   });
+  previous.addEventListener('click', function () { if (current > 0) selectStage(current - 1, false, true); });
+  next.addEventListener('click', function () { if (current < stages.length - 1) selectStage(current + 1, false, true); });
   selectStage(0, false, false);
+  // Re-measure after responsive layout/font changes, without animating a resize.
+  if ('ResizeObserver' in window) new ResizeObserver(function () { positionJourney(true); }).observe(journey);
+  else window.addEventListener('resize', function () { positionJourney(true); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { positionJourney(true); });
+  function motionPreferenceChanged() {
+    if (reduce.matches) { cancelEntrance(); positionJourney(true); }
+  }
+  if (reduce.addEventListener) reduce.addEventListener('change', motionPreferenceChanged);
+  else if (reduce.addListener) reduce.addListener(motionPreferenceChanged);
   root.addEventListener('click', function (e) {
     var a = e.target.closest('a');
     if (a && (a.getAttribute('href') || '').startsWith('/#book')) track('faq_enquiry_click', { placement: a.dataset.enquiry || 'navigation' });
