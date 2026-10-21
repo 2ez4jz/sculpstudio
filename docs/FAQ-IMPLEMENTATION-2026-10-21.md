@@ -25,6 +25,16 @@ The future design-reference preference is recorded in `AGENTS.md`.
 
 To edit content, update `faq/content.json`, run `python3 scripts/build-faq.py`, and commit the source and generated page/copy together. If header/footer changes later, rerun the generator to sync the FAQ shell. No dependency installation or framework build is required for the static page.
 
+## Follow-up — one illustration with distinct actions
+
+The journey now has one fixed illustration area beside its heading. Selecting a step replaces the action at that same location; only one couple scene is visible. The four scenes were redrawn with different body poses: both seated around a calendar, the bride seated with a brush while the groom holds a mirror, arranging a long veil, and walking hand in hand. Shared head definitions preserve the couple's identity; bodies and furniture are specific to each scene. The stage navigation is again numbers and labels, without four repeated couples.
+
+SVG parts are embedded directly so real arms, heads, mirror, veil, skirt and legs can move. A selected scene plays one bounded gesture (680ms plus at most 70ms stagger); clicking the same step replays it. A first-view gesture plays once. Scene changes fade in for 180ms, and rapid changes cancel previous gestures. There is no repeating animation or new dependency. Reduced motion suppresses the illustration animation and cancels it when the preference changes. Desktop art measures 236×196px; phones use 150×126px beside a two-line journey heading.
+
+Checked Chromium iframe widths 375/390/430/1000/1440px: the single illustration and four steps fit, with no document overflow. Clicking stages, Home/End keyboard navigation and rapid sequential selections keep the selected tab, visible panel and visible illustration synchronized. Actual nonidentity transforms were observed on the preparation scene's veil, head and arms during playback. No-JavaScript mode shows one static illustration, all four readable panels and all 20 native FAQs. Render, JS syntax, SVG, unique IDs/local references, unchanged FAQ blocks/schema and unchanged root site were checked. Reduced motion was source-verified; OS-level emulation and physical Safari testing were not performed.
+
+Changed source/generated files: `scripts/journey-figures.svg`, `scripts/build-faq.py`, `faq/faq.css`, `faq/faq.js`, `faq/index.html`, the bilingual review copy, this report and `WORK_LOG.md`.
+
 ## Follow-up — illustrated couple and journey interaction
 
 Each stage now has the same bride and groom in an original, code-native SVG vignette: reviewing a calendar, exploring a look, arranging a veil and holding hands. The figures reuse the page's charcoal, ivory and sand variables; no bitmap downloads, icon package or animation dependency. Source: `scripts/journey-figures.svg`, embedded by the renderer. Decorative illustrations are hidden from assistive technology; stage names remain the accessible tab labels.

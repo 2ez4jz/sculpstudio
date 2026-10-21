@@ -11,7 +11,7 @@ English is the public website language. 中文用于内部审核。
 - Questions, answered. / 常见问题解答
 - Mobile stages: Enquiry / Trial / Preparation / Wedding day — 手机阶段：咨询 / 试妆 / 婚前准备 / 婚礼当天
 - Journey controls: Previous / Next stage / 1 of 4 — 旅程控件：上一步 / 下一阶段 / 第 1 阶段，共 4 阶段
-- Decorative couple scenes: reviewing a date, exploring a look, arranging a veil, holding hands — 装饰人物：查看日程、探索妆容、整理头纱、牵手
+- One illustration changes with each stage: seated together reviewing a date, a seated bridal trial with a mirror, arranging a veil, walking hand in hand — 同一插画区域随阶段切换：一起坐下看日程、坐姿试妆与手镜、侧身整理头纱、牵手迈步
 - What would you like to know? / 您想了解什么？
 - Search booking, trials, travel… / 搜索预订、试妆、上门服务等问题……
 - 20 questions, thoughtfully answered. / 20 个常见问题，为您细致解答。

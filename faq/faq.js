@@ -119,7 +119,25 @@
   var next = controls.querySelector('.journey-next');
   var current = 0;
   var entrance = [];
+  var scenes = Array.from(document.querySelectorAll('.journey-scene'));
+  var sceneMotion = [];
   function cancelEntrance() { entrance.forEach(function (animation) { animation.cancel(); }); entrance = []; }
+  function cancelScene() { sceneMotion.forEach(function (animation) { animation.cancel(); }); sceneMotion = []; }
+  function playScene(n) {
+    cancelScene();
+    if (reduce.matches || typeof scenes[n].animate !== 'function') return;
+    sceneMotion.push(scenes[n].animate([{ opacity: 0.5 }, { opacity: 1 }], { duration: 180, easing: 'ease-out' }));
+    var turns = { 'nod-left': -7, 'nod-right': 6, reach: -8, calendar: -2, point: 8, mirror: -5, brush: -13, turn: 8, arrange: -8, 'bride-step': 10, 'groom-step': -9, 'joined-hands': -5, wave: -12 };
+    Array.from(scenes[n].querySelectorAll('[data-motion]')).forEach(function (part, i) {
+      part.style.transformOrigin = part.dataset.pivot.split(' ').map(function (value) { return value + 'px'; }).join(' ');
+      var middle = 'rotate(' + (turns[part.dataset.motion] || 0) + 'deg)';
+      if (part.dataset.motion === 'veil') middle = 'skewX(-4deg) scaleX(1.04)';
+      if (part.dataset.motion === 'skirt') middle = 'rotate(3deg) scaleX(1.04)';
+      sceneMotion.push(part.animate([
+        { transform: 'none' }, { transform: middle, offset: 0.45 }, { transform: 'none' }
+      ], { duration: 680, delay: i % 3 * 35, easing: 'cubic-bezier(.45,0,.25,1)' }));
+    });
+  }
   function positionJourney(immediate) {
     var bounds = journey.getBoundingClientRect();
     var nodes = stages.map(function (stage) { return stage.querySelector('.stage-node').getBoundingClientRect(); });
@@ -150,6 +168,8 @@
     var direction = n > current ? 1 : -1;
     current = n;
     cancelEntrance();
+    cancelScene();
+    scenes.forEach(function (scene, i) { scene.toggleAttribute('hidden', i !== n); });
     stages.forEach(function (stage, i) { stage.setAttribute('aria-selected', String(i === n)); stage.tabIndex = i === n ? 0 : -1; });
     panels.forEach(function (panel, i) { panel.hidden = i !== n; });
     marker.querySelector('span').textContent = String(n + 1).padStart(2, '0');
@@ -160,6 +180,7 @@
     controls.querySelector('.journey-count').textContent = (n + 1) + ' of ' + stages.length;
     positionJourney(!animate || reduce.matches);
     if (focus) stages[n].focus({ preventScroll: true });
+    if (animate) playScene(n);
     if (animate && changed) {
       revealPanel(n, direction);
       controls.querySelector('.journey-status').textContent = stages[n].getAttribute('aria-label') + ': ' + panels[n].querySelector('h3').textContent;
@@ -183,12 +204,19 @@
   previous.addEventListener('click', function () { if (current > 0) selectStage(current - 1, false, true); });
   next.addEventListener('click', function () { if (current < stages.length - 1) selectStage(current + 1, false, true); });
   selectStage(0, false, false);
+  // A single short gesture on first view; further gestures follow stage selection.
+  if ('IntersectionObserver' in window) {
+    var sceneObserver = new IntersectionObserver(function (entries) {
+      if (entries.some(function (entry) { return entry.isIntersecting; })) { playScene(current); sceneObserver.disconnect(); }
+    }, { threshold: 0.3 });
+    sceneObserver.observe(document.querySelector('.journey-visual'));
+  }
   // Re-measure after responsive layout/font changes, without animating a resize.
   if ('ResizeObserver' in window) new ResizeObserver(function () { positionJourney(true); }).observe(journey);
   else window.addEventListener('resize', function () { positionJourney(true); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { positionJourney(true); });
   function motionPreferenceChanged() {
-    if (reduce.matches) { cancelEntrance(); positionJourney(true); }
+    if (reduce.matches) { cancelEntrance(); cancelScene(); positionJourney(true); }
   }
   if (reduce.addEventListener) reduce.addEventListener('change', motionPreferenceChanged);
   else if (reduce.addListener) reduce.addListener(motionPreferenceChanged);
