@@ -26,8 +26,6 @@ nav, sections, schema, copy = [], [], [], ['# SCULP Studio — FAQ & Bridal Guid
 - Clear / 清除
 - Something more personal? / 有更具体的问题？
 - We're here to help / 联系我们，获得帮助
-- Link to this answer / 本条回答的链接
-- Copy link / 复制链接
 - Let's find your answer. / 帮您找到答案。
 - No questions match your search. Try “trial”, “travel” or “booking”, or ask our team. / 未找到匹配的问题。试试搜索 trial、travel 或 booking，或直接联系团队。
 - Show all questions / 显示全部问题
@@ -43,7 +41,8 @@ for n, cat in enumerate(data['categories'], 1):
     copy.append(f'## {cat["en"]} / {cat["zh"]}\n')
     for q in cat['questions']:
         link = f'<a class="text-link" href="{e(q["link"])}" data-enquiry="answer">{e(q["link_label"])}</a>' if 'link' in q else ''
-        rows.append(f'''<details id="{q['id']}" class="faq-item"><summary><h3>{e(q['q'])}</h3><span class="disclosure" aria-hidden="true"></span></summary><div class="answer"><p>{e(q['a'])}</p><div class="answer-tools">{link}<a class="question-link" href="#{q['id']}" aria-label="Link to: {e(q['q'])}">Link to this answer</a><button class="copy-link" type="button" data-copy="{q['id']}" hidden>Copy link</button></div></div></details>''')
+        answer_tools = f'<div class="answer-tools">{link}</div>' if link else ''
+        rows.append(f'''<details id="{q['id']}" class="faq-item"><summary><h3>{e(q['q'])}</h3><span class="disclosure" aria-hidden="true"></span></summary><div class="answer"><p>{e(q['a'])}</p>{answer_tools}</div></details>''')
         schema.append({'@type':'Question', 'name':q['q'], 'acceptedAnswer':{'@type':'Answer', 'text':q['a']}})
         copy.extend([f'### {q["q"]}\n', q['a']+'\n', f'**{q["q_zh"]}**\n', q['a_zh']+'\n', f'Anchor: `/faq/#{q["id"]}`\n'])
     sections.append(f'<section class="faq-category" id="{cat["id"]}" aria-labelledby="heading-{cat["id"]}"><h2 id="heading-{cat["id"]}">{e(cat["en"])}</h2>{"".join(rows)}</section>')
@@ -66,7 +65,7 @@ page = f'''<!doctype html>
 <meta property="og:url" content="https://sculpstudio.ca/faq/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/faq/faq.css?v=20261021"><script src="/faq/faq.js?v=20261021" defer></script>
+<link rel="stylesheet" href="/faq/faq.css?v=20261021-2"><script src="/faq/faq.js?v=20261021-2" defer></script>
 <script type="application/ld+json">{json.dumps({'@context':'https://schema.org','@type':'FAQPage','mainEntity':schema},ensure_ascii=False).replace('</','<\\/')}</script>
 </head><body><div id="sculp-site"><a class="skip-link" href="#guide">Skip to bridal guide</a>
 {header}
@@ -76,7 +75,7 @@ page = f'''<!doctype html>
 <div class="guide-body shell"><aside class="guide-sidebar"><nav class="category-nav" aria-label="FAQ categories">{''.join(nav)}</nav><div class="sidebar-note"><p>Something more personal?</p><a class="text-link" href="/#book" data-enquiry="sidebar">We're here to help</a></div></aside><div class="faq-content"><div id="no-results" class="no-results" hidden><h2>Let's find your answer.</h2><p>No questions match your search. Try “trial”, “travel” or “booking”, or ask our team.</p><button class="text-link" type="button" id="reset-search">Show all questions</button><a class="text-link" href="/#book" data-enquiry="no-results">Enquire with SCULP</a></div>{''.join(sections)}</div></div>
 <section id="bridal-journey" class="journey"><div class="shell"><div class="journey-heading"><h2>The Bridal Journey</h2><p>From the first conversation to the final touch.<br>Find your place, and see what comes next.</p></div><div class="journey-nav" aria-label="The bridal journey stages"><div class="journey-track" aria-hidden="true"><span></span></div>{''.join(journey_nav)}</div><div class="journey-panels">{''.join(panels)}</div></div></section>
 <section class="closing"><div class="shell"><h2>Your day is<br><em>uniquely yours.</em></h2><div><p>Let's create an experience that feels entirely your own.</p><a class="button" href="/#book" data-enquiry="closing">ENQUIRE WITH SCULP</a></div></div></section>
-</main>{footer}<p id="copy-status" class="sr-only" role="status" aria-live="polite"></p></div></body></html>'''
+</main>{footer}</div></body></html>'''
 (ROOT / 'faq/index.html').write_text(page)
 (ROOT / 'docs/FAQ-BILINGUAL-2026-10-21.md').write_text('\n'.join(copy))
 print('Rendered /faq/: 5 categories, 20 bilingual questions, 4 journey stages.')

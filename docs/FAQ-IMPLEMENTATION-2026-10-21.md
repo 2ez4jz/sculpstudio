@@ -14,7 +14,7 @@ The future design-reference preference is recorded in `AGENTS.md`.
 
 - `faq/index.html`: generated, crawlable English page; one H1, five category H2s, 20 answers, metadata, canonical and FAQPage JSON-LD.
 - `faq/faq.css`: responsive page and brand shell; sticky categories, native accordion styling, journey line and 400ms panel transition, visible focus and reduced-motion rules.
-- `faq/faq.js`: multi-word search, result and category counts, no-result recovery, deep links, clipboard enhancement, categories, menu and keyboard-accessible journey tabs; analytics hooks.
+- `faq/faq.js`: multi-word search, result and category counts, no-result recovery, deep links, categories, menu and keyboard-accessible journey tabs; analytics hooks.
 - `faq/content.json`: all 20 supplied English/Chinese questions and four journey stages; no prices, deposits or cancellation rules invented.
 - `scripts/build-faq.py`: Python standard-library renderer. Reuses the current header/footer markup and emits the static page plus bilingual review copy.
 - `docs/FAQ-BILINGUAL-2026-10-21.md`: complete question/answer copy and English/Chinese page, CTA and journey content for review.
@@ -24,6 +24,10 @@ The future design-reference preference is recorded in `AGENTS.md`.
 - `WORK_LOG.md`: this change, verification and limits.
 
 To edit content, update `faq/content.json`, run `python3 scripts/build-faq.py`, and commit the source and generated page/copy together. If header/footer changes later, rerun the generator to sync the FAQ shell. No dependency installation or framework build is required for the static page.
+
+## Follow-up — sharing controls removed
+
+Removed every “Link to this answer” and “Copy link” control at the user’s request, together with clipboard code, status announcements, unused styles and bilingual labels. Question IDs and direct anchor URLs remain. Relevant service/enquiry links stay in the answers. Checks: renderer, JS syntax, all 20 question IDs, content and existing CTA links; sharing controls absent from generated HTML and JS. No full browser regression run for this narrow removal.
 
 ## Verification
 
@@ -50,7 +54,7 @@ To edit content, update `faq/content.json`, run `python3 scripts/build-faq.py`, 
 
 No GA4, Clarity or other collector was found in the current tracked website. No new tracking script or property was installed. The page dispatches `sculp:analytics` custom events and calls existing `gtag` / `clarity` only if present. Nothing is persisted as a substitute for a collector.
 
-Events: `faq_view`, `faq_search`, `faq_search_no_results`, `faq_open`, `faq_copy_link`, `faq_enquiry_click`, `bridal_journey_stage`. Search terms are restricted to known guide keywords; arbitrary text and personal data are not sent. No-result counts remain available even when the entered words are not allowlisted. A real analytics property still needs configuration before reports are available.
+Events: `faq_view`, `faq_search`, `faq_search_no_results`, `faq_open`, `faq_enquiry_click`, `bridal_journey_stage`. Search terms are restricted to known guide keywords; arbitrary text and personal data are not sent. No-result counts remain available even when the entered words are not allowlisted. A real analytics property still needs configuration before reports are available.
 
 ## Content still requiring team confirmation
 

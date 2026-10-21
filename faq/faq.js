@@ -98,19 +98,6 @@
     }, { rootMargin: '-150px 0px -50% 0px', threshold: 0 });
     categories.forEach(function (cat) { observer.observe(cat); });
   }
-  document.querySelectorAll('[data-copy]').forEach(function (button) {
-    if (!navigator.clipboard || !window.isSecureContext) return;
-    button.hidden = false;
-    button.addEventListener('click', function () {
-      var url = new URL(location.href); url.hash = button.dataset.copy;
-      navigator.clipboard.writeText(url.href).then(function () {
-        document.getElementById('copy-status').textContent = 'Link copied to clipboard.';
-        button.textContent = 'Copied';
-        window.setTimeout(function () { button.textContent = 'Copy link'; }, 1800);
-        track('faq_copy_link', { question_id: button.dataset.copy });
-      }).catch(function () { document.getElementById('copy-status').textContent = 'Please use Link to this answer to share this question.'; });
-    });
-  });
   toggle.addEventListener('click', function () {
     var open = menu.classList.toggle('open'); toggle.setAttribute('aria-expanded', String(open));
   });

@@ -15,8 +15,6 @@ English is the public website language. 中文用于内部审核。
 - Clear / 清除
 - Something more personal? / 有更具体的问题？
 - We're here to help / 联系我们，获得帮助
-- Link to this answer / 本条回答的链接
-- Copy link / 复制链接
 - Let's find your answer. / 帮您找到答案。
 - No questions match your search. Try “trial”, “travel” or “booking”, or ask our team. / 未找到匹配的问题。试试搜索 trial、travel 或 booking，或直接联系团队。
 - Show all questions / 显示全部问题
