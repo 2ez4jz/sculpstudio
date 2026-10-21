@@ -4,7 +4,7 @@ Date: 2026-10-21 (Toronto)
 
 ## Scope and design
 
-The user authorized direct publication after the original test-only brief. Add a standalone `/faq/` page and link it in the existing main navigation and footer. Keep the existing SCULP editorial identity: ivory, charcoal, Playfair Display, Cormorant Garamond, calm spacing and readable answers. This is a reading surface, with the four-stage Bridal Journey as its one featured motion interaction.
+The user authorized direct publication after the original test-only brief. Add a standalone `/faq/` page and link it in the existing main navigation and footer. Keep the existing SCULP editorial identity: ivory, charcoal, Playfair Display headings, Arial/Helvetica body, calm spacing and readable answers. This is a reading surface, with the four-stage Bridal Journey as its one featured motion interaction.
 
 Consulted `Leonxlnx/taste-skill` and `pbakaus/impeccable`, as requested. Applied their hierarchy, responsive, interaction, reduced-motion and rendered-review principles within the fixed brief. No random direction draw, image-generation concept round, framework migration or unrelated restyle. Brand/footer navigation, functional accordion dividers and journey numbering are intentional brief/brand choices where generic style detectors flag them. Small functional text identified by the detector was raised to 11px or above. These are design references, not a claim that every optional workflow or stylistic gate was run.
 
@@ -24,6 +24,21 @@ The future design-reference preference is recorded in `AGENTS.md`.
 - `WORK_LOG.md`: this change, verification and limits.
 
 To edit content, update `faq/content.json`, run `python3 scripts/build-faq.py`, and commit the source and generated page/copy together. If header/footer changes later, rerun the generator to sync the FAQ shell. No dependency installation or framework build is required for the static page.
+
+## Follow-up — consistent typography
+
+The FAQ now uses two font families with fixed roles: Playfair Display for all display/section/stage headings, and Arial/Helvetica for body, lists, answers and controls. Display headings use upright 600 weight throughout. Removed the secondary Cormorant Garamond family and the hero/closing italic treatments. The headline text is unchanged.
+
+| Role | Desktop | Phone |
+| --- | --- | --- |
+| Main/closing headings | Responsive display scale, up to 62px | 30–36px |
+| Section headings | 34–44px | 28px |
+| Category/stage headings | 28–36px | 26px |
+| Body, lists and answers | 16px / 1.7 | 15px / 1.7 |
+| Page controls | 13px | 12px |
+| Supporting metadata | 12px | 12px |
+
+The masthead/logo retain their compact brand sizing. CSS typography variables now control the scale. Actual rendered font families, 600 heading weight, 16px/27.2px desktop body and 15px/25.5px phone body were inspected in Chromium. Rechecked 375, 390, 430, 1000 and 1440px iframe viewports: no document overflow, all journey steps fit, and the phone headline stays on two lines. Also inspected an expanded FAQ answer. Text, IDs, schema, region order and the main site are unchanged. This was a typography pass, without another full interaction regression or physical Safari test.
 
 ## Follow-up — journey first and dedicated phone layout
 
