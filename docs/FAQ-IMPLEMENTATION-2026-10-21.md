@@ -25,6 +25,14 @@ The future design-reference preference is recorded in `AGENTS.md`.
 
 To edit content, update `faq/content.json`, run `python3 scripts/build-faq.py`, and commit the source and generated page/copy together. If header/footer changes later, rerun the generator to sync the FAQ shell. No dependency installation or framework build is required for the static page.
 
+## Follow-up — journey first and dedicated phone layout
+
+The order is now compact introduction → Bridal Journey → dedicated FAQ/search section → closing enquiry. The introduction keeps the requested headline and description, with a visible “Find an answer” jump to the FAQ. The secondary decorative introduction was removed. FAQ questions and policies are unchanged.
+
+Phones have four simultaneously visible journey steps with shorter visible labels and full accessible names, compact typography and spacing, and a single-column stage description/checklist. No sideways scrolling is needed for the journey. FAQ categories remain horizontally scrollable and sticky. Fixed-header padding and anchor margins are coordinated, so a question lands beneath the header/category bar rather than adding duplicate offsets. There are still no share/copy controls.
+
+Rechecked actual Chromium iframe viewports at 375, 390, 430, 1000 and 1440px: no document overflow; all four journey targets fit, without label overflow. At 375px the introduction measured about 309px and the journey about 562px. On 390px, click selects Trial, End selects Wedding Day, the stage link opens its corresponding question at 150px from the top, and “Find an answer” lands the FAQ at 84px. Search finds and opens the allergies answer, Escape clears search, and Enter opens a native question. Render/JS syntax, original 20 question IDs/text, local links, schema and source consistency checked. These are browser viewport tests; physical Safari and OS-level reduced-motion emulation were not performed.
+
 ## Follow-up — sharing controls removed
 
 Removed every “Link to this answer” and “Copy link” control at the user’s request, together with clipboard code, status announcements, unused styles and bilingual labels. Question IDs and direct anchor URLs remain. Relevant service/enquiry links stay in the answers. Checks: renderer, JS syntax, all 20 question IDs, content and existing CTA links; sharing controls absent from generated HTML and JS. No full browser regression run for this narrow removal.
@@ -39,10 +47,10 @@ Removed every “Link to this answer” and “Copy link” control at the user�
 | 375 / 390 / 430px layout | Checked using respective iframe viewport widths. Fixed category-grid minimum-width overflow; final document fits all widths. These are browser width tests, not physical iPhone/Safari tests. |
 | Main navigation at 1000px | No horizontal overflow after adding the guide link. |
 | Search | `allergies` gives one matching expanded answer; mixed-case `WEDDING date` gives three expanded matches; no-result query shows recovery; clearing restores all 20. |
-| Categories | Native category links and `#trials` navigation verified; desktop sticky/sidebar and mobile horizontal navigation inspected. |
+| Categories | Native category links and `#trials` navigation verified; desktop sticky/sidebar and mobile horizontal FAQ categories inspected. |
 | Accordion and keyboard | Multiple native details can remain open. Enter opens a question; Space collapses it. |
 | Shareable anchors | Direct `/faq/#bring-to-trial` opens its answer; reload preserves link behavior. |
-| Journey | Click switching, ArrowRight and End keyboard controls verified; active tab and panel match; mobile last stage scrolls into view. |
+| Journey | Click switching, ArrowRight and End keyboard controls verified; active tab and panel match; all four mobile stages are now simultaneously visible after the journey-first follow-up. |
 | No JavaScript | Script-disabled iframe retains 20 native accordions and four readable journey panels, with inactive search controls hidden; native answer opening works; no mobile overflow. |
 | Enquiry CTA | Closing CTA opens the existing `/#book` route and shows `#sculp-form`; no second form. No test enquiry sent. |
 | Existing pages and form logic | Original `<main>` content and complete inline application/form script are byte-identical to pre-change `eb79edb`; only outside navigation/footer markup changes. |

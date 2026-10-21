@@ -7,8 +7,9 @@ English is the public website language. 中文用于内部审核。
 - The Bridal Guide / 新娘妆发指南
 - Every detail, beautifully considered. / 每一处细节，都经过悉心考量。
 - A thoughtful guide to your bridal beauty experience, from your first enquiry to the final touch. / 从初次咨询到最后的妆发细节，为您的新娘造型体验提供周到指引。
-- A little clarity. A little more confidence. / 更清晰一点，也更从容一点。
-- Explore the bridal journey / 了解新娘体验旅程
+- Find an answer / 查找答案
+- Questions, answered. / 常见问题解答
+- Mobile stages: Enquiry / Trial / Preparation / Wedding day — 手机阶段：咨询 / 试妆 / 婚前准备 / 婚礼当天
 - What would you like to know? / 您想了解什么？
 - Search booking, trials, travel… / 搜索预订、试妆、上门服务等问题……
 - 20 questions, thoughtfully answered. / 20 个常见问题，为您细致解答。
